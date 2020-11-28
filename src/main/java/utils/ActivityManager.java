@@ -6,12 +6,15 @@ import model.Room;
 import model.Scheduler;
 import model.persons.Client;
 import model.persons.Host;
+import persistance.IDataManager;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class ActivityManager {
     private Scheduler scheduler;
+    private IDataManager dataManager;
 
     public boolean createActivity (String name, int id, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         if(!host.isFree(weekDay,startTime,endTime))
@@ -32,6 +35,9 @@ public class ActivityManager {
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
         if(activity.isEnrolled(clientToAdd))
             return false;
+        if(activity.getParticipants().size() == activity.getRoom().getCapacity())
+            return false;
+
         for(Activity clientActivity : clientToAdd.getActivities()) {
             if(clientActivity.getWeekDay().equals(activity.getWeekDay())) {
                 if(activity.getStartTime().after(clientActivity.getStartTime()) && activity.getStartTime().before(clientActivity.getEndTime()) ||
@@ -43,12 +49,25 @@ public class ActivityManager {
         return true;
     }
 
-    public void getAllActivities (WeekDay weekDay) {
-        scheduler.getActivities(weekDay);
+    public void removeClientFromActivity(Client clientToRemove, Activity activity) {
+        clientToRemove.removeActivity(activity);
+        activity.removeClient(clientToRemove);
     }
 
-    public List<Room> getPossibleRooms (WeekDay weekDay, Date startTime, Date endTime, int groupSize) {
+    public List<Activity> getAllActivities (WeekDay weekDay) {
+        return scheduler.getActivities(weekDay);
+    }
 
-        return null;
+    public List<Room> getPossibleRooms (WeekDay weekDay, Date startTime, Date endTime) {
+        List<Room> availableRooms = dataManager.loadRooms();
+
+        for(Activity activity: this.getAllActivities(weekDay)) {
+            if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
+                    (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))) {
+                availableRooms.remove(activity.getRoom());
+            }
+        }
+
+        return availableRooms;
     }
 }

@@ -1,28 +1,67 @@
 package persistance;
 
 import model.Activity;
+import model.Room;
 import model.persons.Client;
+import model.persons.Host;
+import model.persons.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataManager implements IDataManager{
-    @Override
-    public void saveActivities(List<Activity> teachers) {
 
+    private List<Client> clients = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
+    private List<Room> rooms = new ArrayList<>();
+    private List<Host> host = new ArrayList<>();
+    private List<Activity> activities = new ArrayList<>(); //to be deleted
+
+
+    public DataManager() {}
+
+    @Override
+    public void saveActivities(List<Activity> activities) {
+        this.activities = activities;
     }
 
     @Override
     public List<Activity> loadActivities() {
-        return null;
+        return activities;
     }
 
     @Override
-    public void saveClients(List<Client> classes) {
-
+    public void saveClients(List<Client> clients) {
+        this.clients = clients;
     }
 
     @Override
     public List<Client> loadClients() {
-        return null;
+        return clients;
+    }
+
+    @Override
+    public List<Room> loadRooms() {return rooms;}
+
+    @Override
+    public void saveUsers(List<User> users) {
+        this.users = users;
+    }
+
+    @Override
+    public List<User> loadUser() {
+        return users;
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        for(User user: users) {
+            if(user.getEmail().equals(email)) return user;
+        }
+    }
+
+    @Override
+    public void saveUser(User user) {
+
     }
 }

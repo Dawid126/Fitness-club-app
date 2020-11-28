@@ -6,10 +6,21 @@ public abstract class AbstractPerson {
     private int ID;
     private String email;
 
-    public AbstractPerson (String name, String surname, String email, int ID) {
+    public AbstractPerson (String name, String surname, String email) {
         this.name = name;
         this.surname = surname;
-        this.ID = ID;
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

@@ -30,7 +30,11 @@ public class Activity {
     }
 
     public void addClient (Client client) {
+        participants.add(client);
+    }
 
+    public void removeClient(Client client) {
+        participants.remove(client);
     }
 
     public boolean isEnrolled (Client client) {
