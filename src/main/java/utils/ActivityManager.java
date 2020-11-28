@@ -16,7 +16,7 @@ public class ActivityManager {
     private Scheduler scheduler;
     private IDataManager dataManager;
 
-    public boolean createActivity (String name, int id, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
+    public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         if(!host.isFree(weekDay,startTime,endTime))
             return false;
         List<Activity> activities = scheduler.getActivities(weekDay,room);
@@ -25,7 +25,7 @@ public class ActivityManager {
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
                 return false;
         }
-        scheduler.addActivity(new Activity(name, id, host, room, startTime, endTime, weekDay));
+        scheduler.addActivity(new Activity(name, host, room, startTime, endTime, weekDay));
         return true;
     }
     public void removeActivity (Activity activity) {

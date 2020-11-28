@@ -18,9 +18,8 @@ public class Activity {
     private final Date startTime;
     private final Date endTime;
 
-    public Activity(String name, int id, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
+    public Activity(String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         this.name = name;
-        this.ID = id;
         this.host = host;
         this.room = room;
         this.startTime = startTime;
