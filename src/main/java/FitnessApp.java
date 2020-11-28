@@ -13,14 +13,13 @@ public class FitnessApp extends Application {
     public void start(Stage primaryStage) {
 
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("My first JavaFX app");
+        this.primaryStage.setTitle("Fitness");
 
         this.appController = new FitnessController(primaryStage);
         this.appController.initRootLayout();
     }
 
     public static void main(String args[]){
-        System.out.println("gówno");
         Application.launch(args);
     }
 }

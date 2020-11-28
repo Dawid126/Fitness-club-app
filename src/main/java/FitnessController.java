@@ -16,12 +16,11 @@ public class FitnessController {
 
     public void initRootLayout() {
         try {
-            this.primaryStage.setTitle("My second JavaFX app");
 
             // load layout from FXML file
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(FitnessController.class
-                    .getResource("HostView.fxml"));
+                    .getResource("mainMenu.fxml"));
 
             // add layout to a scene and show them all
             Scene scene = new Scene(loader.load());
