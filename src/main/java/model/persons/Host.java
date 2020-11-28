@@ -11,8 +11,9 @@ public class Host extends AbstractPerson{
 
     private final List<Activity> activities;
 
-    public Host (String name, String surname, String email, int ID) {
-        super(name, surname, email, ID);
+    public Host (String name, String surname, String email) {
+        super(name, surname, email
+        );
         activities = new ArrayList<>();
     }
 
