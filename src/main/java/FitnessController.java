@@ -22,10 +22,9 @@ public class FitnessController {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(FitnessController.class
                     .getResource("HostView.fxml"));
-            BorderPane rootLayout = (BorderPane) loader.load();
 
             // add layout to a scene and show them all
-            Scene scene = new Scene(rootLayout);
+            Scene scene = new Scene(loader.load());
             primaryStage.setScene(scene);
             primaryStage.show();
 
