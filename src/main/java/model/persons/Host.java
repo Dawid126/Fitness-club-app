@@ -32,8 +32,9 @@ public class Host extends AbstractPerson{
     public boolean isFree (WeekDay weekDay, Date startTime, Date endTime) {
         for(Activity activity : activities) {
             if(activity.getWeekDay().equals(weekDay)) {
-                if(activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime) ||
-                        activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
+                if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
+                        (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime)) ||
+                        activity.getStartTime().equals(startTime) || activity.getEndTime().equals(endTime))
                     return false;
             }
         }

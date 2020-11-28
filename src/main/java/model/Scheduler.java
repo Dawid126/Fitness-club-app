@@ -2,7 +2,6 @@ package model;
 
 import enums.WeekDay;
 import model.persons.Client;
-import model.persons.Host;
 
 import java.util.ArrayList;
 import java.util.List;

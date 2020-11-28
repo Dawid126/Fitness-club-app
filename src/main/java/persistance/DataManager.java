@@ -17,7 +17,6 @@ public class DataManager implements IDataManager{
     private List<Host> hosts = new ArrayList<>();
     private List<Activity> activities = new ArrayList<>(); //to be deleted
 
-
     public DataManager() {}
 
     @Override
@@ -55,7 +54,7 @@ public class DataManager implements IDataManager{
 
     @Override
     public List<Host> loadHosts() {
-        return null;
+        return hosts;
     }
 
     @Override

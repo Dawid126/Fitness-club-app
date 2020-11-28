@@ -26,6 +26,7 @@ public class Activity {
         this.endTime = endTime;
         this.weekDay = weekDay;
         this.participants = new ArrayList<>();
+        this.host.addActivity(this);
     }
 
     public void addClient (Client client) {

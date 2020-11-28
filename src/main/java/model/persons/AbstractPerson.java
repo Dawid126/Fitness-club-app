@@ -3,7 +3,7 @@ package model.persons;
 public abstract class AbstractPerson {
     private final String name;
     private final String surname;
-    private int ID;
+    private int id;
     private String email;
 
     public AbstractPerson (String name, String surname, String email) {

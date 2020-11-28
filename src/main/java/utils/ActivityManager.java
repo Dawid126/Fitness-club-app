@@ -13,8 +13,16 @@ import java.util.Date;
 import java.util.List;
 
 public class ActivityManager {
-    private Scheduler scheduler;
-    private IDataManager dataManager;
+    private final Scheduler scheduler;
+    private final IDataManager dataManager;
+
+    public ActivityManager (IDataManager dataManager) {
+        this.dataManager = dataManager;
+        this.scheduler = new Scheduler();
+        for(Activity a : dataManager.loadActivities()) {
+            this.scheduler.addActivity(a);
+        }
+    }
 
     public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         if(!host.isFree(weekDay,startTime,endTime))
@@ -25,6 +33,7 @@ public class ActivityManager {
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
                 return false;
         }
+//        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
         scheduler.addActivity(new Activity(name, host, room, startTime, endTime, weekDay));
         return true;
     }
