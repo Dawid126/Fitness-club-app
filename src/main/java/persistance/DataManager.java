@@ -58,6 +58,7 @@ public class DataManager implements IDataManager{
         for(User user: users) {
             if(user.getEmail().equals(email)) return user;
         }
+        return null;
     }
 
     @Override
