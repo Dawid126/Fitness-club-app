@@ -8,7 +8,8 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.BorderPane?>
+<AnchorPane fx:controller="ui.MainMenuController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.22244488977955912" layoutX="100.0" layoutY="14.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -22,8 +23,8 @@
                                  <children>
                                     <VBox layoutX="14.0" layoutY="42.0" prefHeight="669.0" prefWidth="219.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Button id="menuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Schedule" />
-                                          <Button id="menuButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Rooms" />
+                                          <Button id="menuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Schedule" userData="/schedule.fxml" onAction="#handleShowView"/>
+                                          <Button id="menuButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Rooms" userData="/rooms.fxml" onAction="#handleShowView"/>
                                           <Button id="menuButton" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Trainers" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Customers" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Activities" />
@@ -55,7 +56,10 @@
                   </TabPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+            <BorderPane fx:id="routerContainer">
+                <Button text="xd"></Button>
+            </BorderPane>
+<!--          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />-->
         </items>
       </SplitPane>
    </children>
