@@ -14,7 +14,7 @@ public class DataManager implements IDataManager{
     private List<Client> clients = new ArrayList<>();
     private List<User> users = new ArrayList<>();
     private List<Room> rooms = new ArrayList<>();
-    private List<Host> host = new ArrayList<>();
+    private List<Host> hosts = new ArrayList<>();
     private List<Activity> activities = new ArrayList<>(); //to be deleted
 
 
@@ -41,7 +41,22 @@ public class DataManager implements IDataManager{
     }
 
     @Override
+    public void saveRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    @Override
     public List<Room> loadRooms() {return rooms;}
+
+    @Override
+    public void saveHosts(List<Host> hosts) {
+        this.hosts = hosts;
+    }
+
+    @Override
+    public List<Host> loadHosts() {
+        return null;
+    }
 
     @Override
     public void saveUsers(List<User> users) {
@@ -49,7 +64,7 @@ public class DataManager implements IDataManager{
     }
 
     @Override
-    public List<User> loadUser() {
+    public List<User> loadUsers() {
         return users;
     }
 

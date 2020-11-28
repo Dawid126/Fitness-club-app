@@ -1,9 +1,9 @@
 package model;
 
 public class Room {
-    private int capacity;
+    private final int capacity;
 
-    public Room(int capacity, int id) {
+    public Room(int capacity) {
         this.capacity = capacity;
     }
 

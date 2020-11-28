@@ -9,8 +9,8 @@ public class Client extends AbstractPerson{
 
     private final List<Activity> activities;
 
-    public Client (String name, String surname, String email, int ID) {
-        super(name, surname, email, ID);
+    public Client (String name, String surname, String email) {
+        super(name, surname, email);
         activities = new ArrayList<>();
     }
 

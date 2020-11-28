@@ -6,7 +6,7 @@ import persistance.IDataManager;
 
 public class LoginManager {
     private User loggedUser;
-    private IDataManager dataManager;
+    private final IDataManager dataManager;
 
     public LoginManager(IDataManager dataManager) {
         this.dataManager = dataManager;
@@ -31,6 +31,12 @@ public class LoginManager {
     public boolean register(String name, String surname, String email, Role role, String password) {
         if(dataManager.getUserByEmail(email) == null) {
             dataManager.saveUser(new User(name, surname, email, role, password));
+            return true;
         }
+        return false;
+    }
+
+    public User getLoggedUser () {
+        return loggedUser;
     }
 }
