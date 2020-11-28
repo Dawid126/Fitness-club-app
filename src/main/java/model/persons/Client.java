@@ -17,4 +17,12 @@ public class Client extends AbstractPerson{
     public List<Activity> getActivities() {
         return activities;
     }
+
+    public void addActivity (Activity activity) {
+        if(!activities.contains(activity))
+            activities.add(activity);
+    }
+    public void removeActivity (Activity activity) {
+        activities.remove(activity);
+    }
 }
