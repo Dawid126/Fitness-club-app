@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Activity {
     private String name;
-    private int ID;
+    private int id = 0;
     private final WeekDay weekDay;
     private Host host;
     private final List<Client> participants;
@@ -50,8 +50,8 @@ public class Activity {
     public Host getHost() {
         return host;
     }
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
     public List<Client> getParticipants() {
         return participants;

@@ -23,48 +23,87 @@ public class DataManager implements IDataManager{
     public void saveActivities(List<Activity> activities) {
         this.activities = activities;
     }
-
-    @Override
-    public List<Activity> loadActivities() {
-        return activities;
-    }
-
     @Override
     public void saveClients(List<Client> clients) {
         this.clients = clients;
     }
-
     @Override
-    public List<Client> loadClients() {
-        return clients;
+    public void saveHosts(List<Host> hosts) {
+        this.hosts = hosts;
     }
-
+    @Override
+    public void saveUsers(List<User> users) {
+        this.users = users;
+    }
     @Override
     public void saveRooms(List<Room> rooms) {
         this.rooms = rooms;
     }
 
     @Override
-    public List<Room> loadRooms() {return rooms;}
-
-    @Override
-    public void saveHosts(List<Host> hosts) {
-        this.hosts = hosts;
+    public List<Activity> loadActivities() {
+        return activities;
     }
-
+    @Override
+    public List<Client> loadClients() {
+        return clients;
+    }
     @Override
     public List<Host> loadHosts() {
         return hosts;
     }
-
-    @Override
-    public void saveUsers(List<User> users) {
-        this.users = users;
-    }
-
     @Override
     public List<User> loadUsers() {
         return users;
+    }
+    @Override
+    public List<Room> loadRooms() {return rooms;}
+
+    @Override
+    public void saveActivity(Activity activity) {
+        if(!activities.contains(activity))
+            activities.add(activity);
+    }
+    @Override
+    public void saveClient(Client client) {
+        if(!clients.contains(client))
+            clients.add(client);
+    }
+    @Override
+    public void saveHost(Host host) {
+        if(!hosts.contains(host))
+            hosts.add(host);
+    }
+    @Override
+    public void saveUser(User user) {
+        if(!users.contains(user))
+            users.add(user);
+    }
+    @Override
+    public void saveRoom(Room room) {
+        if(!rooms.contains(room))
+            rooms.add(room);
+    }
+
+    @Override
+    public void removeActivity(Activity activity) {
+        activities.remove(activity);
+    }
+    @Override
+    public void removeClient(Client client) {
+        clients.remove(client);
+    }
+    @Override
+    public void removeHost(Host host) {
+        hosts.remove(host);
+    }
+    @Override
+    public void removeUser(User user) {
+        users.remove(user);
+    }
+    @Override
+    public void removeRoom(Room room) {
+        rooms.remove(room);
     }
 
     @Override
@@ -73,10 +112,5 @@ public class DataManager implements IDataManager{
             if(user.getEmail().equals(email)) return user;
         }
         return null;
-    }
-
-    @Override
-    public void saveUser(User user) {
-
     }
 }

@@ -33,12 +33,15 @@ public class ActivityManager {
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
                 return false;
         }
-//        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
-        scheduler.addActivity(new Activity(name, host, room, startTime, endTime, weekDay));
+        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
+        dataManager.saveActivity(newActivity);
+        scheduler.addActivity(newActivity);
         return true;
     }
+
     public void removeActivity (Activity activity) {
         scheduler.removeActivity(activity);
+        dataManager.removeActivity(activity);
     }
 
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
@@ -76,7 +79,12 @@ public class ActivityManager {
                 availableRooms.remove(activity.getRoom());
             }
         }
-
         return availableRooms;
+    }
+
+    public List<Host> getPossibleHosts () {
+        List<Host> result = new ArrayList<>();
+        //TODO:
+        return result;
     }
 }
