@@ -22,16 +22,16 @@
                               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </padding>
                            <children>
-                              <TableView prefHeight="604.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="activitiesTableView" prefHeight="604.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn prefWidth="75.0" text="ID" />
-                                  <TableColumn prefWidth="75.0" text="Name" />
-                                    <TableColumn prefWidth="75.0" text="Host" />
-                                    <TableColumn prefWidth="75.0" text="Room" />
-                                    <TableColumn prefWidth="75.0" text="Week Day" />
-                                    <TableColumn prefWidth="75.0" text="Start Time" />
-                                    <TableColumn prefWidth="75.0" text="End Time" />
-                                    <TableColumn prefWidth="75.0" text="Participants" />
+                                  <TableColumn prefWidth="${activitiesTableView.width*0.075}" text="ID" />
+                                  <TableColumn prefWidth="${activitiesTableView.width*0.15}" text="Name" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.15}" text="Host" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.075}" text="Room" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.1}" text="Week Day" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.1}" text="Start Time" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.1}" text="End Time" />
+                                    <TableColumn prefWidth="${activitiesTableView.width*0.25}" text="Participants" />
                                 </columns>
                               </TableView>
                            </children>
