@@ -16,7 +16,7 @@ public class MainMenuController {
 
     @FXML
     private void handleShowView(ActionEvent e) {
-        String view = (String) ((Node)e.getSource()).getUserData();
+        String view = (String) ((Node) e.getSource()).getUserData();
         loadFXML(getClass().getResource(view));
     }
 
