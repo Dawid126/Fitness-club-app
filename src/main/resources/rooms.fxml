@@ -19,10 +19,10 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: B9B6B5; -fx-border-color: B9B6B5;">
                            <children>
-                              <TableView prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="roomsTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn prefWidth="169.99999380111694" resizable="false" text="ID" />
-                                  <TableColumn prefWidth="247.0" resizable="false" text="Capacity" />
+                                  <TableColumn prefWidth="${roomsTableView.width*0.5}" resizable="false" text="ID" />
+                                  <TableColumn prefWidth="${roomsTableView.width*0.5}" resizable="false" text="Capacity" />
                                 </columns>
                               </TableView>
                            </children>
