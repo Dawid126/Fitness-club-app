@@ -14,12 +14,13 @@ public class HostManager {
     }
 
     public boolean createHost (String name, String surname, String email) {
-        if(StringsValidator.validateInfo(name,surname,email))
+        if(!StringsValidator.validateInfo(name,surname,email))
             return false;
-        if(!dataManager.isEmailFree(email))
-            return false;
-        dataManager.saveHost(new Host(name,surname,email));
-        return true;
+        if(!dataManager.isEmailFree(email)) {
+            dataManager.saveHost(new Host(name,surname,email));
+            return true;
+        }
+        return false;
     }
 
     public boolean removeHost (Host host) {
