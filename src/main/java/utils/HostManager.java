@@ -15,7 +15,7 @@ public class HostManager {
     public boolean createHost (String name, String surname, String email) {
         if(!dataManager.isEmailFree(email))
             return false;
-        Host newHost = new Host(name,surname,email);
+        dataManager.saveHost(new Host(name,surname,email));
         return true;
     }
 
