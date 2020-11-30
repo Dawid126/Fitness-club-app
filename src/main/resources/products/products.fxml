@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import ui.products.ProductDetails?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ui.products.ProductsController">
+   <TitledPane fx:id="titlePane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" animated="false"  text="Products" >
+      <content>
+         <AnchorPane>
+            <children>
+            <SplitPane focusTraversable="true" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <items>
+                  <ScrollPane maxHeight="${titlePane.height}" fx:id="sasd" fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+                     <content>
+                        <GridPane fx:id="productsGrid" vgap="10" hgap="10" alignment="CENTER">
+
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane>
+                     <children>
+                        <VBox>
+<!--                           <Text text="Select product to see details"></Text>-->
+                           <ProductDetails></ProductDetails>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            </children>
+         </AnchorPane>
+      </content>
+   </TitledPane>
+</AnchorPane>
