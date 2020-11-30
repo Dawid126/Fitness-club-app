@@ -52,6 +52,10 @@ public class DataInitiator {
             activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY));
             activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY));
             activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY));
+            activities.add(new Activity("xD7",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY));
+            activities.add(new Activity("xD8",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY));
+            activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY));
+            activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY));
         } catch ( ParseException e ) {
             System.out.println("xD");
         }

@@ -61,7 +61,7 @@ public class FitnessApp extends Application {
         List<Room> rooms = dataManager.loadRooms();
         DateFormat format = new SimpleDateFormat("hh:mm");
         try {
-            if(activityManager.createActivity("xD7",hosts.get(0),rooms.get(0),format.parse("11:30"),format.parse("13:00"), WeekDay.MONDAY))
+            if(activityManager.createActivity("xD11",hosts.get(0),rooms.get(0),format.parse("11:30"),format.parse("13:00"), WeekDay.MONDAY))
                 System.out.println("SUCCESS");
             else
                 System.out.println("FAILURE");
