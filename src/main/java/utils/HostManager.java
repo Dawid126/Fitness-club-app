@@ -14,11 +14,7 @@ public class HostManager {
     }
 
     public boolean createHost (String name, String surname, String email) {
-        if(StringsValidator.validateName(name))
-            return false;
-        if(StringsValidator.validateName(surname))
-            return false;
-        if(StringsValidator.validateEmail(email))
+        if(StringsValidator.validateInfo(name,surname,email))
             return false;
         if(!dataManager.isEmailFree(email))
             return false;

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringsValidator {
+    public static boolean validateInfo (String name, String surname, String email) {
+        return validateName(name) && validateName(surname) && validateEmail(email);
+    }
     public static boolean validateName (String name) {
         List<Character> specialSigns = new ArrayList<>();
         for(Character c : "{}()[]<>;:=+_*/|0123456789,.!?~`@#$%^&*".toCharArray())

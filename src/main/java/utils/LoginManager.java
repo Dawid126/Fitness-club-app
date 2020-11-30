@@ -29,6 +29,8 @@ public class LoginManager {
     }
 
     public boolean registerNewUser (String name, String surname, String email, Role role, String password) {
+        if(StringsValidator.validateInfo(name,surname,email))
+            return false;
         if(dataManager.getUserByEmail(email) == null) {
             dataManager.saveUser(new User(name, surname, email, role, password));
             return true;
