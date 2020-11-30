@@ -5,6 +5,7 @@ import model.Room;
 import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
+import shop.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,8 @@ public class DataManager implements IDataManager{
     private List<User> users = new ArrayList<>();
     private List<Room> rooms = new ArrayList<>();
     private List<Host> hosts = new ArrayList<>();
-    private List<Activity> activities = new ArrayList<>(); //to be deleted
+    private List<Activity> activities = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 
     public DataManager() {}
 
@@ -39,6 +41,10 @@ public class DataManager implements IDataManager{
     public void saveRooms(List<Room> rooms) {
         this.rooms = rooms;
     }
+    @Override
+    public void saveProducts(List<Product> products) {
+        this.products = products;
+    }
 
     @Override
     public List<Activity> loadActivities() {
@@ -58,6 +64,10 @@ public class DataManager implements IDataManager{
     }
     @Override
     public List<Room> loadRooms() {return rooms;}
+    @Override
+    public List<Product> loadProducts() {
+        return products;
+    }
 
     @Override
     public void saveActivity(Activity activity) {
@@ -84,6 +94,11 @@ public class DataManager implements IDataManager{
         if(!rooms.contains(room))
             rooms.add(room);
     }
+    @Override
+    public void saveProduct(Product product) {
+        if(!products.contains(product))
+            products.add(product);
+    }
 
     @Override
     public void removeActivity(Activity activity) {
@@ -105,6 +120,10 @@ public class DataManager implements IDataManager{
     public void removeRoom(Room room) {
         rooms.remove(room);
     }
+    @Override
+    public void removeProduct(Product product) {
+        products.remove(product);
+    }
 
     @Override
     public User getUserByEmail(String email) {
@@ -113,4 +132,22 @@ public class DataManager implements IDataManager{
         }
         return null;
     }
+
+    @Override
+    public boolean isEmailFree(String email) {
+        for(Client client: clients) {
+            if(client.getEmail().equals(email))
+                return false;
+        }
+        for(Host host: hosts) {
+            if(host.getEmail().equals(email))
+                return false;
+        }
+        for(User user: users) {
+            if(user.getEmail().equals(email))
+                return false;
+        }
+        return true;
+    }
+
 }
