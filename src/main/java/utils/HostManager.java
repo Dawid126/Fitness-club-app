@@ -2,6 +2,7 @@ package utils;
 
 import model.persons.Host;
 import persistance.IDataManager;
+import utils.StringsValidator;
 
 import java.util.List;
 
@@ -13,6 +14,12 @@ public class HostManager {
     }
 
     public boolean createHost (String name, String surname, String email) {
+        if(StringsValidator.validateName(name))
+            return false;
+        if(StringsValidator.validateName(surname))
+            return false;
+        if(StringsValidator.validateEmail(email))
+            return false;
         if(!dataManager.isEmailFree(email))
             return false;
         dataManager.saveHost(new Host(name,surname,email));
