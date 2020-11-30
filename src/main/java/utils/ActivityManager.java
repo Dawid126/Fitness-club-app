@@ -3,7 +3,6 @@ package utils;
 import enums.WeekDay;
 import model.Activity;
 import model.Room;
-import model.Scheduler;
 import model.persons.Client;
 import model.persons.Host;
 import persistance.IDataManager;
@@ -13,21 +12,16 @@ import java.util.Date;
 import java.util.List;
 
 public class ActivityManager {
-    private final Scheduler scheduler;
     private final IDataManager dataManager;
 
     public ActivityManager (IDataManager dataManager) {
         this.dataManager = dataManager;
-        this.scheduler = new Scheduler();
-        for(Activity a : dataManager.loadActivities()) {
-            this.scheduler.addActivity(a);
-        }
     }
 
     public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         if(!host.isFree(weekDay,startTime,endTime))
             return false;
-        List<Activity> activities = scheduler.getActivities(weekDay,room);
+        List<Activity> activities = getActivities(weekDay,room);
         for(Activity activity : activities) {
             if(activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime) ||
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
@@ -35,13 +29,12 @@ public class ActivityManager {
         }
         Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
         dataManager.saveActivity(newActivity);
-        scheduler.addActivity(newActivity);
         return true;
     }
 
-    public void removeActivity (Activity activity) {
-        scheduler.removeActivity(activity);
+    public boolean removeActivity (Activity activity) {
         dataManager.removeActivity(activity);
+        return true;
     }
 
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
@@ -66,14 +59,10 @@ public class ActivityManager {
         activity.removeClient(clientToRemove);
     }
 
-    public List<Activity> getAllActivities (WeekDay weekDay) {
-        return scheduler.getActivities(weekDay);
-    }
-
     public List<Room> getPossibleRooms (WeekDay weekDay, Date startTime, Date endTime) {
         List<Room> availableRooms = dataManager.loadRooms();
 
-        for(Activity activity: this.getAllActivities(weekDay)) {
+        for(Activity activity: this.getActivities(weekDay)) {
             if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
                     (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))) {
                 availableRooms.remove(activity.getRoom());
@@ -82,9 +71,43 @@ public class ActivityManager {
         return availableRooms;
     }
 
-    public List<Host> getPossibleHosts () {
-        List<Host> result = new ArrayList<>();
-        //TODO:
+    public List<Host> getPossibleHosts (WeekDay weekDay, Date startTime, Date endTime) {
+        List<Host> availableHosts = dataManager.loadHosts();
+
+        for(Activity activity: this.getActivities(weekDay)) {
+            if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
+                    (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))) {
+                availableHosts.remove(activity.getHost());
+            }
+        }
+        return availableHosts;
+    }
+
+    public List<Activity> getActivities () {
+        return dataManager.loadActivities();
+    }
+    public List<Activity> getActivities(WeekDay weekDay) {
+        List<Activity> result = new ArrayList<>();
+        for(Activity activity : dataManager.loadActivities()) {
+            if(activity.getWeekDay().equals(weekDay))
+                result.add(activity);
+        }
+        return result;
+    }
+    public List<Activity> getActivities(Room room) {
+        List<Activity> result = new ArrayList<>();
+        for(Activity activity : dataManager.loadActivities()) {
+            if(activity.getRoom().equals(room))
+                result.add(activity);
+        }
+        return result;
+    }
+    public List<Activity> getActivities(WeekDay weekDay, Room room) {
+        List<Activity> result = new ArrayList<>();
+        for(Activity activity : dataManager.loadActivities()) {
+            if(activity.getWeekDay().equals(weekDay) && activity.getRoom().equals(room))
+                result.add(activity);
+        }
         return result;
     }
 }

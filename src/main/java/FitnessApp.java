@@ -47,7 +47,7 @@ public class FitnessApp extends Application {
             System.out.println(c.getEmail());
         }
         ActivityManager activityManager = new ActivityManager(dataManager);
-        for(Activity a : activityManager.getAllActivities(WeekDay.MONDAY)) {
+        for(Activity a : activityManager.getActivities(WeekDay.MONDAY)) {
             System.out.println(a.getName());
         }
         List<Host> hosts = dataManager.loadHosts();
