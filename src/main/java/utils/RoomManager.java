@@ -21,21 +21,15 @@ public class RoomManager {
     public boolean removeRoom(Room roomToRemove) {
         List<Activity> activies = dataManager.loadActivities();
         for(Activity activity: activies) {
-            if(activity.getRoom().equals(roomToRemove)); //TODO zwracanie listy activities ktore uzywaja dany room
-            return false;
+            if(activity.getRoom().equals(roomToRemove)) //TODO zwracanie listy activities ktore uzywaja dany room
+                return false;
         }
         dataManager.removeRoom(roomToRemove);
         return true;
     }
 
-    public boolean createRoom(int capacity) {
-        Room newRoom = new Room(capacity);
-        if(!dataManager.loadRooms().contains(newRoom)) {
-            dataManager.saveRoom(new Room(capacity));
-            return true;
-        }
-        return false;
+    public void createRoom(int capacity) {
+        dataManager.saveRoom(new Room(capacity));
     }
-
 
 }

@@ -16,4 +16,6 @@ public class User extends AbstractPerson{
         return password;
     }
 
+    public Role getRole() { return role; }
+
 }
