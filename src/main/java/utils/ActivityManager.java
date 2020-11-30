@@ -13,10 +13,18 @@ import java.util.Date;
 import java.util.List;
 
 public class ActivityManager {
-    private Scheduler scheduler;
-    private IDataManager dataManager;
+    private final Scheduler scheduler;
+    private final IDataManager dataManager;
 
-    public boolean createActivity (String name, int id, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
+    public ActivityManager (IDataManager dataManager) {
+        this.dataManager = dataManager;
+        this.scheduler = new Scheduler();
+        for(Activity a : dataManager.loadActivities()) {
+            this.scheduler.addActivity(a);
+        }
+    }
+
+    public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
         if(!host.isFree(weekDay,startTime,endTime))
             return false;
         List<Activity> activities = scheduler.getActivities(weekDay,room);
@@ -25,11 +33,15 @@ public class ActivityManager {
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
                 return false;
         }
-        scheduler.addActivity(new Activity(name, id, host, room, startTime, endTime, weekDay));
+        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
+        dataManager.saveActivity(newActivity);
+        scheduler.addActivity(newActivity);
         return true;
     }
+
     public void removeActivity (Activity activity) {
         scheduler.removeActivity(activity);
+        dataManager.removeActivity(activity);
     }
 
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
@@ -67,7 +79,12 @@ public class ActivityManager {
                 availableRooms.remove(activity.getRoom());
             }
         }
-
         return availableRooms;
+    }
+
+    public List<Host> getPossibleHosts () {
+        List<Host> result = new ArrayList<>();
+        //TODO:
+        return result;
     }
 }

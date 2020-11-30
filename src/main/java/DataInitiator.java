@@ -1,4 +1,5 @@
 import enums.Role;
+import enums.WeekDay;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
@@ -6,6 +7,9 @@ import model.persons.Host;
 import model.persons.User;
 import persistance.IDataManager;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +20,8 @@ public class DataInitiator {
         this.dataManager = dataManager;
     }
     public void fillData () {
+        DateFormat format = new SimpleDateFormat("hh:mm");
+
         List<Room> rooms = new ArrayList<>();
         List<User> users = new ArrayList<>();
         List<Host> hosts = new ArrayList<>();
@@ -38,6 +44,17 @@ public class DataInitiator {
         clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@xd.com"));
         clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@xd.com"));
         clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@xd.com"));
+
+        try {
+            activities.add(new Activity("xD1",hosts.get(0),rooms.get(0),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY));
+            activities.add(new Activity("xD2",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY));
+            activities.add(new Activity("xD3",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY));
+            activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY));
+            activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY));
+            activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY));
+        } catch ( ParseException e ) {
+            System.out.println("xD");
+        }
 
         dataManager.saveRooms(rooms);
         dataManager.saveUsers(users);
