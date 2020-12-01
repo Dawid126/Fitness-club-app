@@ -1,19 +1,8 @@
-import enums.WeekDay;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.Activity;
-import model.Room;
-import model.persons.Client;
-import model.persons.Host;
 import persistance.DataManager;
 import persistance.IDataManager;
-import utils.ActivityManager;
 import utils.statics.DataInitiator;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.List;
 
 public class FitnessApp extends Application {
     private Stage primaryStage;
