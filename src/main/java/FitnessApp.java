@@ -1,4 +1,3 @@
-import enums.Role;
 import enums.WeekDay;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -6,13 +5,11 @@ import model.Activity;
 import model.Room;
 import model.persons.Client;
 import model.persons.Host;
-import org.checkerframework.checker.units.qual.A;
-import org.hibernate.SessionFactory;
 import persistance.DataManager;
 import persistance.IDataManager;
 import utils.ActivityManager;
+import utils.statics.DataInitiator;
 
-import java.lang.module.Configuration;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -36,36 +33,6 @@ public class FitnessApp extends Application {
     public static void main(String[] args){
         IDataManager dataManager = new DataManager();
         DataInitiator.fillData(dataManager);
-//        backTesting(dataManager);
         Application.launch(args);
-    }
-
-    private static void backTesting(IDataManager dataManager) {
-        List<Client> clients = dataManager.loadClients();
-        for(Client c : clients) {
-            System.out.println(c.getEmail());
-        }
-        ActivityManager activityManager = new ActivityManager(dataManager);
-        for(Activity a : activityManager.getActivities(WeekDay.MONDAY)) {
-            System.out.println(a.getName());
-        }
-        List<Host> hosts = dataManager.loadHosts();
-        for(Host host : hosts) {
-            System.out.println(host.getEmail());
-            for(Activity ac : host.getActivities()) {
-                System.out.println(ac.getName());
-            }
-        }
-        System.out.println("Activity Manager TEST");
-        List<Room> rooms = dataManager.loadRooms();
-        DateFormat format = new SimpleDateFormat("hh:mm");
-        try {
-            if(activityManager.createActivity("xD11",hosts.get(0),rooms.get(0),format.parse("11:30"),format.parse("13:00"), WeekDay.MONDAY))
-                System.out.println("SUCCESS");
-            else
-                System.out.println("FAILURE");
-        } catch ( ParseException e ) {
-            System.out.println("xD");
-        }
     }
 }

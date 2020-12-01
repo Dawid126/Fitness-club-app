@@ -2,6 +2,7 @@ package utils;
 
 import model.persons.Client;
 import persistance.IDataManager;
+import utils.statics.StringsValidator;
 
 import java.util.List;
 

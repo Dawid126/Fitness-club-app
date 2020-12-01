@@ -1,3 +1,5 @@
+package utils.statics;
+
 import enums.Role;
 import enums.WeekDay;
 import model.Activity;

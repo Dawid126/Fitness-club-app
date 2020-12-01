@@ -1,4 +1,4 @@
-package utils;
+package utils.statics;
 
 import java.util.ArrayList;
 import java.util.List;
