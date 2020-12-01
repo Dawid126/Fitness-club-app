@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<fx:root style="-fx-background-color: green;" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root style="-fx-background-color: green;" fx:controller="ui.products.productTile.ProductTileController" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fx:id="productName" strokeType="OUTSIDE" strokeWidth="0.0" text="product_name" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="199.7294921875" VBox.vgrow="ALWAYS" />
       <ImageView fx:id="productImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <HBox alignment="CENTER">
          <children>
-            <Button fx:id="detailsButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Details" />
+            <Button fx:id="detailsButton" onAction="#selectProduct" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Details" />
          </children>
       </HBox>
    </children>

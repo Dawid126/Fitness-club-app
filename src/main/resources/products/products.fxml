@@ -28,14 +28,12 @@
                         </GridPane>
                      </content>
                   </ScrollPane>
-                  <AnchorPane>
-                     <children>
-                        <VBox>
-<!--                           <Text text="Select product to see details"></Text>-->
-                           <ProductDetails></ProductDetails>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
+                   <AnchorPane maxWidth="200">
+                       <VBox>
+                           <Text fx:id="noProductSelectedText" text="Select product to see details"></Text>
+                          <ProductDetails fx:id="productDetails"></ProductDetails>
+                       </VBox>
+                   </AnchorPane>
                </items>
             </SplitPane>
             </children>

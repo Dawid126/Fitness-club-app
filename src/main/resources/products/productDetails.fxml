@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<fx:root type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:controller="ui.products.productDetails.ProductDetailsController" type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="25.0" layoutY="73.0" prefHeight="400.0" prefWidth="219.0" >
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" alignment="TOP_CENTER">
          <children>
             <HBox alignment="CENTER">
                <children>
@@ -24,16 +24,16 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                  <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
                </children>
             </HBox>
             <VBox alignment="BOTTOM_CENTER" minWidth="-Infinity" prefHeight="218.0" prefWidth="219.0">
                <children>
                   <HBox alignment="BASELINE_CENTER" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" text="-" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
-                        <Button mnemonicParsing="false" text="+" />
+                        <Button mnemonicParsing="false" text="-" onAction="#decreaseQuantity" />
+                        <Text fx:id="quantity" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+                        <Button mnemonicParsing="false" text="+" onAction="#increaseQuantity"/>
                      </children>
                   </HBox>
                </children>
