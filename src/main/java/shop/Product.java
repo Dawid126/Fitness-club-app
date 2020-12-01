@@ -23,6 +23,9 @@ public class Product {
     public int getPrice() {
         return price;
     }
+    public String getPriceAsString() {
+        return price/100+","+price%100+"$";
+    }
     public String getDescription() {
         return description;
     }
