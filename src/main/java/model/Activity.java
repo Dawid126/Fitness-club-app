@@ -17,14 +17,16 @@ public class Activity {
     private final Room room;
     private final Date startTime;
     private final Date endTime;
+    private int maxGroupSize;
 
-    public Activity(String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
+    public Activity(String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay, int maxGroupSize) {
         this.name = name;
         this.host = host;
         this.room = room;
         this.startTime = startTime;
         this.endTime = endTime;
         this.weekDay = weekDay;
+        this.maxGroupSize = Math.min(maxGroupSize,room.getCapacity());
         this.participants = new ArrayList<>();
         this.host.addActivity(this);
     }
@@ -39,6 +41,11 @@ public class Activity {
 
     public boolean isEnrolled (Client client) {
         return participants.contains(client);
+    }
+    public boolean canEnroll (Client client) {
+        if(participants.contains(client))
+            return false;
+        return participants.size() < maxGroupSize;
     }
 
     public Date getEndTime() {
@@ -64,5 +71,8 @@ public class Activity {
     }
     public WeekDay getWeekDay() {
         return weekDay;
+    }
+    public int getMaxGroupSize() {
+        return maxGroupSize;
     }
 }

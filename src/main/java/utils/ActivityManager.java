@@ -18,7 +18,7 @@ public class ActivityManager {
         this.dataManager = dataManager;
     }
 
-    public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay) {
+    public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay, int maxGroupSize) {
         if(!host.isFree(weekDay,startTime,endTime))
             return false;
         List<Activity> activities = getActivities(weekDay,room);
@@ -27,7 +27,7 @@ public class ActivityManager {
                     activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime))
                 return false;
         }
-        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay);
+        Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay, maxGroupSize);
         dataManager.saveActivity(newActivity);
         return true;
     }
@@ -38,9 +38,7 @@ public class ActivityManager {
     }
 
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
-        if(activity.isEnrolled(clientToAdd))
-            return false;
-        if(activity.getParticipants().size() == activity.getRoom().getCapacity())
+        if(activity.canEnroll(clientToAdd))
             return false;
 
         for(Activity clientActivity : clientToAdd.getActivities()) {
