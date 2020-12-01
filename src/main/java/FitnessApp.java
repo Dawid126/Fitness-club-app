@@ -34,14 +34,13 @@ public class FitnessApp extends Application {
     }
 
     public static void main(String[] args){
-        backTesting();
+        IDataManager dataManager = new DataManager();
+        DataInitiator.fillData(dataManager);
+//        backTesting(dataManager);
         Application.launch(args);
     }
 
-    private static void backTesting() {
-        IDataManager dataManager = new DataManager();
-        DataInitiator initiator = new DataInitiator(dataManager);
-        initiator.fillData();
+    private static void backTesting(IDataManager dataManager) {
         List<Client> clients = dataManager.loadClients();
         for(Client c : clients) {
             System.out.println(c.getEmail());
@@ -51,12 +50,12 @@ public class FitnessApp extends Application {
             System.out.println(a.getName());
         }
         List<Host> hosts = dataManager.loadHosts();
-//        for(Host host : hosts) {
-//            System.out.println(host.getEmail());
-//            for(Activity ac : host.getActivities()) {
-//                System.out.println(ac.getName());
-//            }
-//        }
+        for(Host host : hosts) {
+            System.out.println(host.getEmail());
+            for(Activity ac : host.getActivities()) {
+                System.out.println(ac.getName());
+            }
+        }
         System.out.println("Activity Manager TEST");
         List<Room> rooms = dataManager.loadRooms();
         DateFormat format = new SimpleDateFormat("hh:mm");

@@ -6,6 +6,7 @@ import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
 import persistance.IDataManager;
+import shop.Product;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -14,12 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataInitiator {
-    private final IDataManager dataManager;
-
-    public DataInitiator (IDataManager dataManager) {
-        this.dataManager = dataManager;
-    }
-    public void fillData () {
+    public static void fillData (IDataManager dataManager) {
         DateFormat format = new SimpleDateFormat("hh:mm");
 
         List<Room> rooms = new ArrayList<>();
@@ -27,6 +23,7 @@ public class DataInitiator {
         List<Host> hosts = new ArrayList<>();
         List<Client> clients = new ArrayList<>();
         List<Activity> activities = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
 
         for(int i=0; i<5; i++)
             rooms.add(new Room(30));
@@ -60,10 +57,24 @@ public class DataInitiator {
             System.out.println("xD");
         }
 
+        products.add(new Product("Soczek dla koxa",10,2137,"Description"));
+        products.add(new Product("Soczek dla cziki",10,2137,"Description"));
+        products.add(new Product("Soczek dla dzika",10,2137,"Description"));
+        products.add(new Product("Soczek dla byczka",10,2137,"Description"));
+        products.add(new Product("Baton dla koxa",10,2137,"Description"));
+        products.add(new Product("Baton dla cziki",10,2137,"Description"));
+        products.add(new Product("Baton dla dzika",10,2137,"Description"));
+        products.add(new Product("Baton dla byczka",10,2137,"Description"));
+        products.add(new Product("Białko dla koxa",10,2137,"Description"));
+        products.add(new Product("Białko dla cziki",10,2137,"Description"));
+        products.add(new Product("Białko dla dzika",10,2137,"Description"));
+        products.add(new Product("Białko dla byczka",10,2137,"Description"));
+
         dataManager.saveRooms(rooms);
         dataManager.saveUsers(users);
         dataManager.saveHosts(hosts);
         dataManager.saveActivities(activities);
         dataManager.saveClients(clients);
+        dataManager.saveProducts(products);
     }
 }
