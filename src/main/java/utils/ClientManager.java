@@ -1,8 +1,6 @@
 package utils;
 
-import model.Activity;
 import model.persons.Client;
-import persistance.DataManager;
 import persistance.IDataManager;
 
 import java.util.List;
@@ -12,10 +10,6 @@ public class ClientManager {
 
     public ClientManager(IDataManager dataManager) {
         this.dataManager = dataManager;
-    }
-
-    public List<Client> getClients() {
-        return dataManager.loadClients();
     }
 
     public boolean createClient(String name, String surname, String email) {
@@ -33,5 +27,9 @@ public class ClientManager {
             return false;
         dataManager.removeClient(clientToRemove);
         return true;
+    }
+
+    public List<Client> getClients() {
+        return dataManager.loadClients();
     }
 }

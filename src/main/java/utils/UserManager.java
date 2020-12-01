@@ -1,8 +1,6 @@
 package utils;
 
 import enums.Role;
-import model.Activity;
-import model.persons.Client;
 import model.persons.User;
 import persistance.IDataManager;
 
@@ -13,10 +11,6 @@ public class UserManager {
 
     public UserManager(IDataManager dataManager) {
         this.dataManager = dataManager;
-    }
-
-    public List<User> getUsers() {
-        return dataManager.loadUsers();
     }
 
     public boolean createUser(String name, String surname, String email, Role role, String password) {
@@ -34,5 +28,9 @@ public class UserManager {
             return false;
         dataManager.removeUser(userToRemove);
         return true;
+    }
+
+    public List<User> getUsers() {
+        return dataManager.loadUsers();
     }
 }

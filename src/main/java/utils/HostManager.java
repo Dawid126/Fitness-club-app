@@ -2,7 +2,6 @@ package utils;
 
 import model.persons.Host;
 import persistance.IDataManager;
-import utils.StringsValidator;
 
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class HostManager {
     }
 
     public boolean removeHost (Host host) {
-        if(host.getActivities().size() > 0)
+        if(!host.getActivities().isEmpty())
             return false;
         dataManager.removeHost(host);
         return true;
