@@ -38,8 +38,7 @@ public class ProductsController {
 
     private void initializeGrid() {
         int columns = 3, productsCount = 12;
-        IDataManager dataManager = new DataManager();
-        var store = new Store(dataManager);
+        var store = Store.getInstance();
         AtomicInteger i = new AtomicInteger();
         store.getProducts().forEach((product) -> {
             var productTile = new ProductTile();

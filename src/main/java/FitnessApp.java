@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import persistance.DataManager;
 import persistance.IDataManager;
+import shop.Store;
 import utils.statics.DataInitiator;
 
 public class FitnessApp extends Application {
@@ -22,6 +23,7 @@ public class FitnessApp extends Application {
     public static void main(String[] args){
         IDataManager dataManager = new DataManager();
         DataInitiator.fillData(dataManager);
+        new Store(dataManager);
         Application.launch(args);
     }
 }
