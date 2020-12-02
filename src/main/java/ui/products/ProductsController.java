@@ -40,21 +40,21 @@ public class ProductsController {
         int columns = 3, productsCount = 12;
         IDataManager dataManager = new DataManager();
         var store = new Store(dataManager);
-//        AtomicInteger i = new AtomicInteger();
-//        store.getProducts().forEach((product) -> {
-//            var productTile = new ProductTile();
-//            productTile.setProduct(product);
-//            productTile.setService(selectedProductsService);
-//            productsGrid.add(productTile, i.get() % columns, i.get() / columns);
-//            i.getAndIncrement();
-//        });
-        for (int i = 0; i < productsCount; ++i) {
-            var product = new Product("name", 1, 30, "desc" + i);
+        AtomicInteger i = new AtomicInteger();
+        store.getProducts().forEach((product) -> {
             var productTile = new ProductTile();
             productTile.setProduct(product);
             productTile.setService(selectedProductsService);
-            productsGrid.add(productTile, i % columns, i / columns);
-        }
+            productsGrid.add(productTile, i.get() % columns, i.get() / columns);
+            i.getAndIncrement();
+        });
+//        for (int i = 0; i < productsCount; ++i) {
+//            var product = new Product("name", 1, 30, "desc" + i);
+//            var productTile = new ProductTile();
+//            productTile.setProduct(product);
+//            productTile.setService(selectedProductsService);
+//            productsGrid.add(productTile, i % columns, i / columns);
+//        }
     }
 
 

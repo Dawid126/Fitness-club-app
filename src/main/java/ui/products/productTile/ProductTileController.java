@@ -18,12 +18,16 @@ public class ProductTileController {
     @FXML
     private Text productName;
 
+    @FXML
+    private Text price;
+
     public ProductTileController() {
     }
 
     public void setProduct(Product product) {
         this.product = product;
         productName.setText(product.getName());
+        price.setText(String.valueOf(product.getPrice()));
     }
 
     public void setSelectedProductsService(SelectedProductsService selectedProductsService) {
