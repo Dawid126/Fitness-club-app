@@ -18,7 +18,7 @@ public class ClientManager {
         instance = this;
     }
 
-    public ClientManager getInstance() {
+    public static ClientManager getInstance() {
         return instance;
     }
 
