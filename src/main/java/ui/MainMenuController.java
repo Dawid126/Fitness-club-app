@@ -17,13 +17,17 @@ public class MainMenuController {
     @FXML
     private void handleShowView(ActionEvent e) {
         String view = (String) ((Node) e.getSource()).getUserData();
+        System.out.println(view);
         loadFXML(getClass().getResource(view));
     }
 
     private void loadFXML(URL url) {
         try {
             FXMLLoader loader = new FXMLLoader(url);
+            System.out.println("OK");
+            System.out.println("OK");
             routerContainer.setCenter(loader.load());
+            System.out.println("GIT");
         }
         catch (IOException e) {
             e.printStackTrace();

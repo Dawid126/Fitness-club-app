@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Customers.CustomersController">
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Clients.ClientsController">
    <children>
-      <TitledPane animated="false" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: B9B6B5;" text="Customers" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TitledPane animated="false" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: B9B6B5;" text="Clients" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -21,13 +21,11 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: B9B6B5; -fx-border-color: B9B6B5;">
                            <children>
                               <ListView layoutX="95.0" layoutY="87.0" prefHeight="398.0" prefWidth="485.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                              <TableView fx:id="customersTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="clientsTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-<!--                                    <TableColumn prefWidth="${customersTableView.width*0.1}" text="ID" />-->
-                                  <TableColumn prefWidth="${customersTableView.width*0.175}" text="name" fx:id="name"/>
-                                  <TableColumn prefWidth="${customersTableView.width*0.175}" text="surname" fx:id="surname"/>
-                                    <TableColumn prefWidth="${customersTableView.width*0.2}" text="email" fx:id="email"/>
-<!--                                    <TableColumn prefWidth="${customersTableView.width*0.35}" text="Activities" />-->
+                                  <TableColumn prefWidth="${clientsTableView.width*0.175}" text="name" fx:id="name"/>
+                                  <TableColumn prefWidth="${clientsTableView.width*0.175}" text="surname" fx:id="surname"/>
+                                    <TableColumn prefWidth="${clientsTableView.width*0.2}" text="email" fx:id="email"/>
                                 </columns>
                               </TableView>
                            </children>
@@ -39,7 +37,7 @@
                            <children>
                               <VBox layoutX="-7.0" layoutY="45.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" style="-fx-border-color: B9B6B5; -fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../../styles/menuButton.css" text="Add" onAction="#addCustomer"/>
+                                    <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../../styles/menuButton.css" text="Add" onAction="#addClient"/>
                                     <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Remove" />
                                     <Button layoutX="10.0" layoutY="35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Edit" />
                                  </children>

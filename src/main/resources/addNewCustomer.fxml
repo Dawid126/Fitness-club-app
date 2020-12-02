@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<BorderPane prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.addNewCustomer.AddNewCustomerController">
+<?import javafx.scene.text.Text?>
+<BorderPane prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.addNewClient.AddNewClientController">
     <center>
         <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
             <columnConstraints>
@@ -60,14 +61,15 @@
     <bottom>
         <HBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
             <children>
-                <Button mnemonicParsing="false"  prefWidth="100.0" text="Cancel">
+                <Button mnemonicParsing="false"  prefWidth="100.0" text="Ok" onAction="#addCustomer">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin></Button>
-                <Button mnemonicParsing="false"  prefWidth="60.0" text="Ok" onAction="#addCustomer">
+                <Text fx:id="validationError" text="Please enter correct data to proceed">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </HBox.margin></Button>
+                    </HBox.margin>
+                </Text>
             </children>
             <BorderPane.margin>
                 <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />

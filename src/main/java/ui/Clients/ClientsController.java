@@ -1,4 +1,4 @@
-package ui.Customers;
+package ui.Clients;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -11,14 +11,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import ui.addNewCustomer.AddNewCustomerController;
+import ui.addNewClient.AddNewClientController;
 import utils.ClientManager;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CustomersController {
+public class ClientsController {
     @FXML
     private Button add;
 
@@ -26,7 +26,7 @@ public class CustomersController {
     private AnchorPane anchorPane;
 
     @FXML
-    private TableView<ClientView> customersTableView;
+    private TableView<ClientView> clientsTableView;
 
     @FXML
     private TableColumn<ClientView, String> name;
@@ -37,7 +37,7 @@ public class CustomersController {
     @FXML
     private TableColumn<ClientView, String> email;
 
-    public CustomersController() {
+    public ClientsController() {
 
     }
 
@@ -58,12 +58,12 @@ public class CustomersController {
     @FXML
     private void initialize() {
         setTableViewProps();
-        customersTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
+        clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
         System.out.println(mapClientsToViewModel().size());
     }
 
     @FXML
-    private void addCustomer() {
+    private void addClient() {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/addNewCustomer.fxml"));
         BorderPane page = null;
@@ -75,13 +75,13 @@ public class CustomersController {
         }
 
         Stage dialogStage = new Stage();
-        ((AddNewCustomerController)loader.getController()).setDialogStage(dialogStage);
-        dialogStage.setTitle("Edit transaction");
+        ((AddNewClientController)loader.getController()).setDialogStage(dialogStage);
+        dialogStage.setTitle("Add Client");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         Scene scene = new Scene(page);
         dialogStage.initOwner(stage);
         dialogStage.setScene(scene);
         dialogStage.showAndWait();
-        customersTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
+        clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
     }
 }
