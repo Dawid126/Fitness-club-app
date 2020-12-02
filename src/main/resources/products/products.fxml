@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 <?import ui.products.ProductDetails?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ui.products.ProductsController">
-   <TitledPane fx:id="titlePane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" animated="false"  text="Products" >
+   <TitledPane fx:id="titlePane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"  text="Products" >
       <content>
          <AnchorPane>
             <children>
