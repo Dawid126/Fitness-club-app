@@ -1,7 +1,11 @@
-package utils.statics;
+package utils;
 
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
 import enums.Role;
 import enums.WeekDay;
+import guice.DataModule;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
@@ -9,6 +13,8 @@ import model.persons.Host;
 import model.persons.User;
 import persistance.IDataManager;
 import shop.Product;
+import shop.Store;
+import utils.*;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -17,7 +23,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataInitiator {
-    public static void fillData (IDataManager dataManager) {
+
+    private final IDataManager dataManager;
+    private Store store;
+    private ActivityManager activityManager;
+    private ClientManager clientManager;
+    private HostManager hostManager;
+    private LoginManager loginManager;
+    private RoomManager roomManager;
+    private UserManager userManager;
+
+    @Inject
+    public DataInitiator(IDataManager dataManager) {
+        this.dataManager = dataManager;
+    }
+
+    public void setManagers(Injector injector) {
+        this.store = injector.getInstance(Store.class);
+        this.activityManager = injector.getInstance(ActivityManager.class);
+        this.clientManager = injector.getInstance(ClientManager.class);
+        this.hostManager = injector.getInstance(HostManager.class);
+        this.loginManager = injector.getInstance(LoginManager.class);
+        this.roomManager = injector.getInstance(RoomManager.class);
+        this.userManager = injector.getInstance(UserManager.class);
+    }
+
+    public void fillData () {
         DateFormat format = new SimpleDateFormat("hh:mm");
 
         List<Room> rooms = new ArrayList<>();

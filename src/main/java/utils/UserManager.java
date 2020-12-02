@@ -1,5 +1,7 @@
 package utils;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import enums.Role;
 import model.persons.User;
 import persistance.IDataManager;
@@ -9,9 +11,16 @@ import java.util.List;
 
 public class UserManager {
     private final IDataManager dataManager;
+    private static UserManager instance;
 
+    @Inject
     public UserManager(IDataManager dataManager) {
         this.dataManager = dataManager;
+        instance = this;
+    }
+
+    public static UserManager getInstance() {
+        return instance;
     }
 
     public boolean createUser(String name, String surname, String email, Role role, String password) {

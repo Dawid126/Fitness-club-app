@@ -1,5 +1,7 @@
 package utils;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import model.persons.Client;
 import persistance.IDataManager;
 import utils.statics.StringsValidator;
@@ -8,9 +10,16 @@ import java.util.List;
 
 public class ClientManager {
     private final IDataManager dataManager;
+    private static ClientManager instance;
 
+    @Inject
     public ClientManager(IDataManager dataManager) {
         this.dataManager = dataManager;
+        instance = this;
+    }
+
+    public ClientManager getInstance() {
+        return instance;
     }
 
     public boolean createClient(String name, String surname, String email) {

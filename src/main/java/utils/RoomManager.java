@@ -1,5 +1,7 @@
 package utils;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import model.Activity;
 import model.Room;
 import org.checkerframework.checker.units.qual.A;
@@ -9,9 +11,16 @@ import java.util.List;
 
 public class RoomManager {
     private final IDataManager dataManager;
+    private static RoomManager instance;
 
+    @Inject
     public RoomManager(IDataManager dataManager) {
         this.dataManager = dataManager;
+        instance = this;
+    }
+
+    public static RoomManager getInstance() {
+        return instance;
     }
 
     public List<Room> getRooms() {

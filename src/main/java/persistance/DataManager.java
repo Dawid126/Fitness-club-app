@@ -1,5 +1,6 @@
 package persistance;
 
+import com.google.inject.Singleton;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
@@ -10,6 +11,7 @@ import shop.Product;
 import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
 public class DataManager implements IDataManager{
 
     private List<Client> clients = new ArrayList<>();

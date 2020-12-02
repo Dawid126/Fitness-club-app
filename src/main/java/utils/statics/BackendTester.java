@@ -15,7 +15,7 @@ import java.util.List;
 
 public class BackendTester {
 
-    private static void backTesting(IDataManager dataManager) {
+    public static void backTesting(IDataManager dataManager) {
         List<Client> clients = dataManager.loadClients();
         for(Client c : clients) {
             System.out.println(c.getEmail());

@@ -1,18 +1,17 @@
 package shop;
 
+import com.google.inject.Inject;
 import persistance.IDataManager;
-import utils.statics.DataInitiator;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
     private final IDataManager dataManager;
     private static Store instance = null;
 
+    @Inject
     public Store(IDataManager dataManager) {
         this.dataManager = dataManager;
-        DataInitiator.fillData(dataManager); //temporary
         instance = this;
     }
 

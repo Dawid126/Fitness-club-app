@@ -1,11 +1,14 @@
 package utils;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import enums.WeekDay;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
 import model.persons.Host;
 import persistance.IDataManager;
+import shop.Store;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,9 +16,16 @@ import java.util.List;
 
 public class ActivityManager {
     private final IDataManager dataManager;
+    private static ActivityManager instance = null;
 
+    @Inject
     public ActivityManager (IDataManager dataManager) {
         this.dataManager = dataManager;
+        instance = this;
+    }
+
+    public ActivityManager getInstance() {
+        return instance;
     }
 
     public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay, int maxGroupSize) {
