@@ -23,27 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/guice/DataModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guice/DataModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistance/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistance/IDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/IDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ActivitiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ActivitiesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/RoomsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/TrainersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/TrainersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ActivityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ActivityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LoginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/statics/BackendTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/statics/BackendTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/activities.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/activities.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/trainers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trainers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +67,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -142,15 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,6 +197,8 @@
       <workItem from="1606657297439" duration="10455000" />
       <workItem from="1606942267901" duration="2481000" />
       <workItem from="1606944768692" duration="9757000" />
+      <workItem from="1606954809736" duration="312000" />
+      <workItem from="1606988753594" duration="1566000" />
     </task>
     <servers />
   </component>
@@ -267,6 +250,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
+    <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1116" y="559" key="MultipleFileMergeDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954992759" />
     <state x="1040" y="319" key="RollbackChangesDialog" timestamp="1606949183279">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

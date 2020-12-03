@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ActivityManager {
     private final IDataManager dataManager;
-    private static ActivityManager instance = null;
+    private static ActivityManager instance;
 
     @Inject
     public ActivityManager (IDataManager dataManager) {
@@ -22,7 +22,7 @@ public class ActivityManager {
         instance = this;
     }
 
-    public ActivityManager getInstance() {
+    public static ActivityManager getInstance() {
         return instance;
     }
 

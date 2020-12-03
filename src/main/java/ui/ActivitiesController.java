@@ -11,6 +11,8 @@ import javafx.scene.control.TableColumn;
 import model.Room;
 import model.persons.Host;
 import persistence.DataManager;
+import utils.ActivityManager;
+import utils.RoomManager;
 
 import java.util.Date;
 
@@ -35,11 +37,10 @@ public class ActivitiesController {
 
     ObservableList<Activity> data;
 
-    DataManager dataManager = new DataManager();
 
     @FXML
     private void initialize(){
-        data = FXCollections.observableList(dataManager.loadActivities());
+        data = FXCollections.observableList(ActivityManager.getInstance().getActivities());
         initializeTable();
     }
 

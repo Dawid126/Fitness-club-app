@@ -11,6 +11,8 @@ import model.Activity;
 import model.Room;
 import model.persons.Host;
 import persistence.DataManager;
+import utils.ClientManager;
+import utils.HostManager;
 
 import java.util.Date;
 
@@ -29,11 +31,11 @@ public class TrainersController {
 
     ObservableList<Host> data;
 
-    DataManager dataManager = new DataManager();
+
 
     @FXML
     private void initialize() {
-        data = FXCollections.observableList(dataManager.loadHosts());
+        data = FXCollections.observableList(HostManager.getInstance().getHosts());
         initializeTable();
     }
 

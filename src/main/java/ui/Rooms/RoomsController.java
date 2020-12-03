@@ -1,4 +1,4 @@
-package ui;
+package ui.Rooms;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,6 +10,7 @@ import model.Activity;
 import model.Room;
 import model.persons.Host;
 import persistence.DataManager;
+import utils.RoomManager;
 
 import java.util.Date;
 
@@ -23,11 +24,11 @@ public class RoomsController {
     TableColumn roomsCapacity;
     ObservableList<Room> data;
 
-    DataManager dataManager = new DataManager();
+
 
     @FXML
     private void initialize(){
-        data = FXCollections.observableList(dataManager.loadRooms());
+        data = FXCollections.observableList(RoomManager.getInstance().getRooms());
         initializeTable();
     }
 
