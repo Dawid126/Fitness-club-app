@@ -26,26 +26,26 @@ public class ClientsController {
     private AnchorPane anchorPane;
 
     @FXML
-    private TableView<ClientView> clientsTableView;
+    private TableView<ClientInfo> clientsTableView;
 
     @FXML
-    private TableColumn<ClientView, String> name;
+    private TableColumn<ClientInfo, String> name;
 
     @FXML
-    private TableColumn<ClientView, String> surname;
+    private TableColumn<ClientInfo, String> surname;
 
     @FXML
-    private TableColumn<ClientView, String> email;
+    private TableColumn<ClientInfo, String> email;
 
     public ClientsController() {
 
     }
 
-    private List<ClientView> mapClientsToViewModel() {
+    private List<ClientInfo> mapClientsToViewModel() {
         return ClientManager
                 .getInstance()
                 .getClients()
-                .stream().map(ClientView::new)
+                .stream().map(ClientInfo::new)
                 .collect(Collectors.toList());
     }
 
@@ -65,7 +65,7 @@ public class ClientsController {
     @FXML
     private void addClient() {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/addNewCustomer.fxml"));
+        loader.setLocation(getClass().getResource("/addNewClient.fxml"));
         BorderPane page = null;
         Stage stage = (Stage) anchorPane.getScene().getWindow();
         try {

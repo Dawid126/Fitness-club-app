@@ -4,12 +4,15 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import model.persons.Client;
 
-public class ClientView {
+// Class that represents Client properties that are used in the clients.fxml view.
+// Uses properties specific for JavaFX
+
+public class ClientInfo {
     private StringProperty name;
     private StringProperty surname;
     private StringProperty email;
 
-    public ClientView(Client client) {
+    public ClientInfo(Client client) {
         this.name = new SimpleStringProperty(client.getName());
         this.surname = new SimpleStringProperty(client.getSurname());
         this.email = new SimpleStringProperty(client.getEmail());
