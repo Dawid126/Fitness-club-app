@@ -8,6 +8,8 @@ public class StringsValidator {
         return validateName(name) && validateName(surname) && validateEmail(email);
     }
     public static boolean validateName (String name) {
+        if(name.length() <= 0)
+            return false;
         List<Character> specialSigns = new ArrayList<>();
         for(Character c : "{}()[]<>;:=+_*/|0123456789,.!?~`@#$%^&*".toCharArray())
             specialSigns.add(c);
@@ -25,6 +27,8 @@ public class StringsValidator {
         return true;
     }
     public static boolean validateEmail (String email) {
+        if(email.length() <= 0)
+            return false;
         List<Character> specialSigns = new ArrayList<>();
         for(Character c : "{}()[]<>;:=+_*/|,!?~`#$%^&*".toCharArray())
             specialSigns.add(c);
