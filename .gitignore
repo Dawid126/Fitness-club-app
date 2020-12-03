@@ -81,7 +81,7 @@ nb-configuration.xml
 ### Gradle template
 .gradle
 /build/
-
+.idea/workspace.xml
 # Ignore Gradle GUI config
 gradle-app.setting
 
