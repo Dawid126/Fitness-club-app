@@ -1,4 +1,4 @@
-package ui.addNewClient;
+package ui.addDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

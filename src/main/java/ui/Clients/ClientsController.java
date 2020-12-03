@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import ui.addNewClient.AddNewClientController;
+import ui.addDialogs.AddNewClientController;
 import utils.ClientManager;
 
 import java.io.IOException;

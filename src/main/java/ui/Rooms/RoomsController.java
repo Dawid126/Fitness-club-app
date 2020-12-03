@@ -3,43 +3,76 @@ package ui.Rooms;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import model.Activity;
-import model.Room;
-import model.persons.Host;
-import persistence.DataManager;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import ui.addDialogs.AddNewRoomController;
 import utils.RoomManager;
 
-import java.util.Date;
+import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class RoomsController {
     @FXML
-    TableView roomsTableView;
+    AnchorPane anchorPane;
 
     @FXML
-    TableColumn roomsId;
-    @FXML
-    TableColumn roomsCapacity;
-    ObservableList<Room> data;
+    TableView<RoomInfo> roomsTableView;
 
+    @FXML
+    TableColumn<RoomInfo, String> roomsId;
+    @FXML
+    TableColumn<RoomInfo, String> roomsCapacity;
+
+    ObservableList<RoomInfo> data;
 
 
     @FXML
     private void initialize(){
-        data = FXCollections.observableList(RoomManager.getInstance().getRooms());
-        initializeTable();
+        initializeTableCells();
+        roomsTableView.setItems(FXCollections.observableList(mapRoomsToViewModel()));
     }
 
-    private void initializeTable(){
-        roomsId.setCellValueFactory(
-                new PropertyValueFactory<Room, Integer>("id")
-        );
-        roomsCapacity.setCellValueFactory(
-                new PropertyValueFactory<Room, Integer>("capacity")
-        );
+    private List<RoomInfo> mapRoomsToViewModel(){
+        return RoomManager
+                .getInstance()
+                .getRooms()
+                .stream().map(RoomInfo::new)
+                .collect(Collectors.toList());
+    }
 
-        roomsTableView.setItems(data);
+    private void initializeTableCells(){
+        roomsId.setCellValueFactory(dataValue -> dataValue.getValue().getIdProperty());
+        roomsCapacity.setCellValueFactory(dataValue -> dataValue.getValue().getCapacityProperty());
+    }
+
+    @FXML
+    private void addRoom() {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/addNewRoom.fxml"));
+        BorderPane page = null;
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+
+        try {
+            page = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage dialogStage = new Stage();
+        ((AddNewRoomController)loader.getController()).setDialogStage(dialogStage);
+        dialogStage.setTitle("Add Client");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        Scene scene = new Scene(page);
+        dialogStage.initOwner(stage);
+        dialogStage.setScene(scene);
+        dialogStage.showAndWait();
+        roomsTableView.setItems(FXCollections.observableList(mapRoomsToViewModel()));
     }
 }

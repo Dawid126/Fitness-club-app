@@ -11,4 +11,8 @@ public class Room {
     public int getCapacity() {
         return capacity;
     }
+
+    public int getId() {
+        return id;
+    }
 }

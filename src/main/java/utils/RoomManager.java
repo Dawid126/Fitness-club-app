@@ -35,8 +35,12 @@ public class RoomManager {
         return true;
     }
 
-    public void createRoom(int capacity) {
-        dataManager.saveRoom(new Room(capacity));
+    public boolean createRoom(int capacity) {
+        if(capacity>0) {
+            dataManager.saveRoom(new Room(capacity));
+            return true;
+        }
+        return false;
     }
 
 }
