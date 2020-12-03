@@ -67,7 +67,7 @@ public class RoomsController {
 
         Stage dialogStage = new Stage();
         ((AddNewRoomController)loader.getController()).setDialogStage(dialogStage);
-        dialogStage.setTitle("Add Client");
+        dialogStage.setTitle("Add Room");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         Scene scene = new Scene(page);
         dialogStage.initOwner(stage);
