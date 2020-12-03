@@ -1,7 +1,7 @@
 package shop;
 
 import com.google.inject.Inject;
-import persistance.IDataManager;
+import persistence.IDataManager;
 
 import java.util.List;
 

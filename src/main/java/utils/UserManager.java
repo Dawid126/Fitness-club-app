@@ -1,10 +1,9 @@
 package utils;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import enums.Role;
 import model.persons.User;
-import persistance.IDataManager;
+import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
 import java.util.List;

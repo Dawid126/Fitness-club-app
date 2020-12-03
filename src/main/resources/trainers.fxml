@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CustomersController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.TrainersController">
    <children>
       <TitledPane animated="false" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: B9B6B5;" text="Trainers" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>
@@ -21,9 +21,10 @@
                            <children>
                               <TableView fx:id="trainersTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn prefWidth="${trainersTableView.width*0.2}" text="ID" />
-                                  <TableColumn prefWidth="${trainersTableView.width*0.4}" text="Name" />
-                                    <TableColumn prefWidth="${trainersTableView.width*0.4}" text="Surname" />
+                                  <TableColumn fx:id="trainersId" prefWidth="${trainersTableView.width*0.2}" text="ID" />
+                                  <TableColumn fx:id="trainersName" prefWidth="${trainersTableView.width*0.3}" text="Name" />
+                                    <TableColumn fx:id="trainersSurname" prefWidth="${trainersTableView.width*0.3}" text="Surname" />
+                                    <TableColumn fx:id="trainersEmail" prefWidth="${trainersTableView.width*0.2}" text="Email" />
                                 </columns>
                               </TableView>
                            </children>

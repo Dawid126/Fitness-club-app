@@ -1,4 +1,4 @@
-package persistance;
+package persistence;
 
 import com.google.inject.Singleton;
 import model.Activity;

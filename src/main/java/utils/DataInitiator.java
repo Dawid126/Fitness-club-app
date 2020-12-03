@@ -1,20 +1,17 @@
 package utils;
 
-import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import enums.Role;
 import enums.WeekDay;
-import guice.DataModule;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
-import persistance.IDataManager;
+import persistence.IDataManager;
 import shop.Product;
 import shop.Store;
-import utils.*;
 
 import java.text.DateFormat;
 import java.text.ParseException;

@@ -3,9 +3,6 @@ package ui.products;
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import persistance.DataManager;
-import persistance.IDataManager;
-import shop.Product;
 import shop.Store;
 import ui.products.productTile.ProductTile;
 

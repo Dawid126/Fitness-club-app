@@ -23,11 +23,10 @@
                               <ListView layoutX="95.0" layoutY="87.0" prefHeight="398.0" prefWidth="485.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                               <TableView fx:id="customersTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                    <TableColumn prefWidth="${customersTableView.width*0.1}" text="ID" />
-                                  <TableColumn prefWidth="${customersTableView.width*0.175}" text="Name" />
-                                  <TableColumn prefWidth="${customersTableView.width*0.175}" text="Surname" />
-                                    <TableColumn prefWidth="${customersTableView.width*0.2}" text="Email" />
-                                    <TableColumn prefWidth="${customersTableView.width*0.35}" text="Activities" />
+                                    <TableColumn fx:id="customersId" prefWidth="${customersTableView.width*0.1}" text="ID" />
+                                  <TableColumn fx:id="customersName" prefWidth="${customersTableView.width*0.225}" text="Name" />
+                                  <TableColumn fx:id="customersSurname" prefWidth="${customersTableView.width*0.225}" text="Surname" />
+                                    <TableColumn fx:id="customersEmail" prefWidth="${customersTableView.width*0.45}" text="Email" />
                                 </columns>
                               </TableView>
                            </children>

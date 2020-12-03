@@ -1,14 +1,12 @@
 package utils;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import enums.WeekDay;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
 import model.persons.Host;
-import persistance.IDataManager;
-import shop.Store;
+import persistence.IDataManager;
 
 import java.util.ArrayList;
 import java.util.Date;

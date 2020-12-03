@@ -1,9 +1,8 @@
 package utils;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import model.persons.Client;
-import persistance.IDataManager;
+import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
 import java.util.List;

@@ -1,9 +1,8 @@
 package guice;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.name.Names;
-import persistance.DataManager;
-import persistance.IDataManager;
+import persistence.DataManager;
+import persistence.IDataManager;
 
 public class DataModule extends AbstractModule{
     @Override

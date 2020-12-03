@@ -5,7 +5,7 @@ import model.Activity;
 import model.Room;
 import model.persons.Client;
 import model.persons.Host;
-import persistance.IDataManager;
+import persistence.IDataManager;
 import utils.ActivityManager;
 
 import java.text.DateFormat;

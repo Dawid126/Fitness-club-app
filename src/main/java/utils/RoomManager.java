@@ -1,11 +1,9 @@
 package utils;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import model.Activity;
 import model.Room;
-import org.checkerframework.checker.units.qual.A;
-import persistance.IDataManager;
+import persistence.IDataManager;
 
 import java.util.List;
 
