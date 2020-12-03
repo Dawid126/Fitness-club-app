@@ -26,8 +26,8 @@ public class RoomManager {
     }
 
     public boolean removeRoom(Room roomToRemove) {
-        List<Activity> activies = dataManager.loadActivities();
-        for(Activity activity: activies) {
+        List<Activity> activities = dataManager.loadActivities();
+        for(Activity activity: activities) {
             if(activity.getRoom().equals(roomToRemove)) //TODO zwracanie listy activities ktore uzywaja dany room
                 return false;
         }

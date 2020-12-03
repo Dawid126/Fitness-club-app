@@ -26,7 +26,7 @@
                                           <Button id="menuButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Schedule" userData="/schedule.fxml" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="220.0" stylesheets="@../../../styles/menuButton.css" text="Rooms" userData="/rooms.fxml" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="218.0" stylesheets="@../../../styles/menuButton.css" text="Trainers" userData="/trainers.fxml" />
-                                          <Button id="menuButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Customers" userData="/customers.fxml" />
+                                          <Button id="menuButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Clients" userData="/clients.fxml" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="221.0" stylesheets="@../../../styles/menuButton.css" text="Activities" userData="/activities.fxml" />
                                        </children>
                                        <padding>
