@@ -58,19 +58,19 @@ public class DataInitiator {
         for(int i=0; i<5; i++)
             rooms.add(new Room(30));
 
-        users.add(new User("Lukasz","Pitrus","kret.to@xd.com", Role.ADMIN,"xd"));
+        users.add(new User("Lukasz","Pitrus","kret.to@poczta.com", Role.ADMIN,"aa"));
 
-        hosts.add(new Host("Grzegorz","Gackowski","ggackowski@xd.com"));
-        hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@xd.com"));
+        hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
+        hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@poczta.com"));
 
-        clients.add(new Client("Dawid","Bialka","dbialka@xd.com"));
-        clients.add(new Client("Dawid1","Bialka1","dbialka1@xd.com"));
-        clients.add(new Client("Dawid2","Bialka2","dbialka2@xd.com"));
-        clients.add(new Client("Dawid3","Bialka3","dbialka3@xd.com"));
-        clients.add(new Client("Krzysztof","Retkiewicz","kret@xd.com"));
-        clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@xd.com"));
-        clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@xd.com"));
-        clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@xd.com"));
+        clients.add(new Client("Dawid","Bialka","dbialka@poczta.com"));
+        clients.add(new Client("Dawid1","Bialka1","dbialka1@poczta.com"));
+        clients.add(new Client("Dawid2","Bialka2","dbialka2@poczta.com"));
+        clients.add(new Client("Dawid3","Bialka3","dbialka3@poczta.com"));
+        clients.add(new Client("Krzysztof","Retkiewicz","kret@poczta.com"));
+        clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@poczta.com"));
+        clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@poczta.com"));
+        clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@poczta.com"));
 
         try {
             activities.add(new Activity("xD1",hosts.get(0),rooms.get(0),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
@@ -84,21 +84,21 @@ public class DataInitiator {
             activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
             activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
         } catch ( ParseException e ) {
-            System.out.println("xD");
+            e.printStackTrace();
         }
 
-        products.add(new Product("Soczek dla koxa",10,2137,"Description"));
-        products.add(new Product("Soczek dla cziki",10,2137,"Description"));
-        products.add(new Product("Soczek dla dzika",10,2137,"Description"));
-        products.add(new Product("Soczek dla byczka",10,2137,"Description"));
-        products.add(new Product("Baton dla koxa",10,2137,"Description"));
-        products.add(new Product("Baton dla cziki",10,2137,"Description"));
-        products.add(new Product("Baton dla dzika",10,2137,"Description"));
-        products.add(new Product("Baton dla byczka",10,2137,"Description"));
-        products.add(new Product("Białko dla koxa",10,2137,"Description"));
-        products.add(new Product("Białko dla cziki",10,2137,"Description"));
-        products.add(new Product("Białko dla dzika",10,2137,"Description"));
-        products.add(new Product("Białko dla byczka",10,2137,"Description"));
+        products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
+        products.add(new Product("Soczek 2",10,29,"Jakis opis 2"));
+        products.add(new Product("Soczek 3",10,4,"Jakis opis 3"));
+        products.add(new Product("Soczek 4",10,2,"Jakis opis 4"));
+        products.add(new Product("Baton 1",10,21,"Jakis opis 5"));
+        products.add(new Product("Baton 2",10,37,"Jakis opis 6"));
+        products.add(new Product("Baton 3",10,20,"Jakis opis 7"));
+        products.add(new Product("Baton 4",10,30,"Jakis opis 8"));
+        products.add(new Product("Białko 1",10,99,"Jakis opis 9"));
+        products.add(new Product("Białko 2",10,9999,"Jakis opis 10"));
+        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
+        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
         dataManager.saveRooms(rooms);
         dataManager.saveUsers(users);
