@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+apply plugin: 'org.openjfx.javafxplugin'
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    applicationDefaultJvmArgs = ["--add-opens", "java.base/java.lang=ALL-UNNAMED"]
+    mainClassName = "FitnessApp"
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.hibernate:hibernate-core:5.2.2.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.2.2.Final'
+    implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+    implementation group: 'com.google.inject', name: 'guice', version: '4.2.3'
+    implementation group: 'com.google.inject.extensions', name: 'guice-multibindings', version: '4.2.3'
+}
+
+
+javafx {
+    version = '14'
+    modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media', 'javafx.swing', 'javafx.web']
+}
