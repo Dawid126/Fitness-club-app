@@ -15,8 +15,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
+        <mapping class="model.persons.AbstractPerson"></mapping>
+        <mapping class="model.persons.Client"></mapping>
+        <mapping class="model.persons.Host"></mapping>
+        <mapping class="model.persons.User"></mapping>
+        <mapping class="model.Activity"></mapping>
         <mapping class="model.Room"></mapping>
-        <!--mapping class="pl.edu.agh.iisg.to.model.Course"></mapping>
-        <mapping class="pl.edu.agh.iisg.to.model.Grade"></mapping-->
     </session-factory>
 </hibernate-configuration>
