@@ -12,13 +12,15 @@ public class Room {
     private int id;
 
     @Column(name = Columns.CAPACITY, nullable = false, length = 50, unique = true)
-    private final int capacity;
+    private int capacity;
 
     @Column(name = Columns.NUMBER, nullable = false, length = 50, unique = true)
     private int number;
 
+    public Room() {}
     public Room(int capacity) {
         this.capacity = capacity;
+        this.number = id;
     }
 
     public int getCapacity() {
@@ -49,10 +51,10 @@ public class Room {
         return number == course.number;
     }
 
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + name.hashCode();
-//        return result;
-//    }
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + number;
+        return result;
+    }
 }
