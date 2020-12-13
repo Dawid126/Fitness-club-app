@@ -31,6 +31,13 @@ public interface IDataManager {
     void saveRoom(Room room);
     void saveProduct(Product product);
 
+    void updateActivity(Activity activity);
+    void updateClient(Client client);
+    void updateHost(Host host);
+    void updateUser(User user);
+    void updateRoom(Room room);
+    void updateProduct(Product product);
+
     void removeActivity(Activity activity);
     void removeClient(Client client);
     void removeHost(Host host);
