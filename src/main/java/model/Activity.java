@@ -19,7 +19,7 @@ public class Activity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", nullable = false, length = 50, unique = true)
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
 
     @Column(name = "weekDay", nullable = false, length = 50)

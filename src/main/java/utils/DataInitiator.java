@@ -56,7 +56,7 @@ public class DataInitiator {
         List<Product> products = new ArrayList<>();
 
         for(int i=0; i<5; i++)
-            rooms.add(new Room(30));
+            rooms.add(new Room(30,i+1));
 
         users.add(new User("Lukasz","Pitrus","kret.to@poczta.com", Role.ADMIN,"aa"));
 
@@ -100,11 +100,11 @@ public class DataInitiator {
         products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
         products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
-        //dataManager.saveRooms(rooms);
-        //dataManager.saveUsers(users);
+        dataManager.saveRooms(rooms);
+        dataManager.saveUsers(users);
         dataManager.saveHosts(hosts);
-        //dataManager.saveActivities(activities);
-        //dataManager.saveClients(clients);
-        //dataManager.saveProducts(products);
+        dataManager.saveActivities(activities);
+        dataManager.saveClients(clients);
+        dataManager.saveProducts(products);
     }
 }

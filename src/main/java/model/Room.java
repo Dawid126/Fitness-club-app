@@ -13,7 +13,7 @@ public class Room {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "capacity", nullable = false, length = 50, unique = true)
+    @Column(name = "capacity", nullable = false, length = 50)
     private int capacity;
 
     @Column(name = "number", nullable = false, length = 50, unique = true)
@@ -23,9 +23,9 @@ public class Room {
     private List<Activity> activities = new ArrayList<>();
 
     public Room() {}
-    public Room(int capacity) {
+    public Room(int capacity, int number) {
         this.capacity = capacity;
-        this.number = id;
+        this.number = number;
     }
 
     public int getCapacity() {

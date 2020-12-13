@@ -37,7 +37,8 @@ public class RoomManager {
 
     public boolean createRoom(int capacity) {
         if(capacity>0) {
-            dataManager.saveRoom(new Room(capacity));
+            //TODO to jest zle:
+            dataManager.saveRoom(new Room(capacity,capacity+20));
             return true;
         }
         return false;

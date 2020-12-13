@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name = "client")
 public class Client extends AbstractPerson{
 
-    @OneToMany(mappedBy = "client")
+    @ManyToMany(mappedBy = "participants")
     private List<Activity> activities  = new ArrayList<>();
 
     public Client () {}

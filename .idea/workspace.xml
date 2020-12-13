@@ -23,13 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Silownia.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Silownia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Silownia.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/persistence/HibernateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/HibernateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/persistence/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/session/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +116,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TO LAB/lab-persistence/active-record" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -292,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607890779100</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="still not working">
+      <created>1607893413469</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607893413469</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,16 +335,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="859" y="411" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1607893405420" />
-    <state x="372" y="189" key="#Project_Structure" timestamp="1607882972292">
+    <state x="372" y="189" key="#Project_Structure" timestamp="1607894492051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="372" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607882972292" />
+    <state x="372" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607894492051" />
     <state x="1043" y="453" key="#Project_Structure/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606944520299" />
     <state x="424" y="283" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607883463084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="424" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607883463084" />
     <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581178578" />
+    <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607894401780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607894401780" />
     <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607870957688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -343,18 +358,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581095650" />
-    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1607882828382">
+    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1607894420723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607882828382" />
+    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607894420723" />
+    <state x="650" y="521" width="505" height="186" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1607894484277">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="650" y="521" width="505" height="186" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1920.1040@0.0.1920.1040" timestamp="1607894484277" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1607868377442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607868377442" />
-    <state x="272" y="277" key="FileChooserDialogImpl" timestamp="1607882964478">
+    <state x="272" y="277" key="FileChooserDialogImpl" timestamp="1607894480919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="272" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607882964478" />
+    <state x="272" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607894480919" />
     <state width="1860" height="265" key="GridCell.Tab.0.bottom" timestamp="1607875147246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -375,6 +394,10 @@
     </state>
     <state width="1860" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147246" />
     <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607895032087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1607895032087" />
     <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -392,16 +415,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="391" y="163" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607882067968" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/persistence/session/SessionService.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

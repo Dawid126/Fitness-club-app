@@ -6,8 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 public class SessionService {
 
-    private static final SessionFactory sessionFactory = new Configuration().configure() // configures settings from hibernate.cfg.xml
-            .buildSessionFactory();
+    private static final SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
     private static Session session;
 
