@@ -2,18 +2,27 @@ package model.persons;
 
 import enums.WeekDay;
 import model.Activity;
+import model.Room;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.*;
+import java.util.*;
 
+@Entity
+@Table(name = "host")
 public class Host extends AbstractPerson{
 
-    private final List<Activity> activities;
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    @Column(name = "id")
+    private int id;
+
+    @OneToMany(mappedBy = "host")
+    private List<Activity> activities;
+
+    public Host() {}
 
     public Host (String name, String surname, String email) {
-        super(name, surname, email
-        );
+        super(name, surname, email);
         activities = new ArrayList<>();
     }
 
@@ -21,23 +30,23 @@ public class Host extends AbstractPerson{
         return activities;
     }
 
-    public void addActivity (Activity activity) {
-        if(!activities.contains(activity))
-            activities.add(activity);
-    }
-    public void removeActivity (Activity activity) {
-        activities.remove(activity);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Host host = (Host) o;
+
+        if (id != host.id) return false;
+        if(this.getName() != host.getName()) return false;
+        if(this.getSurname() != host.getSurname()) return false;
+        return this.getEmail() == host.getEmail();
     }
 
-    public boolean isFree (WeekDay weekDay, Date startTime, Date endTime) {
-        for(Activity activity : activities) {
-            if(activity.getWeekDay().equals(weekDay)) {
-                if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
-                        (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime)) ||
-                        activity.getStartTime().equals(startTime) || activity.getEndTime().equals(endTime))
-                    return false;
-            }
-        }
-        return true;
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result;
+        return result;
     }
 }

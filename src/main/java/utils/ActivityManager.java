@@ -27,7 +27,7 @@ public class ActivityManager {
     }
 
     public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay, int maxGroupSize) {
-        if(!host.isFree(weekDay,startTime,endTime))
+        if(!HostManager.getInstance().isFree(host, weekDay,startTime,endTime))
             return false;
         List<Activity> activities = getActivities(weekDay,room);
         for(Activity activity : activities) {

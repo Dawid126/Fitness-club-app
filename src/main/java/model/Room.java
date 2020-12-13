@@ -45,10 +45,10 @@ public class Room {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Room course = (Room) o;
+        Room room = (Room) o;
 
-        if (id != course.id) return false;
-        return number == course.number;
+        if (id != room.id) return false;
+        return number == room.number;
     }
 
     @Override

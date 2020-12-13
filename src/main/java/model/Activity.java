@@ -3,6 +3,7 @@ package model;
 import enums.WeekDay;
 import model.persons.Client;
 import model.persons.Host;
+import utils.HostManager;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,7 +29,7 @@ public class Activity {
         this.weekDay = weekDay;
         this.maxGroupSize = Math.min(maxGroupSize,room.getCapacity());
         this.participants = new ArrayList<>();
-        this.host.addActivity(this);
+        HostManager.getInstance().addActivity(this.host, this);
     }
 
     public void addClient (Client client) {

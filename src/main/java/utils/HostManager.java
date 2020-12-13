@@ -1,10 +1,13 @@
 package utils;
 
 import com.google.inject.Inject;
+import enums.WeekDay;
+import model.Activity;
 import model.persons.Host;
 import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
+import java.util.Date;
 import java.util.List;
 
 public class HostManager {
@@ -42,4 +45,26 @@ public class HostManager {
     public List<Host> getHosts () {
         return dataManager.loadHosts();
     }
+
+    public void addActivity (Host host, Activity activity) {
+        if(!host.getActivities().contains(activity))
+            host.getActivities().add(activity);
+    }
+
+    public void removeActivity (Host host, Activity activity) {
+        host.getActivities().remove(activity);
+    }
+
+    public boolean isFree (Host host, WeekDay weekDay, Date startTime, Date endTime) {
+        for(Activity activity : host.getActivities()) {
+            if(activity.getWeekDay().equals(weekDay)) {
+                if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
+                        (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime)) ||
+                        activity.getStartTime().equals(startTime) || activity.getEndTime().equals(endTime))
+                    return false;
+            }
+        }
+        return true;
+    }
+
 }
