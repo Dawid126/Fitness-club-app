@@ -1,10 +1,10 @@
 package model.persons;
 
 public abstract class AbstractPerson {
-    private final String name;
-    private final String surname;
+    protected String name;
+    protected String surname;
     private int id = 0;
-    private String email;
+    protected String email;
 
     public AbstractPerson (String name, String surname, String email) {
         this.name = name;
@@ -22,5 +22,11 @@ public abstract class AbstractPerson {
 
     public String getEmail() {
         return email;
+    }
+
+    public void update(String name, String surname, String email){
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
     }
 }

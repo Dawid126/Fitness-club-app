@@ -39,6 +39,19 @@ public class HostManager {
         return true;
     }
 
+    public boolean updateHost (Host host, String name, String surname, String email) {
+        if(!StringsValidator.validateInfo(name,surname,email)) {
+            return false;
+        }
+
+        if(host.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
+            host.update(name, surname, email);
+            return true;
+        }
+
+        return false;
+    }
+
     public List<Host> getHosts () {
         return dataManager.loadHosts();
     }

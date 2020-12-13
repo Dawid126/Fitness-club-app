@@ -23,17 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewRoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addNewClient/AddNewClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,17 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/krzys/czw-1440-polaki/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,6 +194,7 @@
       <workItem from="1606944768692" duration="9757000" />
       <workItem from="1606954809736" duration="312000" />
       <workItem from="1606988753594" duration="5074000" />
+      <workItem from="1607852304156" duration="982000" />
     </task>
     <servers />
   </component>
