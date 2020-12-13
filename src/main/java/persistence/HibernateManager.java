@@ -41,8 +41,8 @@ public class HibernateManager implements IDataManager {
 
     @Override
     public void saveHosts(List<Host> hosts) {
-        SessionService.openSession();
         final Session session = SessionService.getSession();
+        SessionService.openSession();
         final Transaction tx = session.beginTransaction();
         for(Host host : hosts) {
             session.save(host);

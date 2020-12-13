@@ -1,6 +1,8 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "room")
@@ -17,6 +19,9 @@ public class Room {
     @Column(name = "number", nullable = false, length = 50, unique = true)
     private int number;
 
+    @OneToMany(mappedBy = "room")
+    private List<Activity> activities = new ArrayList<>();
+
     public Room() {}
     public Room(int capacity) {
         this.capacity = capacity;
@@ -29,6 +34,10 @@ public class Room {
 
     public int getId() {
         return id;
+    }
+
+    public List<Activity> getActivities() {
+        return activities;
     }
 
     @Override

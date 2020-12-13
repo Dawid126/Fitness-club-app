@@ -10,10 +10,10 @@ public abstract class AbstractPerson {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", nullable = false, length = 50, unique = true)
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "surname", nullable = false, length = 50, unique = true)
+    @Column(name = "surname", nullable = false, length = 50)
     private String surname;
 
     @Column(name = "email", nullable = false, length = 50, unique = true)
