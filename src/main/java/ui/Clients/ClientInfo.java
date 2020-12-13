@@ -8,11 +8,13 @@ import model.persons.Client;
 // Uses properties specific for JavaFX
 
 public class ClientInfo {
+    private Client client;
     private StringProperty name;
     private StringProperty surname;
     private StringProperty email;
 
     public ClientInfo(Client client) {
+        this.client = client;
         this.name = new SimpleStringProperty(client.getName());
         this.surname = new SimpleStringProperty(client.getSurname());
         this.email = new SimpleStringProperty(client.getEmail());
@@ -52,5 +54,9 @@ public class ClientInfo {
 
     public void setEmail(String email) {
         this.email.set(email);
+    }
+
+    public Client getClient(){
+        return this.client;
     }
 }

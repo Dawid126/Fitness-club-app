@@ -1,5 +1,6 @@
 package ui.Clients;
 
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import ui.addDialogs.AddNewClientController;
+import ui.dialogs.DeleteDialogController;
+import ui.dialogs.addDialogs.AddNewClientController;
 import utils.ClientManager;
 
 import java.io.IOException;
@@ -21,6 +23,9 @@ import java.util.stream.Collectors;
 public class ClientsController {
     @FXML
     private Button add;
+
+    @FXML
+    private Button deleteButton;
 
     @FXML
     private AnchorPane anchorPane;
@@ -60,6 +65,9 @@ public class ClientsController {
         setTableViewProps();
         clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
         System.out.println(mapClientsToViewModel().size());
+        deleteButton.disableProperty().bind(
+                Bindings.isEmpty(clientsTableView.getSelectionModel()
+                        .getSelectedItems()));
     }
 
     @FXML
@@ -77,6 +85,30 @@ public class ClientsController {
         Stage dialogStage = new Stage();
         ((AddNewClientController)loader.getController()).setDialogStage(dialogStage);
         dialogStage.setTitle("Add Client");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        Scene scene = new Scene(page);
+        dialogStage.initOwner(stage);
+        dialogStage.setScene(scene);
+        dialogStage.showAndWait();
+        clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
+    }
+
+    @FXML
+    private void deleteClient() {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/deleteDialog.fxml"));
+        BorderPane page = null;
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+        try {
+            page = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage dialogStage = new Stage();
+        ((DeleteDialogController)loader.getController()).setSelectedClient(clientsTableView.getSelectionModel().getSelectedItems().get(0).getClient());
+        ((DeleteDialogController)loader.getController()).setDialogStage(dialogStage);
+        dialogStage.setTitle("Remove Client");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         Scene scene = new Scene(page);
         dialogStage.initOwner(stage);

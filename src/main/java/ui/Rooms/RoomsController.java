@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import ui.addDialogs.AddNewRoomController;
+import ui.dialogs.addDialogs.AddNewRoomController;
 import utils.RoomManager;
 
 import java.io.IOException;

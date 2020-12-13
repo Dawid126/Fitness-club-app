@@ -1,4 +1,4 @@
-package ui.addDialogs;
+package ui.dialogs.addDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
