@@ -7,19 +7,19 @@
         <property name="connection.url">jdbc:sqlite:fitness.db</property>
         <property name="connection.driver_class">org.sqlite.JDBC</property>
         <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
-        <property name="connection.username"></property>
-        <property name="connection.password"></property>
+        <property name="connection.username"/>
+        <property name="connection.password"/>
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">create</property>
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <mapping class="model.persons.AbstractPerson"></mapping>
-        <mapping class="model.persons.Client"></mapping>
-        <mapping class="model.persons.Host"></mapping>
-        <mapping class="model.persons.User"></mapping>
-        <mapping class="model.Activity"></mapping>
-        <mapping class="model.Room"></mapping>
+        <mapping class="model.persons.AbstractPerson"/>
+        <mapping class="model.persons.Client"/>
+        <mapping class="model.persons.Host"/>
+        <mapping class="model.persons.User"/>
+        <mapping class="model.Activity"/>
+        <mapping class="model.Room"/>
     </session-factory>
 </hibernate-configuration>

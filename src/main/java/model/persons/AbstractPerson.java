@@ -16,7 +16,7 @@ public abstract class AbstractPerson {
     @Column(name = "surname", nullable = false, length = 50)
     private String surname;
 
-    @Column(name = "email", nullable = false, length = 50, unique = true)
+    @Column(name = "email", nullable = false, length = 50)
     private String email;
 
     public AbstractPerson () {}

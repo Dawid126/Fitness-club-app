@@ -16,7 +16,7 @@ public class Room {
     @Column(name = "capacity", nullable = false, length = 50)
     private int capacity;
 
-    @Column(name = "number", nullable = false, length = 50, unique = true)
+    @Column(name = "number", nullable = false, length = 50)
     private int number;
 
     @OneToMany(mappedBy = "room")
