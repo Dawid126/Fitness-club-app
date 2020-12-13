@@ -1,23 +1,22 @@
 package model.persons;
 
-import model.Room;
-
 import javax.persistence.*;
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class AbstractPerson {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name = Columns.ID)
+    @Column(name = "id")
     private int id;
 
-    @Column(name = Columns.NAME, nullable = false, length = 50, unique = true)
+    @Column(name = "name", nullable = false, length = 50, unique = true)
     private String name;
 
-    @Column(name = Columns.SURNAME, nullable = false, length = 50, unique = true)
+    @Column(name = "surname", nullable = false, length = 50, unique = true)
     private String surname;
 
-    @Column(name = Columns.EMAIL, nullable = false, length = 50, unique = true)
+    @Column(name = "email", nullable = false, length = 50, unique = true)
     private String email;
 
     public AbstractPerson () {}
@@ -37,17 +36,6 @@ public abstract class AbstractPerson {
 
     public String getEmail() {
         return email;
-    }
-
-    public static class Columns {
-
-        public static final String ID = "id";
-
-        public static final String NAME = "name";
-
-        public static final String SURNAME = "surname";
-
-        public static final String EMAIL = "email";
     }
 
     @Override

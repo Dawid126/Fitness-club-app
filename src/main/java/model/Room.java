@@ -8,13 +8,13 @@ public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name = Columns.ID)
+    @Column(name = "id")
     private int id;
 
-    @Column(name = Columns.CAPACITY, nullable = false, length = 50, unique = true)
+    @Column(name = "capacity", nullable = false, length = 50, unique = true)
     private int capacity;
 
-    @Column(name = Columns.NUMBER, nullable = false, length = 50, unique = true)
+    @Column(name = "number", nullable = false, length = 50, unique = true)
     private int number;
 
     public Room() {}
@@ -29,15 +29,6 @@ public class Room {
 
     public int getId() {
         return id;
-    }
-
-    public static class Columns {
-
-        public static final String ID = "id";
-
-        public static final String CAPACITY = "capacity";
-
-        public static final String NUMBER = "number";
     }
 
     @Override
