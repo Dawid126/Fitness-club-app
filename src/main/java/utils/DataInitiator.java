@@ -100,11 +100,11 @@ public class DataInitiator {
         products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
         products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
-        dataManager.saveRooms(rooms);
-        dataManager.saveUsers(users);
+        //dataManager.saveRooms(rooms);
+        //dataManager.saveUsers(users);
         dataManager.saveHosts(hosts);
-        dataManager.saveActivities(activities);
-        dataManager.saveClients(clients);
-        dataManager.saveProducts(products);
+        //dataManager.saveActivities(activities);
+        //dataManager.saveClients(clients);
+        //dataManager.saveProducts(products);
     }
 }
