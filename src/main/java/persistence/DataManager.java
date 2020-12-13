@@ -103,6 +103,36 @@ public class DataManager implements IDataManager{
     }
 
     @Override
+    public void updateActivity(Activity activity) {
+
+    }
+
+    @Override
+    public void updateClient(Client client) {
+
+    }
+
+    @Override
+    public void updateHost(Host host) {
+
+    }
+
+    @Override
+    public void updateUser(User user) {
+
+    }
+
+    @Override
+    public void updateRoom(Room room) {
+
+    }
+
+    @Override
+    public void updateProduct(Product product) {
+
+    }
+
+    @Override
     public void removeActivity(Activity activity) {
         activities.remove(activity);
     }

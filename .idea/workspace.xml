@@ -23,11 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/HibernateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/IDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/IDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1606988753594" duration="5074000" />
       <workItem from="1607103301109" duration="49000" />
       <workItem from="1607803906210" duration="1986000" />
-      <workItem from="1607864095012" duration="4874000" />
+      <workItem from="1607864095012" duration="7334000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607867128863</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Next one">
+      <created>1607869022210</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607869022210</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +249,8 @@
     <MESSAGE value="Hibernate init" />
     <MESSAGE value="Hibernate init2" />
     <MESSAGE value="AbstractPerson Entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="AbstractPerson Entity" />
+    <MESSAGE value="Next one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next one" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1043" y="453" key="#Project_Structure" timestamp="1606944520299">
@@ -253,10 +261,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581178578" />
-    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607866080659">
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607870957688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607866080659" />
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607870957688" />
     <state x="445" y="407" key="#com.intellij.ide.util.MemberChooser/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606947495704" />
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606581095650">
       <screen x="0" y="0" width="2560" height="1400" />
