@@ -24,8 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +208,7 @@
       <workItem from="1606988753594" duration="5074000" />
       <workItem from="1607103301109" duration="49000" />
       <workItem from="1607803906210" duration="1986000" />
-      <workItem from="1607864095012" duration="2872000" />
+      <workItem from="1607864095012" duration="4874000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607866583097</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="AbstractPerson Entity">
+      <created>1607867128863</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607867128863</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +252,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hibernate init" />
     <MESSAGE value="Hibernate init2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate init2" />
+    <MESSAGE value="AbstractPerson Entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="AbstractPerson Entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1043" y="453" key="#Project_Structure" timestamp="1606944520299">
@@ -263,6 +273,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581095650" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1607868377442">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607868377442" />
     <state x="272" y="277" key="FileChooserDialogImpl" timestamp="1607864874145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
