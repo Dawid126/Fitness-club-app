@@ -1,5 +1,6 @@
 package persistence;
 
+import com.google.inject.Singleton;
 import model.Activity;
 import model.Room;
 import model.persons.Client;
@@ -10,9 +11,19 @@ import org.hibernate.Transaction;
 import persistence.session.SessionService;
 import shop.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
 public class HibernateManager implements IDataManager {
+
+    private List<Client> clients = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
+    private List<Room> rooms = new ArrayList<>();
+    private List<Host> hosts = new ArrayList<>();
+    private List<Activity> activities = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
+
     @Override
     public void saveActivities(List<Activity> activities) {
         SessionService.openSession();
@@ -85,33 +96,62 @@ public class HibernateManager implements IDataManager {
 
     @Override
     public List<Activity> loadActivities() {
-        return null;
-
+        if(activities == null) {
+            SessionService.openSession();
+            activities =  SessionService.getSession().createQuery("FROM Activity ", Activity.class).list();
+            SessionService.closeSession();
+        }
+        return activities;
     }
 
     @Override
     public List<Client> loadClients() {
-        return null;
+        if(clients == null) {
+            SessionService.openSession();
+            clients =  SessionService.getSession().createQuery("FROM Client", Client.class).list();
+            SessionService.closeSession();
+        }
+        return clients;
     }
 
     @Override
     public List<Host> loadHosts() {
-        return null;
+        if(hosts == null) {
+            SessionService.openSession();
+            hosts =  SessionService.getSession().createQuery("FROM Host ", Host.class).list();
+            SessionService.closeSession();
+        }
+        return hosts;
     }
 
     @Override
     public List<User> loadUsers() {
-        return null;
+        if(users == null) {
+            SessionService.openSession();
+            users =  SessionService.getSession().createQuery("FROM User ", User.class).list();
+            SessionService.closeSession();
+        }
+        return users;
     }
 
     @Override
     public List<Room> loadRooms() {
-        return null;
+        if(rooms == null) {
+            SessionService.openSession();
+            rooms =  SessionService.getSession().createQuery("FROM Room ", Room.class).list();
+            SessionService.closeSession();
+        }
+        return rooms;
     }
 
     @Override
     public List<Product> loadProducts() {
-        return null;
+        if(products == null) {
+            SessionService.openSession();
+            products =  SessionService.getSession().createQuery("FROM Product ", Product.class).list();
+            SessionService.closeSession();
+        }
+        return products;
     }
 
     @Override
