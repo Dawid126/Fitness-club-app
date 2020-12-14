@@ -72,7 +72,6 @@ public class ClientsController {
     private void initialize() {
         setTableViewProps();
         clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
-        System.out.println(mapClientsToViewModel().size());
         deleteButton.disableProperty().bind(
                 Bindings.isEmpty(clientsTableView.getSelectionModel()
                         .getSelectedItems()));

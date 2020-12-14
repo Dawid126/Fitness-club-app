@@ -38,17 +38,17 @@ public class DeleteDialogController {
     private void delete(){
         if(item.getClass().equals(Client.class)) {
             ClientManager manager = ClientManager.getInstance();
-            if(manager.removeClient((Client) item)){
+            if(!manager.removeClient((Client) item)){
                 System.out.println("Cannot delete client. There are related items in the system.");
             }
         }else if(item.getClass().equals(Room.class)) {
             RoomManager manager = RoomManager.getInstance();
-            if(manager.removeRoom((Room) item)){
+            if(!manager.removeRoom((Room) item)){
                 System.out.println("Cannot delete room. There are related items in the system.");
             }
-        }else if(item.getClass().equals(Room.class)) {
+        }else if(item.getClass().equals(Host.class)) {
             HostManager manager = HostManager.getInstance();
-            if(manager.removeHost((Host) item)){
+            if(!manager.removeHost((Host) item)){
                 System.out.println("Cannot delete host. There are related items in the system.");
             }
         }
