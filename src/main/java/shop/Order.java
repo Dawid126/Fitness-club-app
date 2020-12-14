@@ -24,7 +24,7 @@ public class Order {
     private Product product;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false)
+    @Column(name = "status", nullable = false, length = 15)
     private Status status;
 
     public Order () {}
@@ -75,6 +75,7 @@ public class Order {
     public enum Status {
         RESERVED,
         PAID,
-        SEND
+        SEND,
+        CANCELLED
     }
 }

@@ -22,7 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="" />
+    <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/HibernateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/HibernateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ActivityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ActivityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -354,7 +365,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607945796485</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Product repair">
+      <created>1607950476734</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607950476734</updated>
+    </task>
+    <task id="LOCAL-00013" summary="IDataManager order">
+      <created>1607952275503</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607952275503</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +409,9 @@
     <MESSAGE value="Initiator" />
     <MESSAGE value="Little changes" />
     <MESSAGE value="added load from database methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added load from database methods" />
+    <MESSAGE value="Product repair" />
+    <MESSAGE value="IDataManager order" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDataManager order" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1607893405420">
@@ -405,10 +432,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607894401780" />
-    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607870957688">
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607953722651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607870957688" />
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607953722651" />
     <state x="445" y="407" key="#com.intellij.ide.util.MemberChooser/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606947495704" />
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606581095650">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -422,6 +449,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="650" y="521" width="505" height="186" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1920.1040@0.0.1920.1040" timestamp="1607894484277" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607954199171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607954199171" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1607868377442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

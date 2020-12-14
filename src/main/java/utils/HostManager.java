@@ -24,7 +24,6 @@ public class HostManager {
         return instance;
     }
 
-
     public boolean createHost (String name, String surname, String email) {
         if(!StringsValidator.validateInfo(name,surname,email))
             return false;
@@ -45,26 +44,4 @@ public class HostManager {
     public List<Host> getHosts () {
         return dataManager.loadHosts();
     }
-
-    public void addActivity (Host host, Activity activity) {
-        if(!host.getActivities().contains(activity))
-            host.getActivities().add(activity);
-    }
-
-    public void removeActivity (Host host, Activity activity) {
-        host.getActivities().remove(activity);
-    }
-
-    public boolean isFree (Host host, WeekDay weekDay, Date startTime, Date endTime) {
-        for(Activity activity : host.getActivities()) {
-            if(activity.getWeekDay().equals(weekDay)) {
-                if((activity.getStartTime().after(startTime) && activity.getStartTime().before(endTime)) ||
-                        (activity.getEndTime().after(startTime) && activity.getEndTime().before(endTime)) ||
-                        activity.getStartTime().equals(startTime) || activity.getEndTime().equals(endTime))
-                    return false;
-            }
-        }
-        return true;
-    }
-
 }
