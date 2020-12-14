@@ -23,11 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Silownia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Silownia.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,17 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/krzys/czw-1440-polaki/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -230,7 +220,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -253,6 +243,7 @@
       <workItem from="1607864095012" duration="7334000" />
       <workItem from="1607875308918" duration="3326000" />
       <workItem from="1607882789685" duration="1478000" />
+      <workItem from="1607941551729" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -303,11 +294,18 @@
       <option name="project" value="LOCAL" />
       <updated>1607896205520</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Coś tam działa">
+      <created>1607897100129</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607897100129</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -329,7 +327,8 @@
     <MESSAGE value="SessionService" />
     <MESSAGE value="still not working" />
     <MESSAGE value="JESUS ODPALILO SIE" />
-    <option name="LAST_COMMIT_MESSAGE" value="JESUS ODPALILO SIE" />
+    <MESSAGE value="Coś tam działa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coś tam działa" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1607893405420">
@@ -341,10 +340,10 @@
     </state>
     <state x="372" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607894492051" />
     <state x="1043" y="453" key="#Project_Structure/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606944520299" />
-    <state x="424" y="283" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607883463084">
+    <state x="424" y="283" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607941634882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="424" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607883463084" />
+    <state x="424" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607941634882" />
     <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581178578" />
     <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607894401780">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -395,10 +394,10 @@
     </state>
     <state width="1860" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147246" />
     <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607896144803">
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607942433554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1607896144803" />
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1607942433554" />
     <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

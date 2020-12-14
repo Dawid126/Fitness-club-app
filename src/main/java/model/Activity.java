@@ -22,7 +22,8 @@ public class Activity {
     @Column(name = "name", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "weekDay", nullable = false, length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "weekDay", nullable = false, length = 15)
     private WeekDay weekDay;
 
     @ManyToOne(fetch = FetchType.LAZY)

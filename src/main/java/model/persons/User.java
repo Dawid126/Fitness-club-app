@@ -11,7 +11,8 @@ public class User extends AbstractPerson{
     @Column(name = "password", nullable = false, length = 50)
     private String password;
 
-    @Column(name = "role", nullable = false, length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", nullable = false, length = 10)
     private Role role;
 
     public User () {}

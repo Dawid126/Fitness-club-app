@@ -59,35 +59,45 @@ public class DataInitiator {
             rooms.add(new Room(30,i+1));
         dataManager.saveRooms(rooms);
 
-//        users.add(new User("Lukasz","Pitrus","kret.to@poczta.com", Role.ADMIN,"aa"));
-//
-//        hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
-//        hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@poczta.com"));
-//
-//        clients.add(new Client("Dawid","Bialka","dbialka@poczta.com"));
-//        clients.add(new Client("Dawid1","Bialka1","dbialka1@poczta.com"));
-//        clients.add(new Client("Dawid2","Bialka2","dbialka2@poczta.com"));
-//        clients.add(new Client("Dawid3","Bialka3","dbialka3@poczta.com"));
-//        clients.add(new Client("Krzysztof","Retkiewicz","kret@poczta.com"));
-//        clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@poczta.com"));
-//        clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@poczta.com"));
-//        clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@poczta.com"));
-//
-//        try {
-//            activities.add(new Activity("xD1",hosts.get(0),rooms.get(0),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
-//            activities.add(new Activity("xD2",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
-//            activities.add(new Activity("xD3",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
-//            activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
-//            activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
-//            activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
-//            activities.add(new Activity("xD7",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY, 10));
-//            activities.add(new Activity("xD8",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY, 10));
-//            activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
-//            activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
-//        } catch ( ParseException e ) {
-//            e.printStackTrace();
-//        }
-//
+        users.add(new User("Lukasz","Pitrus","pitrus.to@poczta.com", Role.ADMIN,"aa"));
+        dataManager.saveUsers(users);
+
+        hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
+        hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@poczta.com"));
+        dataManager.saveHosts(hosts);
+
+        clients.add(new Client("Dawid","Bialka","dbialka@poczta.com"));
+        clients.add(new Client("Dawid1","Bialka1","dbialka1@poczta.com"));
+        clients.add(new Client("Dawid2","Bialka2","dbialka2@poczta.com"));
+        clients.add(new Client("Dawid3","Bialka3","dbialka3@poczta.com"));
+        clients.add(new Client("Krzysztof","Retkiewicz","kret@poczta.com"));
+        clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@poczta.com"));
+        clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@poczta.com"));
+        clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@poczta.com"));
+        dataManager.saveClients(clients);
+
+        try {
+            activities.add(new Activity("xD1",hosts.get(0),rooms.get(0),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD2",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD3",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD7",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD8",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
+            activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
+            dataManager.saveActivities(activities);
+
+//            for(Host h : hosts)
+//                dataManager.updateHost(h);
+//            for(Room r : rooms)
+//                dataManager.updateRoom(r);
+
+        } catch ( ParseException e ) {
+            e.printStackTrace();
+        }
+
 //        products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
 //        products.add(new Product("Soczek 2",10,29,"Jakis opis 2"));
 //        products.add(new Product("Soczek 3",10,4,"Jakis opis 3"));
@@ -101,11 +111,6 @@ public class DataInitiator {
 //        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
 //        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
-//        dataManager.saveRooms(rooms);
-//        dataManager.saveUsers(users);
-//        dataManager.saveHosts(hosts);
-//        dataManager.saveActivities(activities);
-//        dataManager.saveClients(clients);
 //        dataManager.saveProducts(products);
     }
 }
