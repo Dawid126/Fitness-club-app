@@ -60,7 +60,6 @@ public class Activity {
         this.endTime = endTime;
         this.weekDay = weekDay;
         this.maxGroupSize = Math.min(maxGroupSize,room.getCapacity());
-        HostManager.getInstance().addActivity(this.host, this);
     }
 
     public boolean isEnrolled (Client client) {

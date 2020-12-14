@@ -51,6 +51,9 @@ public class Product {
     public String getDescription() {
         return description;
     }
+    public List<Order> getOrders() {
+        return orders;
+    }
 
     public void setName(String name) {
         this.name = name;

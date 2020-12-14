@@ -6,6 +6,7 @@ import model.Room;
 import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
+import shop.Order;
 import shop.Product;
 
 import java.util.ArrayList;
@@ -49,6 +50,11 @@ public class DataManager implements IDataManager{
     }
 
     @Override
+    public void saveOrders(List<Order> orders) {
+
+    }
+
+    @Override
     public List<Activity> loadActivities() {
         return activities;
     }
@@ -69,6 +75,11 @@ public class DataManager implements IDataManager{
     @Override
     public List<Product> loadProducts() {
         return products;
+    }
+
+    @Override
+    public List<Order> loadOrders() {
+        return null;
     }
 
     @Override
@@ -103,6 +114,11 @@ public class DataManager implements IDataManager{
     }
 
     @Override
+    public void saveOrder(Order order) {
+
+    }
+
+    @Override
     public void updateActivity(Activity activity) {
 
     }
@@ -133,6 +149,11 @@ public class DataManager implements IDataManager{
     }
 
     @Override
+    public void updateOrder(Order order) {
+
+    }
+
+    @Override
     public void removeActivity(Activity activity) {
         activities.remove(activity);
     }
@@ -155,6 +176,11 @@ public class DataManager implements IDataManager{
     @Override
     public void removeProduct(Product product) {
         products.remove(product);
+    }
+
+    @Override
+    public void removeOrder(Order order) {
+
     }
 
     @Override

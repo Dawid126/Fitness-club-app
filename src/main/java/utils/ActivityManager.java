@@ -27,7 +27,7 @@ public class ActivityManager {
     }
 
     public boolean createActivity (String name, Host host, Room room, Date startTime, Date endTime, WeekDay weekDay, int maxGroupSize) {
-        if(!HostManager.getInstance().isFree(host, weekDay,startTime,endTime))
+        if(!host.isFree(weekDay,startTime,endTime))
             return false;
         List<Activity> activities = getActivities(weekDay,room);
         for(Activity activity : activities) {
@@ -37,11 +37,23 @@ public class ActivityManager {
         }
         Activity newActivity = new Activity(name, host, room, startTime, endTime, weekDay, maxGroupSize);
         dataManager.saveActivity(newActivity);
+        host.getActivities().add(newActivity);
+        room.getActivities().add(newActivity);
+        dataManager.updateHost(host);
+        dataManager.updateRoom(room);
         return true;
     }
 
     public boolean removeActivity (Activity activity) {
         dataManager.removeActivity(activity);
+        for(Client client : activity.getParticipants()) {
+            client.getActivities().remove(activity);
+            dataManager.updateClient(client);
+        }
+        activity.getHost().getActivities().remove(activity);
+        activity.getRoom().getActivities().remove(activity);
+        dataManager.updateHost(activity.getHost());
+        dataManager.updateRoom(activity.getRoom());
         return true;
     }
 
