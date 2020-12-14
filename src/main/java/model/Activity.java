@@ -62,10 +62,6 @@ public class Activity {
         HostManager.getInstance().addActivity(this.host, this);
     }
 
-    public void removeClient(Client client) {
-        participants.remove(client);
-    }
-
     public boolean isEnrolled (Client client) {
         return participants.contains(client);
     }

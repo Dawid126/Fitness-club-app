@@ -21,8 +21,4 @@ public class Client extends AbstractPerson{
     public List<Activity> getActivities() {
         return activities;
     }
-
-    public void removeActivity (Activity activity) {
-        activities.remove(activity);
-    }
 }
