@@ -17,12 +17,12 @@ import java.util.List;
 @Singleton
 public class HibernateManager implements IDataManager {
 
-    private List<Client> clients = new ArrayList<>();
-    private List<User> users = new ArrayList<>();
-    private List<Room> rooms = new ArrayList<>();
-    private List<Host> hosts = new ArrayList<>();
-    private List<Activity> activities = new ArrayList<>();
-    private List<Product> products = new ArrayList<>();
+    private List<Client> clients;
+    private List<User> users;
+    private List<Room> rooms;
+    private List<Host> hosts;
+    private List<Activity> activities;
+    private List<Product> products;
 
     @Override
     public void saveActivities(List<Activity> activities) {
@@ -91,7 +91,15 @@ public class HibernateManager implements IDataManager {
 
     @Override
     public void saveProducts(List<Product> Product) {
-
+        SessionService.openSession();
+        final Session session = SessionService.getSession();
+        final Transaction tx = session.beginTransaction();
+        for(Product product : products) {
+            session.save(product);
+            session.merge(product);
+        }
+        tx.commit();
+        SessionService.closeSession();
     }
 
     @Override

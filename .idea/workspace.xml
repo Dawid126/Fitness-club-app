@@ -23,13 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,17 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/krzys/czw-1440-polaki/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -180,6 +163,25 @@
         </option>
         <option name="taskNames">
           <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="czw-1440-polaki [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
@@ -229,16 +231,18 @@
       <item itemvalue="Gradle.czw-1440-polaki [dependencies]" />
       <item itemvalue="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle" />
       <item itemvalue="Gradle.czw-1440-polaki [run]" />
+      <item itemvalue="Gradle.czw-1440-polaki [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.czw-1440-polaki [build]" />
         <item itemvalue="Gradle.czw-1440-polaki [run]" />
         <item itemvalue="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle" />
         <item itemvalue="Gradle.czw-1440-polaki [dependencies]" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -334,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607943889575</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added load from database methods">
+      <created>1607945796485</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607945796485</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +374,8 @@
     <MESSAGE value="Coś tam działa" />
     <MESSAGE value="Initiator" />
     <MESSAGE value="Little changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Little changes" />
+    <MESSAGE value="added load from database methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="added load from database methods" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1607893405420">
@@ -409,25 +421,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="272" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607894480919" />
-    <state width="1860" height="265" key="GridCell.Tab.0.bottom" timestamp="1607875147246">
+    <state width="1860" height="295" key="GridCell.Tab.0.bottom" timestamp="1607945869162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147246" />
+    <state width="1860" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607945869162" />
     <state width="1258" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="265" key="GridCell.Tab.0.center" timestamp="1607875147246">
+    <state width="1860" height="295" key="GridCell.Tab.0.center" timestamp="1607945869162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147246" />
+    <state width="1860" height="295" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607945869162" />
     <state width="1258" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="265" key="GridCell.Tab.0.left" timestamp="1607875147245">
+    <state width="1860" height="295" key="GridCell.Tab.0.left" timestamp="1607945869161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147245" />
+    <state width="1860" height="295" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607945869161" />
     <state width="1258" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="265" key="GridCell.Tab.0.right" timestamp="1607875147246">
+    <state width="1860" height="295" key="GridCell.Tab.0.right" timestamp="1607945869162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607875147246" />
+    <state width="1860" height="295" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607945869162" />
     <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607943366559">
       <screen x="0" y="0" width="1920" height="1040" />
