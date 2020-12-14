@@ -21,5 +21,6 @@
         <mapping class="model.persons.User"/>
         <mapping class="model.Activity"/>
         <mapping class="model.Room"/>
+        <mapping class="shop.Product"/>
     </session-factory>
 </hibernate-configuration>
