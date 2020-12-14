@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import ui.dialogs.DeleteDialogController;
 import ui.dialogs.addDialogs.AddNewRoomController;
 import ui.dialogs.editDialogs.EditClientDialogController;
+import ui.dialogs.editDialogs.EditRoomDialogController;
 import utils.RoomManager;
 
 import java.io.IOException;
@@ -38,6 +39,9 @@ public class RoomsController {
     @FXML
     private Button deleteButton;
 
+    @FXML
+    private Button editButton;
+
 
     ObservableList<RoomInfo> data;
 
@@ -50,6 +54,9 @@ public class RoomsController {
         initializeTableCells();
         roomsTableView.setItems(FXCollections.observableList(mapRoomsToViewModel()));
         deleteButton.disableProperty().bind(
+                Bindings.isEmpty(roomsTableView.getSelectionModel()
+                        .getSelectedItems()));
+        editButton.disableProperty().bind(
                 Bindings.isEmpty(roomsTableView.getSelectionModel()
                         .getSelectedItems()));
     }
@@ -97,6 +104,16 @@ public class RoomsController {
         ((DeleteDialogController)loader.getController()).setSelectedItem(roomsTableView.getSelectionModel().getSelectedItems().get(0).getRoom());
         ((DeleteDialogController)loader.getController()).setDialogStage(dialogStage);
         configureDialog("Remove Room");
+        dialogStage.showAndWait();
+        roomsTableView.setItems(FXCollections.observableList(mapRoomsToViewModel()));
+    }
+
+    @FXML
+    private void editRoom() {
+        createDialogStage("/editRoomDialog.fxml");
+        ((EditRoomDialogController)loader.getController()).setSelectedRoom(roomsTableView.getSelectionModel().getSelectedItems().get(0).getRoom());
+        ((EditRoomDialogController)loader.getController()).setDialogStage(dialogStage);
+        configureDialog("Edit Room");
         dialogStage.showAndWait();
         roomsTableView.setItems(FXCollections.observableList(mapRoomsToViewModel()));
     }

@@ -36,7 +36,7 @@
                                  <children>
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../../styles/menuButton.css" text="Add" onAction="#addRoom" />
                                     <Button fx:id="deleteButton" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Remove" onAction="#deleteRoom"/>
-                                    <Button layoutX="10.0" layoutY="35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Edit" />
+                                    <Button fx:id="editButton" layoutX="10.0" layoutY="35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Edit" onAction="#editRoom" />
                                  </children>
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
