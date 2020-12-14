@@ -86,6 +86,7 @@ public class HibernateManager implements IDataManager {
     @Override
     public List<Activity> loadActivities() {
         return null;
+
     }
 
     @Override
