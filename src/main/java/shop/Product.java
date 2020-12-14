@@ -1,7 +1,5 @@
 package shop;
 
-import model.Activity;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
