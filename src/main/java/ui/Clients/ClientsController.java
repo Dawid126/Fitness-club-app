@@ -93,7 +93,7 @@ public class ClientsController {
     @FXML
     private void deleteClient() {
         createDialogStage("/deleteDialog.fxml");
-        ((DeleteDialogController)loader.getController()).setSelectedClient(clientsTableView.getSelectionModel().getSelectedItems().get(0).getClient());
+        ((DeleteDialogController)loader.getController()).setSelectedItem(clientsTableView.getSelectionModel().getSelectedItems().get(0).getClient());
         ((DeleteDialogController)loader.getController()).setDialogStage(dialogStage);
         configureDialog("Remove Client");
         dialogStage.showAndWait();

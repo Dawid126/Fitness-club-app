@@ -23,19 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/DeleteDialogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/deleteDialog.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addNewProduct/AddNewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/clients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/clients.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/dialogs/DeleteDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/DeleteDialogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,13 +132,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,30 +248,30 @@
       <screen x="2560" y="130" width="1920" height="1040" />
     </state>
     <state x="3206" y="568" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/2560.130.1920.1040/0.0.2560.1400@2560.130.1920.1040" timestamp="1607855291234" />
-    <state width="1258" height="394" key="GridCell.Tab.0.bottom" timestamp="1606954534755">
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom" timestamp="1607950140539">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.center" timestamp="1606954534755">
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607950140539" />
+    <state width="2517" height="394" key="GridCell.Tab.0.center" timestamp="1607950140539">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.left" timestamp="1606954534755">
+    <state width="2517" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607950140539" />
+    <state width="2517" height="394" key="GridCell.Tab.0.left" timestamp="1607950140539">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.right" timestamp="1606954534755">
+    <state width="2517" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607950140539" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right" timestamp="1607950140539">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607950140539" />
     <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1116" y="559" key="MultipleFileMergeDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954992759" />
-    <state x="3340" y="367" key="RollbackChangesDialog" timestamp="1607854465482">
-      <screen x="2560" y="130" width="1920" height="1040" />
+    <state x="1040" y="319" key="RollbackChangesDialog" timestamp="1607947845860">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606949183279" />
+    <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607947845860" />
     <state x="3340" y="367" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@2560.130.1920.1040" timestamp="1607854465482" />
     <state x="760" y="274" key="SettingsEditor" timestamp="1606662918981">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -286,5 +281,9 @@
       <screen x="2560" y="130" width="1920" height="1040" />
     </state>
     <state x="3248" y="347" key="extract.method.dialog/2560.130.1920.1040/0.0.2560.1400@2560.130.1920.1040" timestamp="1607853138912" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1607948705641">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="936" y="330" key="run.anything.popup/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607948705641" />
   </component>
 </project>

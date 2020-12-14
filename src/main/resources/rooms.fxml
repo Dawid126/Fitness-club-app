@@ -35,7 +35,7 @@
                               <VBox layoutX="-7.0" layoutY="45.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" style="-fx-border-color: B9B6B5; -fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../../styles/menuButton.css" text="Add" onAction="#addRoom" />
-                                    <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Remove" />
+                                    <Button fx:id="deleteButton" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Remove" onAction="#deleteRoom"/>
                                     <Button layoutX="10.0" layoutY="35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../../styles/menuButton.css" text="Edit" />
                                  </children>
                                  <padding>
