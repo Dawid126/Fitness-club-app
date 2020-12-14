@@ -47,7 +47,7 @@ public class DataInitiator {
 
     public void fillData () {
         initData();
-//        manyToManyConnections();
+        manyToManyConnections();
     }
 
     private void initData () {
@@ -122,16 +122,16 @@ public class DataInitiator {
         }
     }
 
-//    private void manyToManyConnections() {
-//        List<Client> clients = dataManager.loadClients();
-//        List<Activity> activities = dataManager.loadActivities();
-//        for(int i=0; i<20; i++) {
-//            Client c = clients.get(i%clients.size());
-//            Activity a = activities.get(i%activities.size());
-//            if(activityManager.addClientToActivity(c,a))
-//                System.out.println(c.getEmail()+" was added to "+a.getName());
-//            else
-//                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
-//        }
-//    }
+    private void manyToManyConnections() {
+        List<Client> clients = dataManager.loadClients();
+        List<Activity> activities = dataManager.loadActivities();
+        for(int i=0; i<20; i++) {
+            Client c = clients.get(i%clients.size());
+            Activity a = activities.get(i%activities.size());
+            if(activityManager.addClientToActivity(c,a))
+                System.out.println(c.getEmail()+" was added to "+a.getName());
+            else
+                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
+        }
+    }
 }

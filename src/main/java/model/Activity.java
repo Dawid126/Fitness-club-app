@@ -25,18 +25,18 @@ public class Activity {
     @Column(name = "weekDay", nullable = false, length = 15)
     private WeekDay weekDay;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "host_id")
     private Host host;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "client_activity",
             joinColumns = @JoinColumn(name = "client_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "activity_id", referencedColumnName = "ID"))
     private List<Client> participants = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
 
