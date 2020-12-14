@@ -1,6 +1,10 @@
 package shop;
 
+import model.Activity;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -22,7 +26,9 @@ public class Product {
 
     @Column(name = "description", nullable = false, length = 50)
     private String description;
-    //private Image image;
+
+    @OneToMany(mappedBy = "product")
+    private List<Order> orders = new ArrayList<>();
 
     public Product (String name, int quantity, int price, String description) {
         this.name = name;

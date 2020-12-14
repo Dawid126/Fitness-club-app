@@ -1,6 +1,7 @@
 package model;
 
 import enums.WeekDay;
+import model.persons.AbstractPerson;
 import model.persons.Client;
 import model.persons.Host;
 import utils.HostManager;
@@ -97,5 +98,27 @@ public class Activity {
     }
     public int getMaxGroupSize() {
         return maxGroupSize;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Activity activity = (Activity) o;
+
+        if (id != activity.id) return false;
+        if (!room.equals(activity.room)) return false;
+        if (!name.equals(activity.name)) return false;
+        return weekDay.equals(activity.weekDay);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + name.hashCode();
+        result = 31 * result + weekDay.hashCode();
+        result = 31 * result + room.hashCode();
+        return result;
     }
 }
