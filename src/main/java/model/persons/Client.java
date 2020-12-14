@@ -14,7 +14,7 @@ public class Client extends AbstractPerson{
     @ManyToMany(mappedBy = "participants", fetch = FetchType.EAGER)
     private List<Activity> activities  = new ArrayList<>();
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
     public Client () {}

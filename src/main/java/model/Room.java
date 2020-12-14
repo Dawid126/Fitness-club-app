@@ -32,6 +32,8 @@ public class Room {
         return capacity;
     }
 
+    public int getNumber() {return number;}
+
     public int getId() {
         return id;
     }

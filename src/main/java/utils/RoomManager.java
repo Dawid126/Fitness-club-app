@@ -37,8 +37,24 @@ public class RoomManager {
 
     public boolean createRoom(int capacity) {
         if(capacity>0) {
-            //TODO to jest zle:
-            dataManager.saveRoom(new Room(capacity,capacity+20));
+            int number = 1;
+            List<Room> rooms = this.getRooms();
+            boolean flag = false;
+
+            for(int i = 0; i<=rooms.size(); i++) {
+                number = i+1;
+                for(Room room: rooms) {
+                    if(room.getNumber() == number) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag) {
+                    break;
+                }
+            }
+
+            dataManager.saveRoom(new Room(capacity,number));
             return true;
         }
         return false;
