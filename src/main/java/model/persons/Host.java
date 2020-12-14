@@ -2,7 +2,6 @@ package model.persons;
 
 import enums.WeekDay;
 import model.Activity;
-import model.Room;
 
 import javax.persistence.*;
 import java.util.*;

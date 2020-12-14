@@ -1,10 +1,8 @@
 package model;
 
 import enums.WeekDay;
-import model.persons.AbstractPerson;
 import model.persons.Client;
 import model.persons.Host;
-import utils.HostManager;
 
 import javax.persistence.*;
 import java.util.ArrayList;
