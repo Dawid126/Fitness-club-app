@@ -46,7 +46,7 @@ public class ActivityManager {
     }
 
     public boolean addClientToActivity (Client clientToAdd, Activity activity) {
-        if(activity.canEnroll(clientToAdd))
+        if(!activity.canEnroll(clientToAdd))
             return false;
 
         for(Activity clientActivity : clientToAdd.getActivities()) {
@@ -56,13 +56,18 @@ public class ActivityManager {
                     return false;
             }
         }
-        activity.addClient(clientToAdd);
+        activity.getParticipants().add(clientToAdd);
+        clientToAdd.getActivities().add(activity);
+        dataManager.updateActivity(activity);
+        dataManager.updateClient(clientToAdd);
         return true;
     }
 
     public void removeClientFromActivity(Client clientToRemove, Activity activity) {
-        clientToRemove.removeActivity(activity);
-        activity.removeClient(clientToRemove);
+        clientToRemove.getActivities().remove(activity);
+        activity.getParticipants().remove(clientToRemove);
+        dataManager.updateActivity(activity);
+        dataManager.updateClient(clientToRemove);
     }
 
     public List<Room> getPossibleRooms (WeekDay weekDay, Date startTime, Date endTime) {

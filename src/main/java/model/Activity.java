@@ -62,10 +62,6 @@ public class Activity {
         HostManager.getInstance().addActivity(this.host, this);
     }
 
-    public void addClient (Client client) {
-        participants.add(client);
-    }
-
     public void removeClient(Client client) {
         participants.remove(client);
     }

@@ -88,14 +88,17 @@ public class DataInitiator {
             activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
             activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
             dataManager.saveActivities(activities);
-
-//            for(Host h : hosts)
-//                dataManager.updateHost(h);
-//            for(Room r : rooms)
-//                dataManager.updateRoom(r);
-
         } catch ( ParseException e ) {
             e.printStackTrace();
+        }
+
+        for(int i=0; i<20; i++) {
+            Client c = clients.get(i%clients.size());
+            Activity a = activities.get(i%activities.size());
+            if(activityManager.addClientToActivity(c,a))
+                System.out.println(c.getEmail()+" was added to "+a.getName());
+            else
+                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
         }
 
 //        products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
