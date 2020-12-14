@@ -21,6 +21,7 @@ public class DataManager implements IDataManager{
     private List<Host> hosts = new ArrayList<>();
     private List<Activity> activities = new ArrayList<>();
     private List<Product> products = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     public DataManager() {}
 
@@ -48,10 +49,9 @@ public class DataManager implements IDataManager{
     public void saveProducts(List<Product> products) {
         this.products = products;
     }
-
     @Override
     public void saveOrders(List<Order> orders) {
-
+        this.orders = orders;
     }
 
     @Override
@@ -76,10 +76,9 @@ public class DataManager implements IDataManager{
     public List<Product> loadProducts() {
         return products;
     }
-
     @Override
     public List<Order> loadOrders() {
-        return null;
+        return orders;
     }
 
     @Override
@@ -112,10 +111,10 @@ public class DataManager implements IDataManager{
         if(!products.contains(product))
             products.add(product);
     }
-
     @Override
     public void saveOrder(Order order) {
-
+        if(!orders.contains(order))
+            orders.add(order);
     }
 
     @Override
@@ -177,10 +176,9 @@ public class DataManager implements IDataManager{
     public void removeProduct(Product product) {
         products.remove(product);
     }
-
     @Override
     public void removeOrder(Order order) {
-
+        orders.remove(order);
     }
 
     @Override
