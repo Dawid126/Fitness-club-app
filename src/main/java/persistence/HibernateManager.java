@@ -11,7 +11,6 @@ import org.hibernate.Transaction;
 import persistence.session.SessionService;
 import shop.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
@@ -90,7 +89,7 @@ public class HibernateManager implements IDataManager {
     }
 
     @Override
-    public void saveProducts(List<Product> Product) {
+    public void saveProducts(List<Product> products) {
         SessionService.openSession();
         final Session session = SessionService.getSession();
         final Transaction tx = session.beginTransaction();

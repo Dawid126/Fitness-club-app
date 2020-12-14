@@ -101,19 +101,19 @@ public class DataInitiator {
                 System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
         }
 
-//        products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
-//        products.add(new Product("Soczek 2",10,29,"Jakis opis 2"));
-//        products.add(new Product("Soczek 3",10,4,"Jakis opis 3"));
-//        products.add(new Product("Soczek 4",10,2,"Jakis opis 4"));
-//        products.add(new Product("Baton 1",10,21,"Jakis opis 5"));
-//        products.add(new Product("Baton 2",10,37,"Jakis opis 6"));
-//        products.add(new Product("Baton 3",10,20,"Jakis opis 7"));
-//        products.add(new Product("Baton 4",10,30,"Jakis opis 8"));
-//        products.add(new Product("Białko 1",10,99,"Jakis opis 9"));
-//        products.add(new Product("Białko 2",10,9999,"Jakis opis 10"));
-//        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
-//        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
+        products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
+        products.add(new Product("Soczek 2",10,29,"Jakis opis 2"));
+        products.add(new Product("Soczek 3",10,4,"Jakis opis 3"));
+        products.add(new Product("Soczek 4",10,2,"Jakis opis 4"));
+        products.add(new Product("Baton 1",10,21,"Jakis opis 5"));
+        products.add(new Product("Baton 2",10,37,"Jakis opis 6"));
+        products.add(new Product("Baton 3",10,20,"Jakis opis 7"));
+        products.add(new Product("Baton 4",10,30,"Jakis opis 8"));
+        products.add(new Product("Białko 1",10,99,"Jakis opis 9"));
+        products.add(new Product("Białko 2",10,9999,"Jakis opis 10"));
+        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
+        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
-//        dataManager.saveProducts(products);
+        dataManager.saveProducts(products);
     }
 }

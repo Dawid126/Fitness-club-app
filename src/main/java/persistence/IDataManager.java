@@ -15,7 +15,7 @@ public interface IDataManager {
     void saveHosts(List<Host> hosts);
     void saveUsers(List<User> users);
     void saveRooms(List<Room> rooms);
-    void saveProducts(List<Product> Product);
+    void saveProducts(List<Product> products);
 
     List<Activity> loadActivities();
     List<Client> loadClients();

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "products")
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -28,6 +28,7 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<Order> orders = new ArrayList<>();
 
+    public Product () {}
     public Product (String name, int quantity, int price, String description) {
         this.name = name;
         this.quantity = quantity;
