@@ -22,10 +22,6 @@ public class Client extends AbstractPerson{
         return activities;
     }
 
-    public void addActivity (Activity activity) {
-        if(!activities.contains(activity))
-            activities.add(activity);
-    }
     public void removeActivity (Activity activity) {
         activities.remove(activity);
     }

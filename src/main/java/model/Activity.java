@@ -35,7 +35,7 @@ public class Activity {
             name = "client_activity",
             joinColumns = @JoinColumn(name = "client_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "activity_id", referencedColumnName = "ID"))
-    private List<Client> participants;
+    private List<Client> participants = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
@@ -59,7 +59,6 @@ public class Activity {
         this.endTime = endTime;
         this.weekDay = weekDay;
         this.maxGroupSize = Math.min(maxGroupSize,room.getCapacity());
-        this.participants = new ArrayList<>();
         HostManager.getInstance().addActivity(this.host, this);
     }
 

@@ -12,13 +12,12 @@ import java.util.*;
 public class Host extends AbstractPerson{
 
     @OneToMany(mappedBy = "host")
-    private List<Activity> activities;
+    private List<Activity> activities = new ArrayList<>();
 
     public Host() {}
 
     public Host (String name, String surname, String email) {
         super(name, surname, email);
-        activities = new ArrayList<>();
     }
 
     public List<Activity> getActivities() {

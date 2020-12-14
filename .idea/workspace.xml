@@ -23,12 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Silownia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Silownia.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +147,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/krzys/czw-1440-polaki/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -244,6 +251,7 @@
       <workItem from="1607875308918" duration="3326000" />
       <workItem from="1607882789685" duration="1478000" />
       <workItem from="1607941551729" duration="1227000" />
+      <workItem from="1607942820342" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -301,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607897100129</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Initiator">
+      <created>1607942892485</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607942892485</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +343,8 @@
     <MESSAGE value="still not working" />
     <MESSAGE value="JESUS ODPALILO SIE" />
     <MESSAGE value="Coś tam działa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coś tam działa" />
+    <MESSAGE value="Initiator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initiator" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1607893405420">
