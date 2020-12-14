@@ -23,19 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/DeleteDialogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/deleteDialog.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addNewProduct/AddNewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/clients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/clients.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +202,7 @@
       <workItem from="1606954809736" duration="312000" />
       <workItem from="1606988753594" duration="5074000" />
       <workItem from="1607852304156" duration="4143000" />
+      <workItem from="1607884878307" duration="645000" />
     </task>
     <servers />
   </component>
