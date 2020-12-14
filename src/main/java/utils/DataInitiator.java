@@ -46,6 +46,11 @@ public class DataInitiator {
     }
 
     public void fillData () {
+        initData();
+//        manyToManyConnections();
+    }
+
+    private void initData () {
         DateFormat format = new SimpleDateFormat("hh:mm");
 
         List<Room> rooms = new ArrayList<>();
@@ -92,15 +97,6 @@ public class DataInitiator {
             e.printStackTrace();
         }
 
-        for(int i=0; i<20; i++) {
-            Client c = clients.get(i%clients.size());
-            Activity a = activities.get(i%activities.size());
-            if(activityManager.addClientToActivity(c,a))
-                System.out.println(c.getEmail()+" was added to "+a.getName());
-            else
-                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
-        }
-
         products.add(new Product("Soczek 1",10,19,"Jakis opis 1"));
         products.add(new Product("Soczek 2",10,29,"Jakis opis 2"));
         products.add(new Product("Soczek 3",10,4,"Jakis opis 3"));
@@ -115,5 +111,27 @@ public class DataInitiator {
         products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
         dataManager.saveProducts(products);
+
+        for(int i=0; i<20; i++) {
+            Client c = clients.get(i%clients.size());
+            Activity a = activities.get(i%activities.size());
+            if(activityManager.addClientToActivity(c,a))
+                System.out.println(c.getEmail()+" was added to "+a.getName());
+            else
+                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
+        }
     }
+
+//    private void manyToManyConnections() {
+//        List<Client> clients = dataManager.loadClients();
+//        List<Activity> activities = dataManager.loadActivities();
+//        for(int i=0; i<20; i++) {
+//            Client c = clients.get(i%clients.size());
+//            Activity a = activities.get(i%activities.size());
+//            if(activityManager.addClientToActivity(c,a))
+//                System.out.println(c.getEmail()+" was added to "+a.getName());
+//            else
+//                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
+//        }
+//    }
 }
