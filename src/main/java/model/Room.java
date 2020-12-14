@@ -19,7 +19,7 @@ public class Room {
     @Column(name = "number", nullable = false, length = 50)
     private int number;
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room", fetch = FetchType.EAGER)
     private List<Activity> activities = new ArrayList<>();
 
     public Room() {}

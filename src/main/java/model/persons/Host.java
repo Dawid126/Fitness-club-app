@@ -10,7 +10,7 @@ import java.util.*;
 @Table(name = "host")
 public class Host extends AbstractPerson{
 
-    @OneToMany(mappedBy = "host")
+    @OneToMany(mappedBy = "host", fetch = FetchType.EAGER)
     private List<Activity> activities = new ArrayList<>();
 
     public Host() {}

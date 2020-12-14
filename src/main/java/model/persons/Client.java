@@ -11,10 +11,10 @@ import java.util.List;
 @Table(name = "client")
 public class Client extends AbstractPerson{
 
-    @ManyToMany(mappedBy = "participants")
+    @ManyToMany(mappedBy = "participants", fetch = FetchType.EAGER)
     private List<Activity> activities  = new ArrayList<>();
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
 
     public Client () {}

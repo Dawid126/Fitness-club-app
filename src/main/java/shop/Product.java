@@ -25,7 +25,7 @@ public class Product {
     @Column(name = "description", nullable = false, length = 50)
     private String description;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
 
     public Product () {}
