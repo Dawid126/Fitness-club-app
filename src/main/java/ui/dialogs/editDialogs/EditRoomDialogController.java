@@ -1,27 +1,32 @@
-package ui.addDialogs;
+package ui.dialogs.editDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Room;
+import model.persons.Client;
 import utils.ClientManager;
+import utils.RoomManager;
 
-public class AddNewClientController {
-    @FXML
-    private TextField name;
-
-    @FXML
-    private TextField surname;
+public class EditRoomDialogController {
 
     @FXML
-    private TextField email;
+    private TextField capacity;
 
     @FXML
     private Text validationError;
 
     private Stage dialogStage;
 
-    public AddNewClientController() {
+    private Room room;
+
+    public void setSelectedRoom(Room room){
+        this.room = room;
+        capacity.setText(String.valueOf(room.getCapacity()));
+    }
+
+    public EditRoomDialogController() {
 
     }
 
@@ -35,13 +40,11 @@ public class AddNewClientController {
     }
 
     @FXML
-    private void addCustomer() {
-        if (ClientManager.getInstance().createClient(name.getText(), surname.getText(), email.getText())) {
+    private void saveRoom() {
+        if (RoomManager.getInstance().updateRoom(room, Integer.parseInt(capacity.getText()))) {
             dialogStage.close();
             return;
         }
         validationError.setVisible(true);
     }
-
-
 }

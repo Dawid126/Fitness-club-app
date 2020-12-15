@@ -3,7 +3,9 @@ package utils;
 import com.google.inject.Inject;
 import model.Activity;
 import model.Room;
+import model.persons.Client;
 import persistence.IDataManager;
+import utils.statics.StringsValidator;
 
 import java.util.List;
 
@@ -55,6 +57,14 @@ public class RoomManager {
             }
 
             dataManager.saveRoom(new Room(capacity,number));
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateRoom(Room room, int capacity) {
+        if(capacity > 0) {
+            room.setCapacity(capacity);
             return true;
         }
         return false;

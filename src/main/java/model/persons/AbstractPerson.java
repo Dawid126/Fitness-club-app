@@ -11,13 +11,13 @@ public abstract class AbstractPerson {
     private int id;
 
     @Column(name = "name", nullable = false, length = 50)
-    private String name;
+    protected String name;
 
     @Column(name = "surname", nullable = false, length = 50)
-    private String surname;
+    protected String surname;
 
     @Column(name = "email", nullable = false, length = 50)
-    private String email;
+    protected String email;
 
     public AbstractPerson () {}
     public AbstractPerson (String name, String surname, String email) {
@@ -36,6 +36,12 @@ public abstract class AbstractPerson {
 
     public String getEmail() {
         return email;
+    }
+
+    public void update(String name, String surname, String email){
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
     }
 
     @Override

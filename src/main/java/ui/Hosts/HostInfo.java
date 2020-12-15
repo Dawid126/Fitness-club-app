@@ -1,23 +1,21 @@
-package ui.Clients;
+package ui.Hosts;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import model.persons.Client;
+import model.persons.Host;
 
-// Class that represents Client properties that are used in the clients.fxml view.
-// Uses properties specific for JavaFX
-
-public class ClientInfo {
-    private Client client;
+public class HostInfo {
+    private Host host;
     private StringProperty name;
     private StringProperty surname;
     private StringProperty email;
 
-    public ClientInfo(Client client) {
-        this.client = client;
-        this.name = new SimpleStringProperty(client.getName());
-        this.surname = new SimpleStringProperty(client.getSurname());
-        this.email = new SimpleStringProperty(client.getEmail());
+    public HostInfo(Host host){
+        this.host = host;
+        this.name = new SimpleStringProperty(host.getName());
+        this.surname = new SimpleStringProperty(host.getSurname());
+        this.email = new SimpleStringProperty(host.getEmail());
     }
 
     public String getName() {
@@ -56,7 +54,7 @@ public class ClientInfo {
         this.email.set(email);
     }
 
-    public Client getClient(){
-        return this.client;
+    public Host getHost(){
+        return this.host;
     }
 }

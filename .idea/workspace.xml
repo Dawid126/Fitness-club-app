@@ -23,8 +23,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataInitiator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Hosts/HostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Hosts/HostInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/DeleteDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditClientDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditHostDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditProductDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditRoomDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/deleteDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/editClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/editHostDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/editRoomDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/products/editProductDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/AbstractPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persons/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/TrainersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addNewProduct/AddNewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/ProductDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/SelectedProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/SelectedProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/productDetails/ProductDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/productDetails/ProductDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HostManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/clients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/clients.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/products/productDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/products/productDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trainers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trainers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,17 +194,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/krzys/czw-1440-polaki/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -254,7 +284,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>

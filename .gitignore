@@ -38,7 +38,7 @@ gradle-app.setting
 ## IntelliJ
 ##############################
 out/
-
+**/workspace.xml
 
 ##############################
 ## Eclipse

@@ -19,6 +19,10 @@ public class Room {
     @Column(name = "number", nullable = false, length = 50)
     private int number;
 
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
     @OneToMany(mappedBy = "room", fetch = FetchType.EAGER)
     private List<Activity> activities = new ArrayList<>();
 

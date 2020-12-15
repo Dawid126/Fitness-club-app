@@ -2,6 +2,7 @@ package utils;
 
 import com.google.inject.Inject;
 import model.persons.Client;
+import model.persons.Host;
 import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
@@ -40,5 +41,18 @@ public class ClientManager {
 
     public List<Client> getClients() {
         return dataManager.loadClients();
+    }
+
+    public boolean updateClient (Client client, String name, String surname, String email) {
+        if(!StringsValidator.validateInfo(name,surname,email)) {
+            return false;
+        }
+
+        if(client.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
+            client.update(name, surname, email);
+            return true;
+        }
+
+        return false;
     }
 }
