@@ -9,8 +9,10 @@ import shop.Product;
 public class SelectedProductsService {
     private BooleanProperty isNoProductSelected = new SimpleBooleanProperty();
     private ObjectProperty<Product> selectedProd = new SimpleObjectProperty<>();
+    private ProductsController subscriber;
 
-    public SelectedProductsService() {
+    public SelectedProductsService(ProductsController subscriber) {
+        this.subscriber = subscriber;
         selectedProd.setValue(null);
         isNoProductSelected.setValue(true);
     }
@@ -18,6 +20,12 @@ public class SelectedProductsService {
     public void setSelectedProduct(Product product) {
         selectedProd.setValue(product);
         isNoProductSelected.setValue(false);
+    }
+
+    public void deleteSelectedProduct(){
+        Product productToDelete = selectedProd.getValue();
+        selectedProd.setValue(null);
+        subscriber.notifyDelete(productToDelete);
     }
 
     public BooleanProperty isNoProductSelected() {
