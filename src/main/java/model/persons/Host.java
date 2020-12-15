@@ -3,30 +3,24 @@ package model.persons;
 import enums.WeekDay;
 import model.Activity;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.*;
+import java.util.*;
 
+@Entity
+@Table(name = "host")
 public class Host extends AbstractPerson{
 
-    private final List<Activity> activities;
+    @OneToMany(mappedBy = "host", fetch = FetchType.EAGER)
+    private List<Activity> activities = new ArrayList<>();
+
+    public Host() {}
 
     public Host (String name, String surname, String email) {
-        super(name, surname, email
-        );
-        activities = new ArrayList<>();
+        super(name, surname, email);
     }
 
     public List<Activity> getActivities() {
         return activities;
-    }
-
-    public void addActivity (Activity activity) {
-        if(!activities.contains(activity))
-            activities.add(activity);
-    }
-    public void removeActivity (Activity activity) {
-        activities.remove(activity);
     }
 
     public boolean isFree (WeekDay weekDay, Date startTime, Date endTime) {

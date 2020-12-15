@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.dialogs.editDialogs.EditProductDialogController">
+    <center>
+        <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" />
+                <RowConstraints minHeight="10.0" />
+                <RowConstraints minHeight="10.0" />
+                <RowConstraints minHeight="10.0" />
+                <RowConstraints minHeight="10.0" />
+            </rowConstraints>
+            <children>
+                <Label text="Name">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Quantity" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Description" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Price" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="name" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="quantity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextArea fx:id="description" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </TextArea>
+                <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </TextField>
+
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <VBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false"  prefWidth="100.0" text="Ok" onAction="#editProduct">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin></Button>
+                <Text fx:id="errorName" text="Please enter correct nameto proceed">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Text>
+                <Text fx:id="errorDescription" text="Please enter correct description to proceed">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Text>
+                <Text fx:id="errorQuantity" text="Please enter correct quantity to proceed">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Text>
+                <Text fx:id="errorPrice" text="Please enter correct price to proceed">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Text>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </bottom>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</BorderPane>

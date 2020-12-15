@@ -6,6 +6,7 @@ import model.Room;
 import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
+import shop.Order;
 import shop.Product;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class DataManager implements IDataManager{
     private List<Host> hosts = new ArrayList<>();
     private List<Activity> activities = new ArrayList<>();
     private List<Product> products = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     public DataManager() {}
 
@@ -47,6 +49,10 @@ public class DataManager implements IDataManager{
     public void saveProducts(List<Product> products) {
         this.products = products;
     }
+    @Override
+    public void saveOrders(List<Order> orders) {
+        this.orders = orders;
+    }
 
     @Override
     public List<Activity> loadActivities() {
@@ -69,6 +75,10 @@ public class DataManager implements IDataManager{
     @Override
     public List<Product> loadProducts() {
         return products;
+    }
+    @Override
+    public List<Order> loadOrders() {
+        return orders;
     }
 
     @Override
@@ -101,6 +111,46 @@ public class DataManager implements IDataManager{
         if(!products.contains(product))
             products.add(product);
     }
+    @Override
+    public void saveOrder(Order order) {
+        if(!orders.contains(order))
+            orders.add(order);
+    }
+
+    @Override
+    public void updateActivity(Activity activity) {
+
+    }
+
+    @Override
+    public void updateClient(Client client) {
+
+    }
+
+    @Override
+    public void updateHost(Host host) {
+
+    }
+
+    @Override
+    public void updateUser(User user) {
+
+    }
+
+    @Override
+    public void updateRoom(Room room) {
+
+    }
+
+    @Override
+    public void updateProduct(Product product) {
+
+    }
+
+    @Override
+    public void updateOrder(Order order) {
+
+    }
 
     @Override
     public void removeActivity(Activity activity) {
@@ -125,6 +175,10 @@ public class DataManager implements IDataManager{
     @Override
     public void removeProduct(Product product) {
         products.remove(product);
+    }
+    @Override
+    public void removeOrder(Order order) {
+        orders.remove(order);
     }
 
     @Override
