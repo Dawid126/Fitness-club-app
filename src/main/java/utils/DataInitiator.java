@@ -46,6 +46,11 @@ public class DataInitiator {
     }
 
     public void fillData () {
+        initData();
+        manyToManyConnections();
+    }
+
+    private void initData () {
         DateFormat format = new SimpleDateFormat("hh:mm");
 
         List<Room> rooms = new ArrayList<>();
@@ -56,12 +61,15 @@ public class DataInitiator {
         List<Product> products = new ArrayList<>();
 
         for(int i=0; i<5; i++)
-            rooms.add(new Room(30));
+            rooms.add(new Room(30,i+1));
+        dataManager.saveRooms(rooms);
 
-        users.add(new User("Lukasz","Pitrus","kret.to@poczta.com", Role.ADMIN,"aa"));
+        users.add(new User("Lukasz","Pitrus","pitrus.to@poczta.com", Role.ADMIN,"aa"));
+        dataManager.saveUsers(users);
 
         hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
         hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@poczta.com"));
+        dataManager.saveHosts(hosts);
 
         clients.add(new Client("Dawid","Bialka","dbialka@poczta.com"));
         clients.add(new Client("Dawid1","Bialka1","dbialka1@poczta.com"));
@@ -71,18 +79,20 @@ public class DataInitiator {
         clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@poczta.com"));
         clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@poczta.com"));
         clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@poczta.com"));
+        dataManager.saveClients(clients);
 
         try {
             activities.add(new Activity("xD1",hosts.get(0),rooms.get(0),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
             activities.add(new Activity("xD2",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.MONDAY, 10));
-            activities.add(new Activity("xD3",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
-            activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
-            activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
-            activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
-            activities.add(new Activity("xD7",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY, 10));
-            activities.add(new Activity("xD8",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.THURSDAY, 10));
-            activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
-            activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.FRIDAY, 10));
+            activities.add(new Activity("xD3",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD4",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.MONDAY, 10));
+            activities.add(new Activity("xD5",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD6",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD7",hosts.get(0),rooms.get(3),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD8",hosts.get(1),rooms.get(1),format.parse("14:30"),format.parse("16:00"), WeekDay.TUESDAY, 10));
+            activities.add(new Activity("xD9",hosts.get(0),rooms.get(4),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
+            activities.add(new Activity("xD10",hosts.get(1),rooms.get(2),format.parse("10:30"),format.parse("13:00"), WeekDay.WEDNESDAY, 10));
+            dataManager.saveActivities(activities);
         } catch ( ParseException e ) {
             e.printStackTrace();
         }
@@ -100,11 +110,19 @@ public class DataInitiator {
         products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
         products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
-        dataManager.saveRooms(rooms);
-        dataManager.saveUsers(users);
-        dataManager.saveHosts(hosts);
-        dataManager.saveActivities(activities);
-        dataManager.saveClients(clients);
         dataManager.saveProducts(products);
+    }
+
+    private void manyToManyConnections() {
+        List<Client> clients = dataManager.loadClients();
+        List<Activity> activities = dataManager.loadActivities();
+        for(int i=0; i<20; i++) {
+            Client c = clients.get(i%clients.size());
+            Activity a = activities.get(i%activities.size());
+            if(activityManager.addClientToActivity(c,a))
+                System.out.println(c.getEmail()+" was added to "+a.getName());
+            else
+                System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
+        }
     }
 }

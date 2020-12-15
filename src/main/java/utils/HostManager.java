@@ -1,10 +1,13 @@
 package utils;
 
 import com.google.inject.Inject;
+import enums.WeekDay;
+import model.Activity;
 import model.persons.Host;
 import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
+import java.util.Date;
 import java.util.List;
 
 public class HostManager {
@@ -20,7 +23,6 @@ public class HostManager {
     public static HostManager getInstance() {
         return instance;
     }
-
 
     public boolean createHost (String name, String surname, String email) {
         if(!StringsValidator.validateInfo(name,surname,email))
