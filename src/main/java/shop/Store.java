@@ -44,4 +44,15 @@ public class Store {
         }
         return null;
     }
+
+    public boolean updateProduct(Product product, String name, int quantity, int price, String description) {
+        if(getProduct(name) == product||getProduct(name) == null) {
+            product.setName(name);
+            product.setQuantity(quantity);
+            product.setPrice(price);
+            product.setDescription(description);
+            return true;
+        }
+        return false;
+    }
 }

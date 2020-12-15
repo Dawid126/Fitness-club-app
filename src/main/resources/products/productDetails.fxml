@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<fx:root fx:controller="ui.products.productDetails.ProductDetailsController" type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="root" fx:controller="ui.products.productDetails.ProductDetailsController" type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" alignment="TOP_CENTER">
          <children>
@@ -37,6 +37,12 @@
                      </children>
                   </HBox>
                </children>
+               <HBox alignment="BASELINE_CENTER" spacing="30.0">
+                  <children>
+                     <Button mnemonicParsing="false" text="Delete" onAction="#deleteProduct" />
+                     <Button mnemonicParsing="false" text="Edit" onAction="#editProduct"/>
+                  </children>
+               </HBox>
             </VBox>
          </children>
       </VBox>
