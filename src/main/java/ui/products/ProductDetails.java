@@ -2,6 +2,7 @@ package ui.products;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
+import shop.Product;
 import ui.products.productDetails.ProductDetailsController;
 
 import java.io.IOException;
