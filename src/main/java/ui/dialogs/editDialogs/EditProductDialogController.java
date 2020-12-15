@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import model.persons.Host;
 import shop.Product;
 import shop.Store;
+import ui.products.SelectedProductsService;
 import utils.HostManager;
 
 public class EditProductDialogController {
@@ -39,11 +40,12 @@ public class EditProductDialogController {
     private Stage dialogStage;
 
     private Product product;
+    private SelectedProductsService selectedProductsService;
 
-    public void setSelectedProduct(Product product){
-        System.out.println(product.getName());
-        this.product = product;
+    public void setSelectedProductService(SelectedProductsService selectedProductService){
+        this.product = selectedProductService.getSelectedProduct().get();
         name.setText(product.getName());
+        this.selectedProductsService = selectedProductService;
         quantity.setText(String.valueOf(product.getQuantity()));
         price.setText(String.valueOf(product.getPrice()));
         description.setText(product.getDescription());
@@ -104,6 +106,7 @@ public class EditProductDialogController {
             return;
         }
         if (Store.getInstance().updateProduct(product, name.getText(), Integer.parseInt(quantity.getText()), Integer.parseInt(price.getText()), description.getText())) {
+            selectedProductsService.updateSelectedProduct();
             dialogStage.close();
         }
     }

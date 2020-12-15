@@ -5,6 +5,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import shop.Product;
+import shop.Store;
 
 public class SelectedProductsService {
     private BooleanProperty isNoProductSelected = new SimpleBooleanProperty();
@@ -25,7 +26,14 @@ public class SelectedProductsService {
     public void deleteSelectedProduct(){
         Product productToDelete = selectedProd.getValue();
         selectedProd.setValue(null);
-        subscriber.notifyDelete(productToDelete);
+        var store = Store.getInstance();
+        store.removeProduct(productToDelete);
+        subscriber.notifyChange();
+
+    }
+
+    public void updateSelectedProduct(){
+        subscriber.notifyChange();
     }
 
     public BooleanProperty isNoProductSelected() {

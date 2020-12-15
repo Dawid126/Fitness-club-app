@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="414.0" prefWidth="219.0" type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.products.productDetails.ProductDetailsController">
+<fx:root fx:id="root" prefHeight="414.0" prefWidth="219.0" type="javafx.scene.layout.VBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.products.productDetails.ProductDetailsController">
    <children>
       <VBox fx:id="descriptionItems" alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -41,7 +41,7 @@
                         <Insets top="7.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Edit">
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Edit" onAction="#editProduct">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>

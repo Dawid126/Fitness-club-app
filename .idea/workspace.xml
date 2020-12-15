@@ -23,8 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditProductDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/editDialogs/EditProductDialogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/SelectedProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/SelectedProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/productDetails/ProductDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/productDetails/ProductDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/products/productDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/products/productDetails.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/build.gradle">
           <activation />
         </task>
         <projects_view>
@@ -102,11 +109,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources\gym" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources\gym" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle">
@@ -176,7 +183,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="" />
@@ -192,8 +202,18 @@
       <workItem from="1606954809736" duration="312000" />
       <workItem from="1606988753594" duration="5074000" />
       <workItem from="1607852304156" duration="4143000" />
-      <workItem from="1607974273660" duration="242000" />
+      <workItem from="1607974273660" duration="361000" />
+      <workItem from="1607974995195" duration="649000" />
+      <workItem from="1608025306726" duration="4642000" />
     </task>
+    <task id="LOCAL-00001" summary="merge">
+      <created>1608055401581</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608055401581</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +230,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1043" y="453" key="#Project_Structure" timestamp="1606944520299">
@@ -248,13 +272,20 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607955417159" />
-    <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="178" y="104" width="1538" height="861" key="MergeDialog" timestamp="1608055000110">
+      <screen x="0" y="0" width="1920" height="1043" />
     </state>
+    <state x="178" y="104" width="1538" height="861" key="MergeDialog/0.0.1920.1043/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608055000110" />
+    <state x="512" y="318" width="341" height="264" key="MultipleFileMergeDialog" timestamp="1608055369339">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="512" y="318" width="341" height="264" key="MultipleFileMergeDialog/0.0.1920.1043/1920.0.1920.1080@0.0.1920.1043" timestamp="1608055369339" />
+    <state x="656" y="346" width="946" height="349" key="MultipleFileMergeDialog/0.0.1920.1043/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608055003134" />
     <state x="1116" y="559" key="MultipleFileMergeDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954992759" />
-    <state x="1040" y="319" key="RollbackChangesDialog" timestamp="1607947845860">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="780" y="238" width="799" height="753" key="RollbackChangesDialog" timestamp="1608055239496">
+      <screen x="0" y="0" width="1920" height="1043" />
     </state>
+    <state x="780" y="238" width="799" height="753" key="RollbackChangesDialog/0.0.1920.1043/1920.0.1920.1080@0.0.1920.1043" timestamp="1608055239496" />
     <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1607947845860" />
     <state x="3340" y="367" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@2560.130.1920.1040" timestamp="1607854465482" />
     <state x="760" y="274" key="SettingsEditor" timestamp="1606662918981">

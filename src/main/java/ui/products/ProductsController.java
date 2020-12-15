@@ -58,10 +58,7 @@ public class ProductsController {
 //        }
     }
 
-    public void notifyDelete(Product product) {
-        var store = Store.getInstance();
-        store.removeProduct(product);
-
+    public void notifyChange() {
         initializeGrid();
     }
 }
