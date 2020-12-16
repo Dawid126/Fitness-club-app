@@ -2,7 +2,6 @@ package utils;
 
 import com.google.inject.Inject;
 import model.persons.Client;
-import model.persons.Host;
 import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
@@ -23,7 +22,7 @@ public class ClientManager {
     }
 
     public boolean createClient(String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name, surname, email))
+        if(StringsValidator.validateInfo(name, surname, email))
             return false;
         if(dataManager.isEmailFree(email)) {
             dataManager.saveClient(new Client(name, surname, email));
@@ -44,7 +43,7 @@ public class ClientManager {
     }
 
     public boolean updateClient (Client client, String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name,surname,email)) {
+        if(StringsValidator.validateInfo(name, surname, email)) {
             return false;
         }
 

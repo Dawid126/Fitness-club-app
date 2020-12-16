@@ -34,10 +34,4 @@ public class Host extends AbstractPerson{
         }
         return true;
     }
-
-    public void update(String name, String surname, String email){
-        super.name = name;
-        super.surname = surname;
-        super.email = email;
-    }
 }
