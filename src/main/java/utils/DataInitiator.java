@@ -46,8 +46,8 @@ public class DataInitiator {
     }
 
     public void fillData () {
-        initData();
-        manyToManyConnections();
+//        initData();
+//        manyToManyConnections();
     }
 
     private void initData () {
