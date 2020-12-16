@@ -1,13 +1,10 @@
 package utils;
 
 import com.google.inject.Inject;
-import enums.WeekDay;
-import model.Activity;
 import model.persons.Host;
 import persistence.IDataManager;
 import utils.statics.StringsValidator;
 
-import java.util.Date;
 import java.util.List;
 
 public class HostManager {
@@ -25,11 +22,11 @@ public class HostManager {
     }
 
     public boolean createHost (String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name,surname,email))
-            return false;
-        if(!dataManager.isEmailFree(email)) {
-            dataManager.saveHost(new Host(name,surname,email));
-            return true;
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(!dataManager.isEmailFree(email)) {
+                dataManager.saveHost(new Host(name,surname,email));
+                return true;
+            }
         }
         return false;
     }
@@ -42,15 +39,12 @@ public class HostManager {
     }
 
     public boolean updateHost (Host host, String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name,surname,email)) {
-            return false;
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(host.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
+                host.update(name, surname, email);
+                return true;
+            }
         }
-
-        if(host.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
-            host.update(name, surname, email);
-            return true;
-        }
-
         return false;
     }
 
