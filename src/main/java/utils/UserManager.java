@@ -23,11 +23,11 @@ public class UserManager {
     }
 
     public boolean createUser(String name, String surname, String email, Role role, String password) {
-        if(StringsValidator.validateInfo(name, surname, email))
-            return false;
-        if(dataManager.isEmailFree(email)) {
-            dataManager.saveUser(new User(name, surname, email, role, password));
-            return true;
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(dataManager.isEmailFree(email)) {
+                dataManager.saveUser(new User(name, surname, email, role, password));
+                return true;
+            }
         }
         return false;
     }

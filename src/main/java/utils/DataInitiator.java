@@ -68,17 +68,17 @@ public class DataInitiator {
         dataManager.saveUsers(users);
 
         hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
-        hosts.add(new Host("Grzegorz2","Gackowski2","ggackowski2@poczta.com"));
+        hosts.add(new Host("Grzegorza","Gackowskia","ggackowski2@poczta.com"));
         dataManager.saveHosts(hosts);
 
         clients.add(new Client("Dawid","Bialka","dbialka@poczta.com"));
-        clients.add(new Client("Dawid1","Bialka1","dbialka1@poczta.com"));
-        clients.add(new Client("Dawid2","Bialka2","dbialka2@poczta.com"));
-        clients.add(new Client("Dawid3","Bialka3","dbialka3@poczta.com"));
+        clients.add(new Client("Dawida","Bialkaa","dbialka1@poczta.com"));
+        clients.add(new Client("Dawidb","Bialkab","dbialka2@poczta.com"));
+        clients.add(new Client("Dawidc","Bialkac","dbialka3@poczta.com"));
         clients.add(new Client("Krzysztof","Retkiewicz","kret@poczta.com"));
-        clients.add(new Client("Krzysztof1","Retkiewicz1","kret1@poczta.com"));
-        clients.add(new Client("Krzysztof2","Retkiewicz2","kret2@poczta.com"));
-        clients.add(new Client("Krzysztof3","Retkiewicz3","kret3@poczta.com"));
+        clients.add(new Client("Krzysztofa","Retkiewicza","kret1@poczta.com"));
+        clients.add(new Client("Krzysztofb","Retkiewiczb","kret2@poczta.com"));
+        clients.add(new Client("Krzysztofc","Retkiewiczc","kret3@poczta.com"));
         dataManager.saveClients(clients);
 
         try {
@@ -119,9 +119,7 @@ public class DataInitiator {
         for(int i=0; i<20; i++) {
             Client c = clients.get(i%clients.size());
             Activity a = activities.get(i%activities.size());
-            if(activityManager.addClientToActivity(c,a))
-                System.out.println(c.getEmail()+" was added to "+a.getName());
-            else
+            if(!activityManager.addClientToActivity(c,a))
                 System.out.println("Adding "+c.getEmail()+" to "+a.getName()+" failed");
         }
     }
