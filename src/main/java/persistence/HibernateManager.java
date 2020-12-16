@@ -14,6 +14,7 @@ import shop.Product;
 
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
@@ -615,7 +616,7 @@ public class HibernateManager implements IDataManager {
 
     @Override
     public User getUserByEmail(String email) {
-        User user = null;
+        User user;
         try {
             SessionService.openSession();
             user = SessionService.getSession()
@@ -623,8 +624,8 @@ public class HibernateManager implements IDataManager {
                     .setParameter("email", email).getSingleResult();
             SessionService.closeSession();
         }
-        catch (PersistenceException e) {
-            e.printStackTrace();
+        catch (NoResultException e) {
+            return null;
         }
         return user;
     }
