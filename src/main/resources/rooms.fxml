@@ -21,7 +21,7 @@
                            <children>
                               <TableView fx:id="roomsTableView" prefHeight="353.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn fx:id="roomsId" prefWidth="${roomsTableView.width*0.5}" resizable="false" text="ID" />
+                                  <TableColumn fx:id="roomsId" prefWidth="${roomsTableView.width*0.5}" resizable="false" text="Number" />
                                   <TableColumn fx:id="roomsCapacity" prefWidth="${roomsTableView.width*0.5}" resizable="false" text="Capacity" />
                                 </columns>
                               </TableView>

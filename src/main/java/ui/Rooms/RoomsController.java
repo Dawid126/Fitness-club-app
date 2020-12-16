@@ -78,7 +78,7 @@ public class RoomsController {
     }
 
     private void initializeTableCells(){
-        roomsId.setCellValueFactory(dataValue -> dataValue.getValue().getIdProperty());
+        roomsId.setCellValueFactory(dataValue -> dataValue.getValue().getNumberProperty());
         roomsCapacity.setCellValueFactory(dataValue -> dataValue.getValue().getCapacityProperty());
     }
 
@@ -149,10 +149,8 @@ public class RoomsController {
     private void authoriseRole(){
         Role role = LoginManager.getInstance().getLoggedUser().getRole();
 
-        switch (role){
-            case RECEPTIONIST, ADMIN -> {
-                splitPane.getItems().remove(sidebar);
-            }
+        if (role == Role.RECEPTIONIST || role == Role.ADMIN) {
+            splitPane.getItems().remove(sidebar);
         }
     }
 }
