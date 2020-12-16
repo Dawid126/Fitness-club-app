@@ -22,6 +22,10 @@ public class FitnessApp extends Application {
         dataInitiator.setManagers(injector);
         dataInitiator.fillData();
 
+        //TODO LOGIN SCREEN, NOW DEV IS DEFAULT
+        LoginManager.getInstance().login("developer.to@poczta.com", "aa");
+        //-------------------------------------
+
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Fitness");
 
