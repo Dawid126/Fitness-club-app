@@ -1,11 +1,13 @@
 package ui.Clients;
 
+import enums.Role;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
@@ -16,12 +18,17 @@ import ui.dialogs.DeleteDialogController;
 import ui.dialogs.addDialogs.AddNewClientController;
 import ui.dialogs.editDialogs.EditClientDialogController;
 import utils.ClientManager;
+import utils.LoginManager;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ClientsController {
+    @FXML
+    public AnchorPane sidebar;
+    @FXML
+    public SplitPane splitPane;
     @FXML
     private Button add;
 
@@ -70,6 +77,7 @@ public class ClientsController {
 
     @FXML
     private void initialize() {
+        authoriseRole();
         setTableViewProps();
         clientsTableView.setItems(FXCollections.observableList(mapClientsToViewModel()));
         deleteButton.disableProperty().bind(
@@ -127,5 +135,15 @@ public class ClientsController {
             e.printStackTrace();
         }
         dialogStage = new Stage();
+    }
+
+    private void authoriseRole(){
+        Role role = LoginManager.getInstance().getLoggedUser().getRole();
+
+        switch (role){
+            case ADMIN -> {
+                splitPane.getItems().remove(sidebar);
+            }
+        }
     }
 }

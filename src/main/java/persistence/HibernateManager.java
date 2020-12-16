@@ -619,7 +619,7 @@ public class HibernateManager implements IDataManager {
         try {
             SessionService.openSession();
             user = SessionService.getSession()
-                    .createQuery("SELECT c FROM Client c WHERE c.email = :email", User.class)
+                    .createQuery("SELECT c FROM User c WHERE c.email = :email", User.class)
                     .setParameter("email", email).getSingleResult();
             SessionService.closeSession();
         }

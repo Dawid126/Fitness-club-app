@@ -1,6 +1,7 @@
 package utils;
 
 import com.google.inject.Inject;
+import enums.Role;
 import model.persons.User;
 import persistence.IDataManager;
 

@@ -1,11 +1,13 @@
 package ui.Hosts;
 
+import enums.Role;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
@@ -14,12 +16,17 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import ui.dialogs.DeleteDialogController;
 import utils.HostManager;
+import utils.LoginManager;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class HostController {
+    @FXML
+    public SplitPane splitPane;
+    @FXML
+    public AnchorPane sidebar;
     @FXML
     private AnchorPane anchorPane;
 
@@ -61,6 +68,7 @@ public class HostController {
 
     @FXML
     private void initialize() {
+        authoriseRole();
         setTableViewProps();
         hostsTableView.setItems(FXCollections.observableList(mapHostsToViewModel()));
         deleteButton.disableProperty().bind(
@@ -105,5 +113,15 @@ public class HostController {
             e.printStackTrace();
         }
         dialogStage = new Stage();
+    }
+
+    private void authoriseRole(){
+        Role role = LoginManager.getInstance().getLoggedUser().getRole();
+
+        switch (role){
+            case RECEPTIONIST, ADMIN -> {
+                splitPane.getItems().remove(sidebar);
+            }
+        }
     }
 }

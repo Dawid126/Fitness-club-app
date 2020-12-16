@@ -1,12 +1,10 @@
 package ui.products;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import shop.Product;
 import shop.Store;
-import ui.products.productDetails.ProductDetailsController;
+import ui.products.productDetails.ProductDetails;
 import ui.products.productTile.ProductTile;
 
 import java.util.concurrent.atomic.AtomicInteger;

@@ -1,8 +1,9 @@
-package ui.products;
+package ui.products.productDetails;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
 import shop.Product;
+import ui.products.SelectedProductsService;
 import ui.products.productDetails.ProductDetailsController;
 
 import java.io.IOException;
@@ -27,5 +28,4 @@ public class ProductDetails extends VBox {
         System.out.println("DODAJe");
         ((ProductDetailsController)fxmlLoader.getController()).setSelectedProductService(service);
     }
-
 }

@@ -15,9 +15,9 @@
         <items>
           <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="160.0" prefWidth="218.0">
                <children>
-                  <TabPane prefHeight="698.0" prefWidth="219.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="tabPane" prefHeight="698.0" prefWidth="219.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
-                      <Tab text="Gym">
+                      <Tab text="Gym" fx:id="gymTab">
                         <content>
                           <AnchorPane fx:id="mainPane" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="218.0" style="-fx-border-color: CAC2C2; -fx-border-width: 3;">
                                  <children>
@@ -37,14 +37,14 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Store">
+                      <Tab text="Store" fx:id="storeTab">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <VBox prefHeight="665.0" prefWidth="218.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox fx:id="productTabButtons" prefHeight="665.0" prefWidth="218.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <Button id="menuButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Products" userData="/products/products.fxml" />
-                                          <Button id="menuButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="220.0" stylesheets="@../../../styles/menuButton.css" text="Add new product" userData="/addNewProduct.fxml" />
+                                          <Button fx:id="addNewProductButtton" id="menuButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="220.0" stylesheets="@../../../styles/menuButton.css" text="Add new product" userData="/addNewProduct.fxml" />
                                        </children>
                                        <padding>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -54,7 +54,7 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                        <Tab text="Admin">
+                        <Tab text="Admin" fx:id="adminTab">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>

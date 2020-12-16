@@ -2,8 +2,12 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import guice.DataModule;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import utils.DataInitiator;
+import utils.LoginManager;
 
 public class FitnessApp extends Application {
     private Stage primaryStage;
@@ -24,7 +28,16 @@ public class FitnessApp extends Application {
         this.appController = new FitnessController(primaryStage);
         this.appController.initRootLayout();
 
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent t) {
+                Platform.exit();
+                System.exit(0);
+            }
+        });
     }
+
+
 
     public static void main(String[] args){
         Application.launch(args);

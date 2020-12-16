@@ -27,21 +27,21 @@
                   <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
                </children>
             </HBox>
-            <VBox alignment="BOTTOM_CENTER" minWidth="-Infinity" prefHeight="218.0" prefWidth="219.0">
+            <VBox fx:id="detailsBox" alignment="BOTTOM_CENTER" minWidth="-Infinity" prefHeight="218.0" prefWidth="219.0">
                <children>
-                  <HBox alignment="BASELINE_CENTER" spacing="15.0">
+                  <HBox fx:id="quantityController" alignment="BASELINE_CENTER" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#decreaseQuantity" text="-" />
+                        <Button fx:id="minusButton" mnemonicParsing="false" onAction="#decreaseQuantity" text="-" />
                         <Text fx:id="quantity" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
-                        <Button mnemonicParsing="false" onAction="#increaseQuantity" text="+" />
+                        <Button fx:id="plusButton" mnemonicParsing="false" onAction="#increaseQuantity" text="+" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Remove" onAction="#deleteProduct">
+                  <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Remove" onAction="#deleteProduct">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Edit" onAction="#editProduct">
+                  <Button fx:id="editButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Edit" onAction="#editProduct">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>

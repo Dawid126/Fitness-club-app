@@ -1,10 +1,12 @@
 package ui.products.productDetails;
 
+import enums.Role;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -15,6 +17,7 @@ import ui.dialogs.editDialogs.EditProductDialogController;
 import ui.products.ProductsController;
 import ui.products.SelectedProductsService;
 import javafx.scene.control.Button;
+import utils.LoginManager;
 
 import javax.swing.plaf.basic.BasicButtonUI;
 import java.io.IOException;
@@ -22,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDetailsController {
+
     private SelectedProductsService selectedProductsService;
 
     @FXML
@@ -33,6 +37,19 @@ public class ProductDetailsController {
 
     @FXML
     private VBox root;
+
+    @FXML
+    public HBox quantityController;
+    @FXML
+    public Button minusButton;
+    @FXML
+    public Button plusButton;
+    @FXML
+    public Button deleteButton;
+    @FXML
+    public VBox detailsBox;
+    @FXML
+    public Button editButton;
 
     private Product product = new Product("", 0, 0, "");
 
@@ -46,6 +63,7 @@ public class ProductDetailsController {
 
     @FXML
     private void initialize() {
+        authoriseRole();
     }
 
     private void updateProduct(Product newValue) {
@@ -113,5 +131,22 @@ public class ProductDetailsController {
             e.printStackTrace();
         }
         dialogStage = new Stage();
+    }
+
+    private void authoriseRole(){
+        Role role = LoginManager.getInstance().getLoggedUser().getRole();
+
+        switch (role){
+            case ADMIN -> {
+                quantityController.getChildren().remove(minusButton);
+                quantityController.getChildren().remove(plusButton);
+                detailsBox.getChildren().remove(deleteButton);
+                detailsBox.getChildren().remove(editButton);
+            }
+            case RECEPTIONIST -> {
+                detailsBox.getChildren().remove(deleteButton);
+                detailsBox.getChildren().remove(editButton);
+            }
+        }
     }
 }

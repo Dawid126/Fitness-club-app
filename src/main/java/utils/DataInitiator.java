@@ -65,6 +65,11 @@ public class DataInitiator {
         dataManager.saveRooms(rooms);
 
         users.add(new User("Lukasz","Pitrus","pitrus.to@poczta.com", Role.ADMIN,"aa"));
+        users.add(new User("Admin","Admin","admin.to@poczta.com", Role.ADMIN,"aa"));
+        users.add(new User("Manager","Manager","enroller.to@poczta.com", Role.MANAGER,"aa"));
+        users.add(new User("Developer","Developer","developer.to@poczta.com", Role.DEVELOPER,"aa"));
+        users.add(new User("Receptionist","Receptionist","receptionist.to@poczta.com", Role.RECEPTIONIST,"aa"));
+
         dataManager.saveUsers(users);
 
         hosts.add(new Host("Grzegorz","Gackowski","ggackowski@poczta.com"));
