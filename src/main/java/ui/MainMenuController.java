@@ -62,10 +62,7 @@ public class MainMenuController {
     private void loadFXML(URL url) {
         try {
             FXMLLoader loader = new FXMLLoader(url);
-            System.out.println("OK");
-            System.out.println("OK");
             routerContainer.setCenter(loader.load());
-            System.out.println("GIT");
         }
         catch (IOException e) {
             e.printStackTrace();

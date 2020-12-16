@@ -15,6 +15,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import ui.dialogs.DeleteDialogController;
+import ui.dialogs.addDialogs.AddNewHostController;
+import ui.dialogs.editDialogs.EditHostDialogController;
 import utils.HostManager;
 import utils.LoginManager;
 
@@ -32,6 +34,9 @@ public class HostController {
 
     @FXML
     private Button deleteButton;
+
+    @FXML
+    private Button editButton;
 
     @FXML
     TableView<HostInfo> hostsTableView;
@@ -74,16 +79,29 @@ public class HostController {
         deleteButton.disableProperty().bind(
                 Bindings.isEmpty(hostsTableView.getSelectionModel()
                         .getSelectedItems()));
+        editButton.disableProperty().bind(
+                Bindings.isEmpty(hostsTableView.getSelectionModel()
+                        .getSelectedItems()));
     }
 
-//    @FXML
-//    private void addHost() {
-//        createDialogStage("/addNewClient.fxml");
-//        ((AddNewHostController)loader.getController()).setDialogStage(dialogStage);
-//        configureDialog("Add Host");
-//        dialogStage.showAndWait();
-//        clientsTableView.setItems(FXCollections.observableList(mapHostsToViewModel()));
-//    }
+    @FXML
+    private void editHost() {
+        createDialogStage("/editHostDialog.fxml");
+        ((EditHostDialogController)loader.getController()).setDialogStage(dialogStage);
+        ((EditHostDialogController)loader.getController()).setSelectedHost(hostsTableView.getSelectionModel().getSelectedItem().getHost());
+        configureDialog("Edit Host");
+        dialogStage.showAndWait();
+        hostsTableView.setItems(FXCollections.observableList(mapHostsToViewModel()));
+    }
+
+    @FXML
+    private void addHost() {
+        createDialogStage("/addNewHost.fxml");
+        ((AddNewHostController)loader.getController()).setDialogStage(dialogStage);
+        configureDialog("Add Host");
+        dialogStage.showAndWait();
+        hostsTableView.setItems(FXCollections.observableList(mapHostsToViewModel()));
+    }
 
     @FXML
     private void deleteHost() {

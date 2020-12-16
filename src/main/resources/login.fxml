@@ -9,6 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
    <children>
       <HBox prefHeight="720.0" prefWidth="1286.0">
@@ -56,7 +57,7 @@
                               <Insets top="15.0" />
                            </VBox.margin>
                         </Text>
-                        <TextField fx:id="passwordField" />
+                        <PasswordField fx:id="passwordField" />
                         <HBox alignment="BASELINE_RIGHT">
                            <children>
                               <Button fx:id="loginButton" onAction="#logInUser" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: white;" text="Log In" />

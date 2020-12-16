@@ -23,7 +23,7 @@ public class HostManager {
 
     public boolean createHost (String name, String surname, String email) {
         if(StringsValidator.validateInfo(name, surname, email)) {
-            if(!dataManager.isEmailFree(email)) {
+            if(dataManager.isEmailFree(email)) {
                 dataManager.saveHost(new Host(name,surname,email));
                 return true;
             }

@@ -1,15 +1,13 @@
-package ui.dialogs.editDialogs;
+package ui.dialogs.addDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.persons.Client;
-import model.persons.Host;
 import utils.ClientManager;
 import utils.HostManager;
 
-public class EditHostDialogController {
+public class AddNewHostController {
     @FXML
     private TextField name;
 
@@ -24,16 +22,7 @@ public class EditHostDialogController {
 
     private Stage dialogStage;
 
-    private Host host;
-
-    public void setSelectedHost(Host host){
-        this.host = host;
-        name.setText(host.getName());
-        surname.setText(host.getSurname());
-        email.setText(host.getEmail());
-    }
-
-    public EditHostDialogController() {
+    public AddNewHostController() {
 
     }
 
@@ -47,11 +36,13 @@ public class EditHostDialogController {
     }
 
     @FXML
-    private void editHost() {
-        if (HostManager.getInstance().updateHost(host, name.getText(), surname.getText(), email.getText())) {
+    private void addHost() {
+        if (HostManager.getInstance().createHost(name.getText(), surname.getText(), email.getText())) {
             dialogStage.close();
             return;
         }
         validationError.setVisible(true);
     }
+
+
 }
