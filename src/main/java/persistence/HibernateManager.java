@@ -12,6 +12,7 @@ import persistence.session.SessionService;
 import shop.Order;
 import shop.Product;
 
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
 import java.util.List;
 
@@ -630,30 +631,31 @@ public class HibernateManager implements IDataManager {
 
     @Override
     public boolean isEmailFree(String email) {
-        User user;
-        Client client;
-        Host host;
+        List users;
+        List clients;
+        List hosts;
 
         try {
             SessionService.openSession();
-            user = SessionService.getSession()
-                    .createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
-                    .setParameter("email", email).getSingleResult();
+            users = SessionService.getSession()
+                    .createQuery("SELECT u.email FROM User u WHERE u.email = :email")
+                    .setParameter("email", email).getResultList();
 
-            if(user == null) return false;
+            if(!users.isEmpty()) return false;
 
-            client = SessionService.getSession()
-                    .createQuery("SELECT c FROM Client c WHERE c.email = :email", Client.class)
-                    .setParameter("email", email).getSingleResult();
+            clients = SessionService.getSession()
+                    .createQuery("SELECT c.email FROM Client c WHERE c.email = :email")
+                    .setParameter("email", email).getResultList();
 
-            if(client == null) return false;
+            if(!clients.isEmpty()) return false;
 
-            host = SessionService.getSession()
-                    .createQuery("SELECT h FROM Client h WHERE h.email = :email", Host.class)
-                    .setParameter("email", email).getSingleResult();
+            hosts = SessionService.getSession()
+                    .createQuery("SELECT h.email FROM Host h WHERE h.email = :email")
+                    .setParameter("email", email).getResultList();
 
             SessionService.closeSession();
-            return (host == null);
+
+            return (hosts.isEmpty());
         }
         catch (PersistenceException e) {
             e.printStackTrace();
