@@ -16,7 +16,7 @@
          <children>
             <VBox prefHeight="720.0" prefWidth="877.0" style="-fx-background-color: #f1f1f1;">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P0lakiFitness Premium" wrappingWidth="444.91015625">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PolakiFitness Premium" wrappingWidth="444.91015625">
                      <VBox.margin>
                         <Insets left="100.0" top="50.0" />
                      </VBox.margin>
