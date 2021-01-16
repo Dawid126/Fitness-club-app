@@ -33,25 +33,30 @@ public class StatisticsManager {
     }
 
     public Activity getTopActivity() {
+        updateActivity();
         return topActivity;
     }
     public Client getTopClient() {
+        updateClient();
         return topClient;
     }
     public Host getTopHost() {
+        updateHost();
         return topHost;
     }
     public Order getTopOrder() {
+        updateOrderAndProduct();
         return topOrder;
     }
     public Product getTopProduct() {
+        updateOrderAndProduct();
         return topProduct;
     }
 
     private void updateTOPs() {
+        updateActivity();
         updateClient();
         updateHost();
-        updateActivity();
         updateOrderAndProduct();
     }
 
