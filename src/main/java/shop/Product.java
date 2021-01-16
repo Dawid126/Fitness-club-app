@@ -25,6 +25,9 @@ public class Product {
     @Column(name = "description", nullable = false, length = 50)
     private String description;
 
+    @Column(name = "image")
+    private byte[] image;
+
     @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
 
@@ -54,6 +57,9 @@ public class Product {
     public List<Order> getOrders() {
         return orders;
     }
+    public byte[] getImage() {
+        return image;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -72,6 +78,9 @@ public class Product {
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override

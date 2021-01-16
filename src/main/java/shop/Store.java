@@ -4,6 +4,8 @@ import com.google.inject.Inject;
 import model.persons.Client;
 import persistence.IDataManager;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.List;
 
 public class Store {
@@ -70,12 +72,30 @@ public class Store {
         return null;
     }
 
+    public void setPhoto(Product product, String path) {
+        setPhoto(product,new File(path));
+    }
+    public void setPhoto(Product product, File file) {
+        byte[] bFile = new byte[(int) file.length()];
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            fileInputStream.read(bFile);
+            fileInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        product.setImage(bFile);
+        dataManager.updateProduct(product);
+    }
+
     public boolean updateProduct(Product product, String name, int quantity, int price, String description) {
         if(getProduct(name) == product||getProduct(name) == null) {
             product.setName(name);
             product.setQuantity(quantity);
             product.setPrice(price);
             product.setDescription(description);
+            dataManager.updateProduct(product);
             return true;
         }
         return false;
