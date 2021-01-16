@@ -22,11 +22,11 @@ public class ClientManager {
     }
 
     public boolean createClient(String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name, surname, email))
-            return false;
-        if(dataManager.isEmailFree(email)) {
-            dataManager.saveClient(new Client(name, surname, email));
-            return true;
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(dataManager.isEmailFree(email)) {
+                dataManager.saveClient(new Client(name, surname, email));
+                return true;
+            }
         }
         return false;
     }
@@ -40,5 +40,15 @@ public class ClientManager {
 
     public List<Client> getClients() {
         return dataManager.loadClients();
+    }
+
+    public boolean updateClient (Client client, String name, String surname, String email) {
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(client.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
+                client.update(name, surname, email);
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,12 +1,15 @@
-package ui.addDialogs;
+package ui.dialogs.editDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.persons.Client;
+import model.persons.Host;
 import utils.ClientManager;
+import utils.HostManager;
 
-public class AddNewClientController {
+public class EditHostDialogController {
     @FXML
     private TextField name;
 
@@ -21,7 +24,16 @@ public class AddNewClientController {
 
     private Stage dialogStage;
 
-    public AddNewClientController() {
+    private Host host;
+
+    public void setSelectedHost(Host host){
+        this.host = host;
+        name.setText(host.getName());
+        surname.setText(host.getSurname());
+        email.setText(host.getEmail());
+    }
+
+    public EditHostDialogController() {
 
     }
 
@@ -35,13 +47,11 @@ public class AddNewClientController {
     }
 
     @FXML
-    private void addCustomer() {
-        if (ClientManager.getInstance().createClient(name.getText(), surname.getText(), email.getText())) {
+    private void editHost() {
+        if (HostManager.getInstance().updateHost(host, name.getText(), surname.getText(), email.getText())) {
             dialogStage.close();
             return;
         }
         validationError.setVisible(true);
     }
-
-
 }

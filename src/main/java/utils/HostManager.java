@@ -21,13 +21,12 @@ public class HostManager {
         return instance;
     }
 
-
     public boolean createHost (String name, String surname, String email) {
-        if(!StringsValidator.validateInfo(name,surname,email))
-            return false;
-        if(!dataManager.isEmailFree(email)) {
-            dataManager.saveHost(new Host(name,surname,email));
-            return true;
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(dataManager.isEmailFree(email)) {
+                dataManager.saveHost(new Host(name,surname,email));
+                return true;
+            }
         }
         return false;
     }
@@ -37,6 +36,16 @@ public class HostManager {
             return false;
         dataManager.removeHost(host);
         return true;
+    }
+
+    public boolean updateHost (Host host, String name, String surname, String email) {
+        if(StringsValidator.validateInfo(name, surname, email)) {
+            if(host.getEmail().equals(email) || !dataManager.isEmailFree(email)) {
+                host.update(name, surname, email);
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<Host> getHosts () {

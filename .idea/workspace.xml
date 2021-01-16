@@ -23,17 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewRoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/addNewRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Clients/ClientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Rooms/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/addNewClient/AddNewClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/addDialogs/AddNewClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness.db" beforeDir="false" afterPath="$PROJECT_DIR$/fitness.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FitnessApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +43,32 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/build.gradle">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Silownia" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Silownia" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Silownia" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Silownia" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -73,8 +85,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -90,15 +102,18 @@
     </option>
   </component>
   <component name="ProjectId" id="1kvUEDT27roRTKd0faRNS8PPYAt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -106,19 +121,22 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15332031" />
+    <property name="project.structure.side.proportion" value="0.18715084" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources\Hibernate" />
       <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources\gym" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AGH\Sem5\TO\czw-1440-polaki\src\main\java\org\hibernate\dialect" />
+      <recent name="C:\Users\krzys\czw-1440-polaki\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle">
+  <component name="RunManager" selected="Gradle.czw-1440-polaki [run]">
     <configuration name="FitnessApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -165,6 +183,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="czw-1440-polaki [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="czw-1440-polaki [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,19 +221,45 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="czw-1440-polaki [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.FitnessApp" />
       <item itemvalue="Gradle.czw-1440-polaki [dependencies]" />
       <item itemvalue="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle" />
+      <item itemvalue="Gradle.czw-1440-polaki [run]" />
+      <item itemvalue="Gradle.czw-1440-polaki [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.czw-1440-polaki [build]" />
+        <item itemvalue="Gradle.czw-1440-polaki [run]" />
         <item itemvalue="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle" />
         <item itemvalue="Gradle.czw-1440-polaki [dependencies]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="" />
@@ -211,7 +274,93 @@
       <workItem from="1606944768692" duration="9757000" />
       <workItem from="1606954809736" duration="312000" />
       <workItem from="1606988753594" duration="5074000" />
+      <workItem from="1607103301109" duration="49000" />
+      <workItem from="1607803906210" duration="1986000" />
+      <workItem from="1607864095012" duration="7334000" />
+      <workItem from="1607875308918" duration="3326000" />
+      <workItem from="1607882789685" duration="1478000" />
+      <workItem from="1607941551729" duration="1227000" />
+      <workItem from="1607942820342" duration="3366000" />
+      <workItem from="1608114339627" duration="5306000" />
     </task>
+    <task id="LOCAL-00001" summary="Hibernate init">
+      <created>1607866222182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607866222182</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Hibernate init2">
+      <created>1607866583097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607866583097</updated>
+    </task>
+    <task id="LOCAL-00003" summary="AbstractPerson Entity">
+      <created>1607867128863</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607867128863</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Next one">
+      <created>1607869022210</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607869022210</updated>
+    </task>
+    <task id="LOCAL-00005" summary="SessionService">
+      <created>1607890779100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607890779100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="still not working">
+      <created>1607893413469</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607893413469</updated>
+    </task>
+    <task id="LOCAL-00007" summary="JESUS ODPALILO SIE">
+      <created>1607896205520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607896205520</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Coś tam działa">
+      <created>1607897100129</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607897100129</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Initiator">
+      <created>1607942892485</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607942892485</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Little changes">
+      <created>1607943889575</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607943889575</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added load from database methods">
+      <created>1607945796485</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607945796485</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,39 +378,89 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hibernate init" />
+    <MESSAGE value="Hibernate init2" />
+    <MESSAGE value="AbstractPerson Entity" />
+    <MESSAGE value="Next one" />
+    <MESSAGE value="SessionService" />
+    <MESSAGE value="still not working" />
+    <MESSAGE value="JESUS ODPALILO SIE" />
+    <MESSAGE value="Coś tam działa" />
+    <MESSAGE value="Initiator" />
+    <MESSAGE value="Little changes" />
+    <MESSAGE value="added load from database methods" />
+    <MESSAGE value="data cache fix, added persistencEexception catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="data cache fix, added persistencEexception catch" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1043" y="453" key="#Project_Structure" timestamp="1606944520299">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="593" y="411" width="468" height="217" key="#Assign_Data_Sources" timestamp="1607958073283">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="593" y="411" width="468" height="217" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1607958073283" />
+    <state x="372" y="189" key="#Project_Structure" timestamp="1607958068403">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="372" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607958068403" />
     <state x="1043" y="453" key="#Project_Structure/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606944520299" />
-    <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606581178578">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="424" y="283" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607941634882">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="424" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607941634882" />
     <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581178578" />
-    <state x="445" y="407" key="#com.intellij.ide.util.MemberChooser" timestamp="1606947495704">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607894401780">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607894401780" />
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser" timestamp="1607957897019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607957897019" />
     <state x="445" y="407" key="#com.intellij.ide.util.MemberChooser/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606947495704" />
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606581095650">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="679" y="447" key="#com.intellij.ide.util.TreeClassChooserDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581095650" />
-    <state width="1258" height="394" key="GridCell.Tab.0.bottom" timestamp="1606954534755">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1607894420723">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="658" y="356" width="824" height="622" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607894420723" />
+    <state x="650" y="521" width="505" height="186" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1607894484277">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="650" y="521" width="505" height="186" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1920.1040@0.0.1920.1040" timestamp="1607894484277" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1607868377442">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607868377442" />
+    <state x="272" y="277" key="FileChooserDialogImpl" timestamp="1607894480919">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="272" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607894480919" />
+    <state width="1860" height="296" key="GridCell.Tab.0.bottom" timestamp="1607973007178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
     <state width="1258" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.center" timestamp="1606954534755">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1860" height="296" key="GridCell.Tab.0.center" timestamp="1607973007178">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1860" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
     <state width="1258" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.left" timestamp="1606954534755">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1860" height="296" key="GridCell.Tab.0.left" timestamp="1607973007178">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1860" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
     <state width="1258" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1258" height="394" key="GridCell.Tab.0.right" timestamp="1606954534755">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1860" height="296" key="GridCell.Tab.0.right" timestamp="1607973007178">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1860" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
     <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607943366559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1607943366559" />
     <state x="1116" y="559" key="MultipleFileMergeDialog" timestamp="1606954992759">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -270,9 +469,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606949183279" />
-    <state x="760" y="274" key="SettingsEditor" timestamp="1606662918981">
+    <state x="531" y="17" width="1306" height="793" key="SettingsEditor" timestamp="1607882475187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="531" y="17" width="1306" height="793" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607882475187" />
+    <state x="760" y="274" key="SettingsEditor/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606662918981" />
+    <state x="391" y="163" key="new project wizard" timestamp="1607882067968">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="391" y="163" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607882067968" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1608117837126">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="760" y="274" key="SettingsEditor/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606662918981" />
+    <state x="936" y="330" key="run.anything.popup/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608117837126" />
   </component>
 </project>

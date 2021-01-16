@@ -1,6 +1,7 @@
 package shop;
 
 import com.google.inject.Inject;
+import model.persons.Client;
 import persistence.IDataManager;
 
 import java.util.List;
@@ -8,6 +9,10 @@ import java.util.List;
 public class Store {
     private final IDataManager dataManager;
     private static Store instance = null;
+
+    public static Store getInstance() {
+        return instance;
+    }
 
     @Inject
     public Store(IDataManager dataManager) {
@@ -24,12 +29,32 @@ public class Store {
     }
 
     public boolean removeProduct (Product product) {
+        for(Order order : product.getOrders()) {
+            removeOrder(order);
+        }
         dataManager.removeProduct(product);
         return true;
     }
 
-    public static Store getInstance() {
-        return instance;
+    public boolean orderProduct (Product product, Client client, int quantity) {
+        if(product.setQuantity(product.getQuantity()-quantity))
+            return false;
+        Order newOrder = new Order(client,product,quantity);
+        dataManager.saveOrder(newOrder);
+        client.getOrders().add(newOrder);
+        product.getOrders().add(newOrder);
+        dataManager.updateClient(client);
+        dataManager.updateProduct(product);
+        return true;
+    }
+
+    public void removeOrder (Order order) {
+        dataManager.removeOrder(order);
+        order.getClient().getOrders().remove(order);
+        order.getProduct().setQuantity(order.getProduct().getQuantity() + order.getQuantity());
+        order.getProduct().getOrders().remove(order);
+        dataManager.updateClient(order.getClient());
+        dataManager.updateProduct(order.getProduct());
     }
 
     public List<Product> getProducts() {
@@ -43,5 +68,16 @@ public class Store {
                 return product;
         }
         return null;
+    }
+
+    public boolean updateProduct(Product product, String name, int quantity, int price, String description) {
+        if(getProduct(name) == product||getProduct(name) == null) {
+            product.setName(name);
+            product.setQuantity(quantity);
+            product.setPrice(price);
+            product.setDescription(description);
+            return true;
+        }
+        return false;
     }
 }

@@ -1,11 +1,10 @@
-package ui.addDialogs;
+package ui.dialogs.addDialogs;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
-import utils.ClientManager;
 import utils.RoomManager;
 
 public class AddNewRoomController {

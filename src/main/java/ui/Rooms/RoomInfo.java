@@ -5,24 +5,26 @@ import javafx.beans.property.StringProperty;
 import model.Room;
 
 public class RoomInfo {
-    private StringProperty id;
+    private Room room;
+    private StringProperty number;
     private StringProperty capacity;
 
     public RoomInfo(Room room){
-        this.id = new SimpleStringProperty(Integer.toString(room.getId()));
+        this.room = room;
+        this.number = new SimpleStringProperty(Integer.toString(room.getNumber()));
         this.capacity = new SimpleStringProperty(Integer.toString(room.getCapacity()));
     }
 
-    public String getId() {
-        return id.get();
+    public String getNumber() {
+        return number.get();
     }
 
-    public StringProperty getIdProperty() {
-        return id;
+    public StringProperty getNumberProperty() {
+        return number;
     }
 
     public void setId(String id) {
-        this.id.set(id);
+        this.number.set(id);
     }
 
     public String getCapacity() {
@@ -35,5 +37,9 @@ public class RoomInfo {
 
     public void setCapacity(String capacity) {
         this.capacity.set(capacity);
+    }
+
+    public Room getRoom(){
+        return this.room;
     }
 }

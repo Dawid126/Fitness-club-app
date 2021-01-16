@@ -1,15 +1,18 @@
-package ui.addNewProduct;
+package ui.dialogs.editDialogs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import model.persons.Host;
 import shop.Product;
 import shop.Store;
+import ui.products.SelectedProductsService;
+import utils.HostManager;
 
-public class AddNewProductController {
-
+public class EditProductDialogController {
     @FXML
     private TextField name;
 
@@ -23,9 +26,6 @@ public class AddNewProductController {
     private TextArea description;
 
     @FXML
-    private Button save;
-
-    @FXML
     private Text errorName;
 
     @FXML
@@ -37,18 +37,27 @@ public class AddNewProductController {
     @FXML
     private Text errorPrice;
 
-    @FXML
-    private Text productSaved;
+    private Stage dialogStage;
 
+    private Product product;
+    private SelectedProductsService selectedProductsService;
 
-    public AddNewProductController() {
+    public void setSelectedProductService(SelectedProductsService selectedProductService){
+        this.product = selectedProductService.getSelectedProduct().get();
+        name.setText(product.getName());
+        this.selectedProductsService = selectedProductService;
+        quantity.setText(String.valueOf(product.getQuantity()));
+        price.setText(String.valueOf(product.getPrice()));
+        description.setText(product.getDescription());
+    }
+
+    public EditProductDialogController() {
 
     }
 
     @FXML
     private void initialize() {
         hideErrors();
-        productSaved.setVisible(false);
     }
 
     private void hideErrors() {
@@ -86,20 +95,19 @@ public class AddNewProductController {
         return isValid;
     }
 
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
+    }
+
     @FXML
-    private void saveProduct() {
+    private void editProduct() {
         hideErrors();
         if (!isValid()) {
             return;
         }
-        String name = this.name.getText();
-        String description = this.description.getText();
-        int price = Integer.parseInt(this.price.getText());
-        int quantity = Integer.parseInt(this.quantity.getText());
-        Store.getInstance().createProduct(name, quantity, price, description);
-        productSaved.setVisible(true);
-        clear();
+        if (Store.getInstance().updateProduct(product, name.getText(), Integer.parseInt(quantity.getText()), Integer.parseInt(price.getText()), description.getText())) {
+            selectedProductsService.updateSelectedProduct();
+            dialogStage.close();
+        }
     }
-
-
 }

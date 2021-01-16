@@ -20,7 +20,7 @@ public class FitnessController {
             // load layout from FXML file
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(FitnessController.class
-                    .getResource("mainMenu.fxml"));
+                    .getResource("login.fxml"));
 
             // add layout to a scene and show them all
             Scene scene = new Scene(loader.load());

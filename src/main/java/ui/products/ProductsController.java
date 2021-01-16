@@ -4,11 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import shop.Store;
+import ui.products.productDetails.ProductDetails;
 import ui.products.productTile.ProductTile;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProductsController {
+
 
     private SelectedProductsService selectedProductsService;
 
@@ -22,7 +24,7 @@ public class ProductsController {
     private Text noProductSelectedText;
 
     public ProductsController() {
-        selectedProductsService = new SelectedProductsService();
+        selectedProductsService = new SelectedProductsService(this);
     }
 
     @FXML
@@ -37,6 +39,7 @@ public class ProductsController {
         int columns = 3, productsCount = 12;
         var store = Store.getInstance();
         AtomicInteger i = new AtomicInteger();
+        productsGrid.getChildren().clear();
         store.getProducts().forEach((product) -> {
             var productTile = new ProductTile();
             productTile.setProduct(product);
@@ -53,5 +56,7 @@ public class ProductsController {
 //        }
     }
 
-
+    public void notifyChange() {
+        initializeGrid();
+    }
 }

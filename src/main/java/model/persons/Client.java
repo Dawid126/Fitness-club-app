@@ -1,28 +1,31 @@
 package model.persons;
 
 import model.Activity;
+import shop.Order;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "client")
 public class Client extends AbstractPerson{
 
-    private final List<Activity> activities;
+    @ManyToMany(mappedBy = "participants", fetch = FetchType.EAGER)
+    private List<Activity> activities  = new ArrayList<>();
 
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
+
+    public Client () {}
     public Client (String name, String surname, String email) {
         super(name, surname, email);
-        activities = new ArrayList<>();
     }
 
     public List<Activity> getActivities() {
         return activities;
     }
-
-    public void addActivity (Activity activity) {
-        if(!activities.contains(activity))
-            activities.add(activity);
-    }
-    public void removeActivity (Activity activity) {
-        activities.remove(activity);
+    public List<Order> getOrders() {
+        return orders;
     }
 }
