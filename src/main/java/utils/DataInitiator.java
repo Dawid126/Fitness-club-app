@@ -10,6 +10,7 @@ import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
 import persistence.IDataManager;
+import shop.Order;
 import shop.Product;
 import shop.Store;
 
@@ -29,6 +30,7 @@ public class DataInitiator {
     private LoginManager loginManager;
     private RoomManager roomManager;
     private UserManager userManager;
+    private StatisticsManager statisticsManager;
 
     @Inject
     public DataInitiator(IDataManager dataManager) {
@@ -43,6 +45,7 @@ public class DataInitiator {
         this.loginManager = injector.getInstance(LoginManager.class);
         this.roomManager = injector.getInstance(RoomManager.class);
         this.userManager = injector.getInstance(UserManager.class);
+        this.statisticsManager = injector.getInstance(StatisticsManager.class);
     }
 
     public void fillData () {
@@ -59,6 +62,7 @@ public class DataInitiator {
         List<Client> clients = new ArrayList<>();
         List<Activity> activities = new ArrayList<>();
         List<Product> products = new ArrayList<>();
+        List<Order> orders = new ArrayList<>();
 
         for(int i=0; i<5; i++)
             rooms.add(new Room(30,i+1));
@@ -116,6 +120,19 @@ public class DataInitiator {
         products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
 
         dataManager.saveProducts(products);
+
+        orders.add(new Order(clients.get(0), products.get(0), 4));
+        orders.get(0).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(1), products.get(1), 7));
+        orders.get(1).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(2), products.get(0), 3));
+        orders.get(2).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(3), products.get(7), 10));
+        orders.get(3).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(4), products.get(10), 2));
+        orders.get(4).statusChange(Order.Status.SEND);
+
+        dataManager.saveOrders(orders);
     }
 
     private void manyToManyConnections() {
