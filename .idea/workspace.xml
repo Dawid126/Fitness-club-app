@@ -24,8 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness.db" beforeDir="false" afterPath="$PROJECT_DIR$/fitness.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FitnessApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FitnessApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,13 +156,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -282,6 +285,7 @@
       <workItem from="1607941551729" duration="1227000" />
       <workItem from="1607942820342" duration="3366000" />
       <workItem from="1608114339627" duration="5306000" />
+      <workItem from="1610884064938" duration="4346000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -403,11 +407,12 @@
     </state>
     <state x="372" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607958068403" />
     <state x="1043" y="453" key="#Project_Structure/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606944520299" />
-    <state x="424" y="283" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607941634882">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2984" y="413" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610884128843">
+      <screen x="2560" y="130" width="1920" height="1040" />
     </state>
     <state x="424" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607941634882" />
     <state x="404" y="312" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606581178578" />
+    <state x="2984" y="413" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.130.1920.1040/0.0.2560.1400@2560.130.1920.1040" timestamp="1610884128843" />
     <state x="719" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607894401780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -465,10 +470,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1116" y="559" key="MultipleFileMergeDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954992759" />
-    <state x="1040" y="319" key="RollbackChangesDialog" timestamp="1606949183279">
+    <state x="1040" y="319" key="RollbackChangesDialog" timestamp="1610887145639">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606949183279" />
+    <state x="1040" y="319" key="RollbackChangesDialog/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610887145639" />
     <state x="531" y="17" width="1306" height="793" key="SettingsEditor" timestamp="1607882475187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
