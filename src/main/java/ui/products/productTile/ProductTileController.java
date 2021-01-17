@@ -11,6 +11,10 @@ import shop.Product;
 import ui.products.SelectedProductsService;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 
 public class ProductTileController {
 
@@ -36,7 +40,16 @@ public class ProductTileController {
         this.product = product;
         productName.setText(product.getName());
         price.setText(String.valueOf(product.getPrice()));
-        Image image = new Image(new ByteArrayInputStream(product.getImage()));
+        Image image = null;
+        if(product.getImage()!=null){
+            image = new Image(new ByteArrayInputStream(product.getImage()));
+        }else{
+            try {
+                image = new Image(String.valueOf(new File("src/main/resources/default.jpg").toURI().toURL()));
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
         img.setImage(image);
     }
 

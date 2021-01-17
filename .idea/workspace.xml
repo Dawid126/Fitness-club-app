@@ -24,9 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2785c-8695-4b20-86b8-ebd117768030" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FitnessApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness.db" beforeDir="false" afterPath="$PROJECT_DIR$/fitness.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/dialogs/addDialogs/AddNewProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addNewProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/products/productTile/ProductTileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/products/productTile/ProductTileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/products/editProductDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/products/editProductDialog.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,8 +253,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.czw-1440-polaki [build]" />
         <item itemvalue="Gradle.czw-1440-polaki [run]" />
+        <item itemvalue="Gradle.czw-1440-polaki [build]" />
         <item itemvalue="Gradle.C:/Users/krzys/czw-1440-polaki/build.gradle" />
         <item itemvalue="Gradle.czw-1440-polaki [dependencies]" />
       </list>
@@ -285,7 +286,7 @@
       <workItem from="1607941551729" duration="1227000" />
       <workItem from="1607942820342" duration="3366000" />
       <workItem from="1608114339627" duration="5306000" />
-      <workItem from="1610884064938" duration="4346000" />
+      <workItem from="1610884064938" duration="7794000" />
     </task>
     <task id="LOCAL-00001" summary="Hibernate init">
       <created>1607866222182</created>
@@ -442,26 +443,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="272" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607894480919" />
-    <state width="1860" height="296" key="GridCell.Tab.0.bottom" timestamp="1607973007178">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom" timestamp="1610891863258">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1860" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
-    <state width="1258" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="296" key="GridCell.Tab.0.center" timestamp="1607973007178">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610891863258" />
+    <state width="2517" height="394" key="GridCell.Tab.0.center" timestamp="1610891863258">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1860" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
-    <state width="1258" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="296" key="GridCell.Tab.0.left" timestamp="1607973007178">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="394" key="GridCell.Tab.0.center/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610891863258" />
+    <state width="2517" height="394" key="GridCell.Tab.0.left" timestamp="1610891863258">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1860" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
-    <state width="1258" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
-    <state width="1860" height="296" key="GridCell.Tab.0.right" timestamp="1607973007178">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="394" key="GridCell.Tab.0.left/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610891863258" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right" timestamp="1610891863258">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1860" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607973007178" />
-    <state width="1258" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1606954534755" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right/2560.130.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610891863258" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607943366559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -105,7 +105,8 @@ public class AddNewProductController {
         int price = Integer.parseInt(this.price.getText());
         int quantity = Integer.parseInt(this.quantity.getText());
         Store.getInstance().createProduct(name, quantity, price, description);
-        Store.getInstance().getProduct(name).setImage(imagePath.getText());
+        if(!imagePath.getText().equals("<img location>"))
+            Store.getInstance().setPhoto(Store.getInstance().getProduct(name), imagePath.getText());
         productSaved.setVisible(true);
         clear();
     }

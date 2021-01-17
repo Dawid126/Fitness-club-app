@@ -1,10 +1,12 @@
 package ui.dialogs.editDialogs;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.persons.Host;
 import shop.Product;
@@ -37,6 +39,9 @@ public class EditProductDialogController {
     @FXML
     private Text errorPrice;
 
+    @FXML
+    private Text imagePath;
+
     private Stage dialogStage;
 
     private Product product;
@@ -49,6 +54,7 @@ public class EditProductDialogController {
         quantity.setText(String.valueOf(product.getQuantity()));
         price.setText(String.valueOf(product.getPrice()));
         description.setText(product.getDescription());
+        imagePath.setText("<img location>");
     }
 
     public EditProductDialogController() {
@@ -106,8 +112,18 @@ public class EditProductDialogController {
             return;
         }
         if (Store.getInstance().updateProduct(product, name.getText(), Integer.parseInt(quantity.getText()), Integer.parseInt(price.getText()), description.getText())) {
+            if(!imagePath.getText().equals("<img location>"))
+                Store.getInstance().setPhoto(Store.getInstance().getProduct(name.getText()), imagePath.getText());
             selectedProductsService.updateSelectedProduct();
             dialogStage.close();
         }
+    }
+
+    public void pickImage(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Images", "*.jpg", "*.png")
+        );
+        imagePath.setText(fileChooser.showOpenDialog(new Stage()).getPath());
     }
 }
