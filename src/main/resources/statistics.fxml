@@ -16,24 +16,24 @@
                   <Text fx:id="topActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="274.19775390625" />
                </children>
             </HBox>
-<!--            <HBox prefHeight="100.0" prefWidth="200.0">-->
-<!--               <children>-->
-<!--                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top product: " />-->
-<!--                  <Text fx:id="topProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="234.19775390625" />-->
-<!--               </children>-->
-<!--            </HBox>-->
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top product: " />
+                  <Text fx:id="topProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="234.19775390625" />
+               </children>
+            </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top host: " />
                   <Text fx:id="topHost" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="256.19775390625" />
                </children>
             </HBox>
-<!--            <HBox prefHeight="100.0" prefWidth="200.0">-->
-<!--               <children>-->
-<!--                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top valueable order: " />-->
-<!--                  <Text fx:id="topOrder" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="250.19775390625" />-->
-<!--               </children>-->
-<!--            </HBox>-->
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top valueable order: " />
+                  <Text fx:id="topOrder" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="250.19775390625" />
+               </children>
+            </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Most active client: " />

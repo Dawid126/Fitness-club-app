@@ -100,7 +100,7 @@ public class StatisticsManager {
         int bestPrice = -1;
         List<Order> orders = dataManager.loadOrders();
         for(Order o : orders) {
-            if(o.getStatus().equals(Order.Status.PAID)) {
+            if(o.getStatus().equals(Order.Status.SEND)) {
                 int price = o.getQuantity() * o.getProduct().getPrice();
                 if(bestPrice < price) {
                     bestPrice = price;
