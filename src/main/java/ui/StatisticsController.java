@@ -25,7 +25,7 @@ public class StatisticsController {
         this.topActivity.setText(StatisticsManager.getInstance().getTopActivity().getName());
          this.topProduct.setText(StatisticsManager.getInstance().getTopProduct().getName());
         this.topHost.setText(StatisticsManager.getInstance().getTopHost().getName());
-         this.topOrder.setText(String.valueOf(StatisticsManager.getInstance().getTopOrder().toString()));
+         this.topOrder.setText(String.valueOf(StatisticsManager.getInstance().getTopOrder().hashCode()));
         this.topClient.setText(StatisticsManager.getInstance().getTopClient().getName());
     }
 }
