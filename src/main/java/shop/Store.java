@@ -89,7 +89,7 @@ public class Store {
         dataManager.updateProduct(product);
     }
 
-    public boolean updateProduct(Product product, String name, int quantity, int price, String description) {
+    public boolean updateProduct(Product product, String name, int quantity, double price, String description) {
         if(getProduct(name) == product||getProduct(name) == null) {
             product.setName(name);
             product.setQuantity(quantity);

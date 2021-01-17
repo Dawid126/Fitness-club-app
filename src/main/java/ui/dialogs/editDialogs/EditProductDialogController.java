@@ -52,7 +52,7 @@ public class EditProductDialogController {
         name.setText(product.getName());
         this.selectedProductsService = selectedProductService;
         quantity.setText(String.valueOf(product.getQuantity()));
-        price.setText(String.valueOf(product.getPrice()));
+        price.setText(product.getPriceAsString());
         description.setText(product.getDescription());
         imagePath.setText("<img location>");
     }
@@ -94,7 +94,7 @@ public class EditProductDialogController {
             errorQuantity.setVisible(true);
             isValid = false;
         }
-        if(!price.getText().matches("-?\\d+")) {
+        if(!price.getText().matches("-?\\d+(\\.\\d+)?")) {
             errorPrice.setVisible(true);
             isValid = false;
         }
@@ -111,7 +111,7 @@ public class EditProductDialogController {
         if (!isValid()) {
             return;
         }
-        if (Store.getInstance().updateProduct(product, name.getText(), Integer.parseInt(quantity.getText()), Integer.parseInt(price.getText()), description.getText())) {
+        if (Store.getInstance().updateProduct(product, name.getText(), Integer.parseInt(quantity.getText()), Double.parseDouble(price.getText()), description.getText())) {
             if(!imagePath.getText().equals("<img location>"))
                 Store.getInstance().setPhoto(Store.getInstance().getProduct(name.getText()), imagePath.getText());
             selectedProductsService.updateSelectedProduct();

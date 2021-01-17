@@ -39,7 +39,7 @@ public class ProductTileController {
     public void setProduct(Product product) {
         this.product = product;
         productName.setText(product.getName());
-        price.setText(String.valueOf(product.getPrice()));
+        price.setText(product.getPriceAsString());
         Image image = null;
         if(product.getImage()!=null){
             image = new Image(new ByteArrayInputStream(product.getImage()));
