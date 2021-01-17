@@ -48,7 +48,7 @@ public class Order {
         return status;
     }
     public String toString() {
-        return "Client: "+client.getEmail()+" , Product: "+product.getName()+" , Quantity: "+quantity;
+        return "Client: "+client.getEmail()+", Product: "+product.getName()+", Quantity: "+quantity;
     }
 
     public void statusChange(Status status) {

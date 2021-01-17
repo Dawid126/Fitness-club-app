@@ -71,7 +71,7 @@ public class DataInitiator {
         users.add(new User("Lukasz","Pitrus","pitrus.to@poczta.com", Role.ADMIN,"aa"));
         users.add(new User("Admin","Admin","admin.to@poczta.com", Role.ADMIN,"aa"));
         users.add(new User("Manager","Manager","enroller.to@poczta.com", Role.MANAGER,"aa"));
-        users.add(new User("Developer","Developer","developer.to@poczta.com", Role.DEVELOPER,"aa"));
+        users.add(new User("Developer","Developer","dev@dev.com", Role.DEVELOPER,"aa"));
         users.add(new User("Receptionist","Receptionist","receptionist.to@poczta.com", Role.RECEPTIONIST,"aa"));
 
         dataManager.saveUsers(users);
@@ -114,10 +114,10 @@ public class DataInitiator {
         products.add(new Product("Baton 2",10,37,"Jakis opis 6"));
         products.add(new Product("Baton 3",10,20,"Jakis opis 7"));
         products.add(new Product("Baton 4",10,30,"Jakis opis 8"));
-        products.add(new Product("Białko 1",10,99,"Jakis opis 9"));
-        products.add(new Product("Białko 2",10,9999,"Jakis opis 10"));
-        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
-        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
+        products.add(new Product("Bialko 1",10,99,"Jakis opis 9"));
+        products.add(new Product("Bialko 2",10,9999,"Jakis opis 10"));
+        products.add(new Product("Bialko 3",10,1234,"Jakis opis 11"));
+        products.add(new Product("Bialko 4",10,3333,"Jakis opis 12"));
 
         dataManager.saveProducts(products);
 
