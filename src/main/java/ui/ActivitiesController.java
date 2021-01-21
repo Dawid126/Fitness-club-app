@@ -66,9 +66,9 @@ public class ActivitiesController {
         activitiesRoom.setCellValueFactory(
                 new PropertyValueFactory<Activity, Room>("room")
         );
-//        activitiesWeekDay.setCellValueFactory(
-//                new PropertyValueFactory<Activity, WeekDay>("weekDay")
-//        );
+        activitiesWeekDay.setCellValueFactory(
+                new PropertyValueFactory<Activity, WeekDay>("weekDay")
+        );
         activitiesStartTime.setCellValueFactory(
                 new PropertyValueFactory<Activity, Date>("startTime")
         );

@@ -6,8 +6,16 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import shop.Store;
+import ui.products.productTile.ProductTile;
 import utils.DataInitiator;
 import utils.LoginManager;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class FitnessApp extends Application {
     private Stage primaryStage;
@@ -15,8 +23,12 @@ public class FitnessApp extends Application {
 
     private FitnessController appController;
 
+
+
     @Override
     public void start(Stage primaryStage) {
+
+
         Injector injector = Guice.createInjector(new DataModule());
         dataInitiator = injector.getInstance(DataInitiator.class);
         dataInitiator.setManagers(injector);

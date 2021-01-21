@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.StatisticsController">
+   <children>
+      <Text layoutX="32.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" />
+      <VBox layoutX="32.0" layoutY="62.0" prefHeight="200.0" prefWidth="517.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top activity: " />
+                  <Text fx:id="topActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="274.19775390625" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top product: " />
+                  <Text fx:id="topProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="234.19775390625" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top host: " />
+                  <Text fx:id="topHost" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="256.19775390625" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top valueable order: " />
+                  <Text fx:id="topOrder" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="250.19775390625" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Most active client: " />
+                  <Text fx:id="topClient" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Stat&gt;" wrappingWidth="241.19775390625" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

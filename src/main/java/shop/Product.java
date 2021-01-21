@@ -25,6 +25,9 @@ public class Product {
     @Column(name = "description", nullable = false, length = 50)
     private String description;
 
+    @Column(name = "image")
+    private byte[] image;
+
     @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>();
 
@@ -46,13 +49,18 @@ public class Product {
         return price;
     }
     public String getPriceAsString() {
-        return price/100+","+price%100+"$";
+        if(price%100 < 10)
+            return price/100+".0"+price%100;
+        return price/100+"."+price%100;
     }
     public String getDescription() {
         return description;
     }
     public List<Order> getOrders() {
         return orders;
+    }
+    public byte[] getImage() {
+        return image;
     }
 
     public void setName(String name) {
@@ -64,14 +72,19 @@ public class Product {
         this.quantity = quantity;
         return true;
     }
-    public boolean setPrice(double price) {
-        if(price < 0 || (price*100 - Math.round(price*100) != 0))
+    public boolean setPrice(double newPrice) { // || (price*100 - Math.round(price*100) != 0)
+        System.out.println("New price "+newPrice);
+        if(newPrice < 0)
             return false;
-        this.price = (int) price*100;
+        System.out.println("Parsed "+(int) (newPrice*100));
+        this.price = (int) (newPrice*100);
         return true;
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override

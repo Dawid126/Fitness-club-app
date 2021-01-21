@@ -47,6 +47,7 @@
                         <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
                 </Label>
+                <Label text="Img" GridPane.rowIndex="4"/>
                 <TextField fx:id="name" GridPane.columnIndex="1">
                     <GridPane.margin>
                         <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
@@ -67,6 +68,8 @@
                         <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
                 </TextField>
+                <Text fx:id="imagePath"  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" text="Pick img" onAction="#pickImage" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
 
             </children>
         </GridPane>

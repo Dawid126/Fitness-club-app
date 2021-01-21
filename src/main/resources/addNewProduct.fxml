@@ -57,8 +57,8 @@
                         <HBox alignment="CENTER" spacing="10.0">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Img" wrappingWidth="88.74951171875" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;img location&gt;" />
-                              <Button mnemonicParsing="false" text="Pick img" />
+                              <Text fx:id="imagePath" strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" text="Pick img" onAction="#pickImage"/>
                            </children>
                            <padding>
                               <Insets left="15.0" right="15.0" />

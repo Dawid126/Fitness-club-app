@@ -1,11 +1,17 @@
 package ui.dialogs.addDialogs;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import shop.Product;
 import shop.Store;
+
+import java.io.IOException;
 
 public class AddNewProductController {
 
@@ -39,6 +45,8 @@ public class AddNewProductController {
     @FXML
     private Text productSaved;
 
+    @FXML
+    private Text imagePath;
 
     public AddNewProductController() {
 
@@ -47,6 +55,7 @@ public class AddNewProductController {
     @FXML
     private void initialize() {
         hideErrors();
+        imagePath.setText("<img location>");
         productSaved.setVisible(false);
     }
 
@@ -96,9 +105,18 @@ public class AddNewProductController {
         int price = Integer.parseInt(this.price.getText());
         int quantity = Integer.parseInt(this.quantity.getText());
         Store.getInstance().createProduct(name, quantity, price, description);
+        if(!imagePath.getText().equals("<img location>"))
+            Store.getInstance().setPhoto(Store.getInstance().getProduct(name), imagePath.getText());
         productSaved.setVisible(true);
         clear();
     }
 
 
+    public void pickImage(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Images", "*.jpg", "*.png")
+        );
+        imagePath.setText(fileChooser.showOpenDialog(new Stage()).getPath());
+    }
 }

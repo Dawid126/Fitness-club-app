@@ -28,6 +28,8 @@
                                           <Button id="menuButton" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="218.0" stylesheets="@../../../styles/menuButton.css" text="Hosts" userData="/trainers.fxml" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="219.0" stylesheets="@../../../styles/menuButton.css" text="Clients" userData="/clients.fxml" />
                                           <Button id="menuButton" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="221.0" stylesheets="@../../../styles/menuButton.css" text="Activities" userData="/activities.fxml" />
+                                          <Button id="menuButton" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="25.0" prefWidth="221.0" stylesheets="@../../../styles/menuButton.css" text="Statistics" userData="/statistics.fxml" />
+
                                        </children>
                                        <padding>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

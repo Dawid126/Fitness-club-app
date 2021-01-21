@@ -10,6 +10,7 @@ import model.persons.Client;
 import model.persons.Host;
 import model.persons.User;
 import persistence.IDataManager;
+import shop.Order;
 import shop.Product;
 import shop.Store;
 
@@ -29,6 +30,7 @@ public class DataInitiator {
     private LoginManager loginManager;
     private RoomManager roomManager;
     private UserManager userManager;
+    private StatisticsManager statisticsManager;
 
     @Inject
     public DataInitiator(IDataManager dataManager) {
@@ -43,6 +45,7 @@ public class DataInitiator {
         this.loginManager = injector.getInstance(LoginManager.class);
         this.roomManager = injector.getInstance(RoomManager.class);
         this.userManager = injector.getInstance(UserManager.class);
+        this.statisticsManager = injector.getInstance(StatisticsManager.class);
     }
 
     public void fillData () {
@@ -59,6 +62,7 @@ public class DataInitiator {
         List<Client> clients = new ArrayList<>();
         List<Activity> activities = new ArrayList<>();
         List<Product> products = new ArrayList<>();
+        List<Order> orders = new ArrayList<>();
 
         for(int i=0; i<5; i++)
             rooms.add(new Room(30,i+1));
@@ -67,7 +71,7 @@ public class DataInitiator {
         users.add(new User("Lukasz","Pitrus","pitrus.to@poczta.com", Role.ADMIN,"aa"));
         users.add(new User("Admin","Admin","admin.to@poczta.com", Role.ADMIN,"aa"));
         users.add(new User("Manager","Manager","enroller.to@poczta.com", Role.MANAGER,"aa"));
-        users.add(new User("Developer","Developer","developer.to@poczta.com", Role.DEVELOPER,"aa"));
+        users.add(new User("Developer","Developer","dev@dev.com", Role.DEVELOPER,"aa"));
         users.add(new User("Receptionist","Receptionist","receptionist.to@poczta.com", Role.RECEPTIONIST,"aa"));
 
         dataManager.saveUsers(users);
@@ -110,12 +114,25 @@ public class DataInitiator {
         products.add(new Product("Baton 2",10,37,"Jakis opis 6"));
         products.add(new Product("Baton 3",10,20,"Jakis opis 7"));
         products.add(new Product("Baton 4",10,30,"Jakis opis 8"));
-        products.add(new Product("Białko 1",10,99,"Jakis opis 9"));
-        products.add(new Product("Białko 2",10,9999,"Jakis opis 10"));
-        products.add(new Product("Białko 3",10,1234,"Jakis opis 11"));
-        products.add(new Product("Białko 4",10,3333,"Jakis opis 12"));
+        products.add(new Product("Bialko 1",10,99,"Jakis opis 9"));
+        products.add(new Product("Bialko 2",10,9999,"Jakis opis 10"));
+        products.add(new Product("Bialko 3",10,1234,"Jakis opis 11"));
+        products.add(new Product("Bialko 4",10,3333,"Jakis opis 12"));
 
         dataManager.saveProducts(products);
+
+        orders.add(new Order(clients.get(0), products.get(0), 4));
+        orders.get(0).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(1), products.get(1), 7));
+        orders.get(1).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(2), products.get(0), 3));
+        orders.get(2).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(3), products.get(7), 10));
+        orders.get(3).statusChange(Order.Status.SEND);
+        orders.add(new Order(clients.get(4), products.get(10), 2));
+        orders.get(4).statusChange(Order.Status.SEND);
+
+        dataManager.saveOrders(orders);
     }
 
     private void manyToManyConnections() {
